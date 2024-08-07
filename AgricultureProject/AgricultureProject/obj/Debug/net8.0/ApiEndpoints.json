@@ -551,6 +551,105 @@
     ]
   },
   {
+    "ContainingType": "AgricultureProject.Controllers.ProductReviewController",
+    "Method": "GetAll",
+    "RelativePath": "api/ProductReview",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Mvc.ProblemDetails, Microsoft.AspNetCore.Http.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgricultureProject.Controllers.ProductReviewController",
+    "Method": "CreateProduct",
+    "RelativePath": "api/ProductReview",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "AgricultureProject.DTO.ProductReviewDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgricultureProject.Controllers.ProductReviewController",
+    "Method": "DeleteProduct",
+    "RelativePath": "api/ProductReview/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgricultureProject.Controllers.ProductReviewController",
+    "Method": "ProductUpdate",
+    "RelativePath": "api/ProductReview/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dtoupdate",
+        "Type": "AgricultureProject.DTO.ProductReviewDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgricultureProject.Controllers.ProductReviewController",
+    "Method": "GetOne",
+    "RelativePath": "api/ProductReview/Onedata/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Mvc.ProblemDetails, Microsoft.AspNetCore.Http.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "AgricultureProject.Controllers.SellerController",
     "Method": "GetAll",
     "RelativePath": "api/Seller",

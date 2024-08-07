@@ -28,9 +28,9 @@ namespace AgricultureProject.AutoMapper
             CreateMap<WishListUpdate, WishlistDetails>().ReverseMap();
 
             CreateMap<OrderCreate, OrderDetails>().ReverseMap();
-            CreateMap<OrderUpdate, OrderDetails>().ReverseMap();    
+            CreateMap<OrderUpdate, OrderDetails>().ReverseMap();
 
-            
+            CreateMap<ProductReviewDto,ProductReviews>().ReverseMap();
 
         }
     }

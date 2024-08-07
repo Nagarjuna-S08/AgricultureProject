@@ -17,6 +17,8 @@ namespace AgricultureProject.AppDbContext
         public DbSet<CartDetails> CartTable { get; set; }
         public DbSet<WishlistDetails> WishlistTable { get; set;}
         public DbSet<OrderDetails> OrderTable { get; set; }
+        public DbSet<ProductReviews> ProductReviewsTable { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -65,6 +67,11 @@ namespace AgricultureProject.AppDbContext
                .WithMany()
                .HasForeignKey(wh => wh.Landid);
 
+
+            modelBuilder.Entity<ProductReviews>()
+              .HasOne(pr => pr.Seller)
+              .WithMany()
+              .HasForeignKey(pr=>pr.Sellerid);
 
             base.OnModelCreating(modelBuilder);
         }

@@ -1,0 +1,212 @@
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.csproj.AssemblyReference.cache
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.AssemblyInfoInputs.cache
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.AssemblyInfo.cs
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.csproj.CoreCompileInputs.cache
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.MvcApplicationPartsAssemblyInfo.cs
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.MvcApplicationPartsAssemblyInfo.cache
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\appsettings.Development.json
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\appsettings.json
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\AgricultureProject.exe
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\AgricultureProject.deps.json
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\AgricultureProject.runtimeconfig.json
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\AgricultureProject.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\AgricultureProject.pdb
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Humanizer.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Npgsql.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.CodeDom.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.Text.Json.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\staticwebassets.build.json
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\staticwebassets.development.json
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\staticwebassets\msbuild.AgricultureProject.Microsoft.AspNetCore.StaticWebAssets.props
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\staticwebassets\msbuild.build.AgricultureProject.props
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AgricultureProject.props
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AgricultureProject.props
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\staticwebassets.pack.json
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\scopedcss\bundle\AgricultureProject.styles.css
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\Agricult.8D2E5C53.Up2Date
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\refint\AgricultureProject.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.pdb
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.genruntimeconfig.cache
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\obj\Debug\net8.0\ref\AgricultureProject.dll
+C:\.Net Course Examples\AgricultureProject\AgricultureProject\bin\Debug\net8.0\AutoMapper.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\appsettings.Development.json
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\appsettings.json
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\AgricultureProject.exe
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\AgricultureProject.deps.json
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\AgricultureProject.runtimeconfig.json
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\AgricultureProject.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\AgricultureProject.pdb
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\AutoMapper.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Humanizer.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Npgsql.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.CodeDom.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.Text.Json.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.csproj.AssemblyReference.cache
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.AssemblyInfoInputs.cache
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.AssemblyInfo.cs
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.csproj.CoreCompileInputs.cache
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.MvcApplicationPartsAssemblyInfo.cs
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.MvcApplicationPartsAssemblyInfo.cache
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\staticwebassets.build.json
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\staticwebassets.development.json
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\staticwebassets\msbuild.AgricultureProject.Microsoft.AspNetCore.StaticWebAssets.props
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\staticwebassets\msbuild.build.AgricultureProject.props
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AgricultureProject.props
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AgricultureProject.props
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\staticwebassets.pack.json
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\scopedcss\bundle\AgricultureProject.styles.css
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\Agricult.8D2E5C53.Up2Date
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\refint\AgricultureProject.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.pdb
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.genruntimeconfig.cache
+C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\ref\AgricultureProject.dll

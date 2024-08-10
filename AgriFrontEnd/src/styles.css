@@ -1,0 +1,203 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins";
+}
+body{
+    width:98.7vw;
+    height: 100vh;
+    /* overflow-x:hidden; */
+}
+
+/*Main AMS CSS*/
+.AMSmain{
+    width: 100%;
+    height:fit-content;
+    /* position: relative; */
+    /* padding: 0px 0px; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}  
+
+.Backgroundimg{
+    width:100%;
+    height: fit-content;
+    /* border: 1px solid black; */
+}
+
+/*NavBar CSS*/
+.navBar{
+    position:fixed;
+    left:5%;
+    background-color: rgb(228, 228, 228);
+    height:60px;
+    width: 90%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 25px;
+}
+.navBar > a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size:16px;
+    font-weight: 650;
+}
+
+
+
+
+/*Home page CSS*/
+
+.HomePage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    margin-top: -120px;
+    padding: 5px 5px;
+}
+
+.section2home{
+    /* border: 1px solid blue; */
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.section2home > h3{
+    font-weight: 700;
+    width: 100%;
+    font-size: 30px;
+    /* font-size: larger; */
+    /* border: 1px solid ; */
+}
+
+.section2home > p{
+    width: 100%;
+    /* font-size: medium; */
+    font-size: larger;
+    font-weight: 450;
+    /* border: 1px solid ; */
+}
+
+.section2home > p::first-letter{
+    padding-left: 85px;
+}
+
+.section3home{
+    /* border: 1px solid ; */
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    /* flex-wrap: wrap; */
+}
+.featureheading{
+    font-size:20px;
+}
+.featureblocks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: 1px solid; */
+}
+
+.eachblock{
+    width:290px;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    /* border: 1px solid gray; */
+    margin-right: 20px;
+    margin-top: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.eachblockImg{
+    width: 280px;
+    height:179px;
+    margin-bottom: 15px;
+}
+
+.eachblockContent{
+    margin-top:6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.eachblockContent > h6{
+    font-size:16px;
+}
+.eachblockContent > p{
+    font-size: 14px;
+    word-break: break-all;
+    margin-top: 8px;
+}
+.eachblockContent > p::first-letter{
+    padding-left:1px;
+}
+
+.section4Home{
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    gap: 15px;
+    background-color:#2C8B18;
+}
+
+.Detailsdiv{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.detailpartsHeading{
+    display: flex;
+    /* border: 2px solid ; */
+    justify-content:flex-start;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.detailpartsHeading > img {
+    margin-right:14px;
+}
+
+.parastyle > p{
+    margin-bottom: 6px;
+}
+
+.section4Home > h3{
+    font-size: 23px;
+}
+/*End of th Home page*/
+
+
+/*CSS  For the FarmsLands*/
+
+/*End of the FarmsLands CSS*/

@@ -8,7 +8,7 @@
 body{
     width:98.7vw;
     height: 100vh;
-    /* overflow-x:hidden; */
+    overflow-x:hidden;
 }
 
 /*Main AMS CSS*/
@@ -40,6 +40,7 @@ body{
     align-items: center;
     border-radius: 20px;
     margin-top: 25px;
+    z-index: 3;
 }
 .navBar > a{
     text-decoration: none;
@@ -109,7 +110,7 @@ body{
 }
 .featureblocks{
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     flex-wrap: wrap;
     /* border: 1px solid; */
@@ -174,6 +175,7 @@ body{
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .detailpartsHeading{
@@ -195,9 +197,383 @@ body{
 .section4Home > h3{
     font-size: 23px;
 }
+
+.parastyle{
+    margin-bottom: 20px;
+}
 /*End of th Home page*/
 
 
 /*CSS  For the FarmsLands*/
+.Farmlands{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid; */
+}
 
+.frambackground{
+    width: 100%;
+    height: 300px;
+    background-image: url(assets/Images/landBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 80px;
+}
+
+.searchdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius:6px;
+    padding-right: 7px;
+    z-index: 0;
+    /* padding:0px 10px; */
+}
+
+.searchdiv > img{
+    width: 25px;
+}
+.searchdiv > input , .searchdiv > select{
+    height: 40px;
+    width:300px;
+    outline: none;
+    border: 0px;
+    background-color: transparent;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.farmlandsection2{
+    width: 100%;
+    /* border: 7px soild ; */
+    display: flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    gap: 10px;
+    padding: 5px 10px;
+    /* flex-direction: column; */
+    
+}
+
+.filtersection{
+    background-color: #E5E2E2;
+    border-radius: 10px;
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    padding-top: 20px;
+}
+
+.filterheading{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    /* border: 1px solid; */
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+.filterheading > h4{
+    height:30px;
+    font-size: 18px;
+}
+
+.clearAll{
+    height:30px;
+    width:110px;
+    /* padding: 5px 5px; */
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 0px 6px;
+    color:rgb(137, 235, 235);
+}
+.clearAll > img{
+    width:25px;
+    margin-left: 3px;
+}
+.filteroption{
+    width: 100%;
+    margin-top:45px;
+    margin-bottom: 15px;
+    background-color: white;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:flex-start;
+    gap: 15px;
+    border-radius: 8px;
+}
+
+.filteroption > input {
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.filteroption > .filtervalue{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.filtervalue >h4{
+    font-weight:500;
+}
+
+.filteroption > select{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    background-color: #E5E2E2;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.displaysection{
+    width: 68%;
+    /* border: 1px solid ; */
+    /* height:110vh; */
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap:10px;
+    flex-wrap: wrap;
+}
+
+.landdetaileach{
+  width:98%;
+  height: 350px;
+  border:1px solid black;  
+  border-radius: 10px;
+  overflow: hidden;
+  /* box-shadow: -1px 2px 2px 2px grey ; */
+  display: flex;
+  justify-content:flex-start;
+  /* align-items: center; */
+}
+
+.landdetaileach > img{
+    width:300px;
+    height:100%;
+}
+
+.aboudetails{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 10px 10px;
+    justify-content: center;
+    gap: 5px;
+    padding-top: 20px;
+}
+
+.aboudetails > p{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.aboudetails > .pricearea{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px auto;
+    justify-content:center;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 24px;
+}
+.ownerdetails{
+    font-size: 15px;
+    width: 100%;
+    /* border: 1px solid; */
+}
+.buttondiv{
+    padding-top: 10px;
+    display: flex;
+    width: 100%;
+    justify-content:flex-start;
+    gap: 10%;
+    align-items: center;
+}
+.button{
+    width:200px;
+    height:40px;
+    border:none;
+    outline: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.wishlist{
+    background-color:#005F88 ;
+}
+.Moredetails{
+    background-color: #199716;
+}
+
+.displaysection::-webkit-scrollbar,.sidebar::-webkit-scrollbar,.dashboard_container::-webkit-scrollbar{
+    width: 10px;
+    height: 8px;
+}
+/* .table_container_section2::-webkit-scrollbar-track:horizontal{
+    background-color:rgb(255, 255, 255);
+    border-radius: 20px;
+} */
+.displaysection::-webkit-scrollbar-thumb,.sidebar::-webkit-scrollbar-thumb,.dashboard_container::-webkit-scrollbar-thumb{
+    background-color:#bdbdbdc9;
+    border-radius: 40px;
+    min-width: 4px;
+    height:8px;
+    margin-bottom: 30px;
+}
 /*End of the FarmsLands CSS*/
+
+
+
+/*CSS FOR THE */
+.Feildtotable{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.FeildtoTableBackground{
+    width: 100%;
+    height: 300px;
+    background-image: url(assets/Images/feildtotablebackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: flex-end;
+    padding-bottom: 80px;   
+}
+
+.searchdiv{
+    position: relative;
+}
+.searchdiv >select {
+    padding-left: 40px;
+}
+.searchdiv > .filterimg{
+    position: absolute;
+    width:30px;
+    left: 2px;
+}
+
+.feildtotablesection2{
+    margin-top:30px;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+    gap:16px;
+}
+
+.eachProduct{
+    width: 350px;
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid ;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0px 0px;
+    gap: 8px;
+}
+.productimg{
+    width:350px;
+    min-height:200px;
+}
+
+.productTitle{
+    padding: 0px 10px;
+    width: 100%;
+    display: flex;
+    font-size: 18px;
+    justify-content: space-between;
+    /* padding: 0px 20px; */
+}
+
+.eachProduct > h5{
+    padding: 0px 10px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.eachProduct > p{
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.commentdiv{
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* border: 1px solid ; */
+}
+
+.commentdiv > a{
+    font-size: 13px;
+}
+
+.commentdivinner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* border:2px solid blue; */
+}
+.quantitydiv{
+    display: flex;
+    width: 100%;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.quantitydiv > select{
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #66af65;
+    font-size: 15px;
+    border: 2px solid rgb(0, 182, 76);
+}
+
+.quantitydiv > select > option{
+    background-color: rgb(226, 226, 226);
+    color: black;
+}
+
+.cartbutton{
+    font-size:18px;
+    background-color: #199716;
+}
+/*FeildToTable*/

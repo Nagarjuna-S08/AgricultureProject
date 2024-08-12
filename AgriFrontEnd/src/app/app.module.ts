@@ -7,6 +7,7 @@ import { AMSComponent } from './ams/ams.component';
 import { HomeComponent } from './ams/home/home.component';
 import { NavBarComponent } from './ams/nav-bar/nav-bar.component';
 import { FarmLandsComponent } from './ams/farm-lands/farm-lands.component';
+import { FeildToTableComponent } from './ams/feild-to-table/feild-to-table.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FarmLandsComponent } from './ams/farm-lands/farm-lands.component';
     AMSComponent,
     HomeComponent,
     NavBarComponent,
-    FarmLandsComponent
+    FarmLandsComponent,
+    FeildToTableComponent
   ],
   imports: [
     BrowserModule,

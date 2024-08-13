@@ -8,6 +8,8 @@ import { HomeComponent } from './ams/home/home.component';
 import { NavBarComponent } from './ams/nav-bar/nav-bar.component';
 import { FarmLandsComponent } from './ams/farm-lands/farm-lands.component';
 import { FeildToTableComponent } from './ams/feild-to-table/feild-to-table.component';
+import { SellMyProductComponent } from './ams/sell-my-product/sell-my-product.component';
+import { SellMyLandComponent } from './ams/sell-my-land/sell-my-land.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FeildToTableComponent } from './ams/feild-to-table/feild-to-table.compo
     HomeComponent,
     NavBarComponent,
     FarmLandsComponent,
-    FeildToTableComponent
+    FeildToTableComponent,
+    SellMyProductComponent,
+    SellMyLandComponent
   ],
   imports: [
     BrowserModule,

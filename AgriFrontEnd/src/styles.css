@@ -251,12 +251,14 @@ body{
 
 .farmlandsection2{
     width: 100%;
+   
     /* border: 7px soild ; */
     display: flex;
     justify-content:flex-start;
     align-items:flex-start;
     gap: 10px;
     padding: 5px 10px;
+    /* height:100vh; */
     /* flex-direction: column; */
     
 }
@@ -271,6 +273,7 @@ body{
     align-items: center;
     padding: 5px 15px;
     padding-top: 20px;
+    /* min-height: 100%; */
 }
 
 .filterheading{
@@ -577,3 +580,160 @@ body{
     background-color: #199716;
 }
 /*FeildToTable*/
+
+
+/*CSS FOR SELL MY PRODUCTS*/
+.sellmyproducts{
+    width:100%;
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    padding-top: 80px;
+    background-color: #B6FBB5;
+}
+
+.sellmyproductsSection1{
+    margin-top:50px;
+    display: flex;
+    width: 100%;
+    /* border: 1px solid; */
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+/* .sellmyproductsSection1 > img{
+    width: 45%;
+} */
+.sellmyproductsSection1 > .formdiv{
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:55px 70px;
+    /* padding-bottom:50px; */
+    gap: 35px;
+    background-color: white;
+    border-radius: 10px;
+}
+.formdiv > h4{
+    font-size: 20px;
+}
+.formdiv > form {
+    display: flex;
+    /* border: 1px solid; */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap:20px;
+} 
+
+.inputdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* border: 1px solid black; */
+}
+.inputdiv > label{
+    font-size: 15px;
+    font-weight:500;
+}
+.inputdiv >input{
+    width: 500px;
+    height:55px;
+    border:1px solid rgb(213, 212, 212);
+    outline: none;
+    border-radius: 10px;
+    font-size: 18px;
+    padding-left: 15px;
+}
+.inputdiv > input[type="file"]{
+    display: none;
+}
+
+.inputdiv > label[for="file"]{
+    font-size:20px;
+    margin-top: 10px;
+    color: white;
+    padding:5px 15px;
+    background-color: #4ad68e;
+    border-radius:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.inputdiv > label[for="file"] > img{
+    width:45px;
+}
+
+.add{
+    height:45px;
+    width:150px;
+    background-color: #199716;
+}
+.clear{
+    height: 45px;
+    background-color:red;
+    width: 150px;
+}
+.delete,.edit{
+    font-size: 16px;
+    height: 35px;
+    border-radius: 5px;
+    width: 100px;
+    background-color: #199716;
+}
+.delete{
+    background-color: red;
+}
+.sellmyproductsSection2{
+    margin-top: 30px;
+    padding: 10px 10px;
+    display: flex;
+    /* border: 1px solid ; */
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    gap:20px;
+}
+
+.editmyproduct{
+    width: 100%;
+    display: flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    gap:10px;
+   /* border: 1px solid; */
+}
+
+.editmyproductEach{
+    margin-top: 15px;
+    background-color: white;
+    border: none;
+}
+/*END CSS*/
+
+/*CSS FOR THE SELL MY LAND*/
+.editmyLandEach{
+    width:800px;
+    border: 1px solid transparent;
+    background-color: white;
+    /* height: fit-content; */
+}
+
+.editmyLandEach > img{
+    height: 100%;
+    /* border: 1px solid; */
+}
+
+.editmyland{
+    display: flex;
+    justify-content: flex-start;
+}
+/*END OF CSS FOR THE SELL MY LAND*/

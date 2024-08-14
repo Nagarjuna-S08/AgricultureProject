@@ -10,6 +10,9 @@ import { FarmLandsComponent } from './ams/farm-lands/farm-lands.component';
 import { FeildToTableComponent } from './ams/feild-to-table/feild-to-table.component';
 import { SellMyProductComponent } from './ams/sell-my-product/sell-my-product.component';
 import { SellMyLandComponent } from './ams/sell-my-land/sell-my-land.component';
+import { OrderTrackingComponent } from './ams/order-tracking/order-tracking.component';
+import { OrderTrackingIncomingComponent } from './ams/order-tracking/order-tracking-incoming/order-tracking-incoming.component';
+import { OrderTrackingTakenComponent } from './ams/order-tracking/order-tracking-taken/order-tracking-taken.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { SellMyLandComponent } from './ams/sell-my-land/sell-my-land.component';
     FarmLandsComponent,
     FeildToTableComponent,
     SellMyProductComponent,
-    SellMyLandComponent
+    SellMyLandComponent,
+    OrderTrackingComponent,
+    OrderTrackingIncomingComponent,
+    OrderTrackingTakenComponent
   ],
   imports: [
     BrowserModule,

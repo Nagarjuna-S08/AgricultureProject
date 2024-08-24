@@ -254,12 +254,13 @@ body{
    
     /* border: 7px soild ; */
     display: flex;
-    justify-content:flex-start;
-    align-items:flex-start;
+    /* justify-content:flex-start;
+    align-items:flex-start; */
     gap: 10px;
     padding: 5px 10px;
     /* height:100vh; */
     /* flex-direction: column; */
+    justify-content: center;
     
 }
 
@@ -269,8 +270,8 @@ body{
     width:30%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     padding: 5px 15px;
     padding-top: 20px;
     /* min-height: 100%; */
@@ -777,7 +778,6 @@ body{
 .orderTrackingsection2{
     width: 100%;
     height: fit-content;
-    border: 1px solid;
 }
 
 
@@ -789,4 +789,95 @@ body{
     gap:30px;
 }
 
+.incomingOrder .order-search {
+   margin: 20px 20px 0;
+}
+
+.incomingOrder .orders {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 0 20px;
+}
+
+.order-details {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 48%;
+}
+
+.order-details .items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.order-details .items a{
+    text-decoration: none;
+    color: blue;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.order-details .customer-details,
+.order-details .items-details{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.order-details .customer-details address {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    border-bottom: 5px solid grey;
+    padding-bottom: 10px;
+    word-spacing: 3px;
+}
+
+.order-details .items-details {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.taken-details ,
+.taken-details table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.taken-details table tr th {
+    font-size: 20px;
+    color: #012c3f;
+    padding: 10px 0;
+}
+
+.taken-details table tr td {
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.taken-details table thead:nth-child(1) {
+    background: white;
+    border: none;
+}
+
+.taken-details table tbody tr {
+    background-color: #012c3f;
+    
+}
+
+.taken-details table tbody tr td {
+    padding: 15px 0;
+    color: white;
+    border: 2px solid white;
+}
 /*END of the CSS*/

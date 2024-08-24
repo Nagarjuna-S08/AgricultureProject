@@ -136,7 +136,6 @@ C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Sys
 C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.Composition.Hosting.dll
 C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.Composition.TypedParts.dll
-C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.Text.Json.dll
 C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll

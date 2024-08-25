@@ -13,6 +13,10 @@ import { SellMyLandComponent } from './ams/sell-my-land/sell-my-land.component';
 import { OrderTrackingComponent } from './ams/order-tracking/order-tracking.component';
 import { OrderTrackingIncomingComponent } from './ams/order-tracking/order-tracking-incoming/order-tracking-incoming.component';
 import { OrderTrackingTakenComponent } from './ams/order-tracking/order-tracking-taken/order-tracking-taken.component';
+import { ProfileComponent } from './ams/profile/profile.component';
+import { ProfileWishlistComponent } from './ams/profile/profile-wishlist/profile-wishlist.component';
+import { ProfileCartComponent } from './ams/profile/profile-cart/profile-cart.component';
+import { ProfileOrdersComponent } from './ams/profile/profile-orders/profile-orders.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { OrderTrackingTakenComponent } from './ams/order-tracking/order-tracking
     SellMyLandComponent,
     OrderTrackingComponent,
     OrderTrackingIncomingComponent,
-    OrderTrackingTakenComponent
+    OrderTrackingTakenComponent,
+    ProfileComponent,
+    ProfileWishlistComponent,
+    ProfileCartComponent,
+    ProfileOrdersComponent
   ],
   imports: [
     BrowserModule,

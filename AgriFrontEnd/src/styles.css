@@ -871,13 +871,166 @@ body{
 }
 
 .taken-details table tbody tr {
-    background-color: #012c3f;
+    background-color: #023e3b;
     
 }
 
 .taken-details table tbody tr td {
     padding: 15px 0;
     color: white;
-    border: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.shiped-detail{
+    width:120px;
+    height: 35px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size:medium;
+    font-weight:650;
 }
 /*END of the CSS*/
+
+
+/*CSS FOR THE PROFILE*/
+.user-profile{
+    /* border: 2px solid ; */
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color:#B6FBB5;
+    min-height:100vh;
+    max-height: fit-content;
+
+}
+
+.user-details{
+    margin-top:120px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    gap: 30px;
+}
+.user-details > h3{
+    font-size: 26px;
+    color: #384D6C;
+    padding-bottom: 8px;
+    width: fit-content;
+    border-bottom:2px solid #D0D0D0;
+    margin-left: 20px;
+}
+.user-details .profile-contorls{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    gap: 40px;
+    /* border: 1px solid; */
+}
+.user-details .profile-contorls .profile-image-div{
+    
+    font-size: medium;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:8px;
+   /* background-color: #012c3f; */
+}
+
+.profile-image-div > img{
+    width: 200px;
+    height: 200px;
+    background-color:white;
+    border: 6px solid gray;
+    border-radius: 50%;
+}
+
+.profile-image-div > .user_info{
+    font-size:20px;
+    width:250px;
+}
+
+.user-details .profile-contorls > button{
+    width: 220px;
+    height:60px;
+    font-size:18px;
+    font-weight: 700;
+    /* margin-left: 40px; */
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+
+.eidt-but{
+    background-color: #384D6C;
+    color: white;
+}
+.update-but,.remove-but{
+    color: #384D6C;
+}
+/* 
+.profile-inputs{
+    border: 1px solid;
+} */
+
+.profile-inputs > form{
+    /* border: 1px solid ; */
+    display: flex;
+    justify-content:center;
+    /* align-items:center; */
+    flex-wrap: wrap;
+    gap:20px;
+}
+.width-half{
+    width: 40%;
+    /* border: 1px solid; */
+}
+.width-half > input{
+    width: 100%;
+}
+
+.width-full{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* border: 1px solid; */
+
+}
+.width-full >input{
+    width:100%;
+}
+
+.width-full >label,.width-half>label{
+    color: #384D6C;
+    font-size: 16px;
+}
+
+.routesection-profile{
+    width: 100%;
+    /* border: 1px solid; */
+    padding: 10px ;
+}
+
+.profile-navigation > a{
+    padding: 0px 50px 0px 50px;
+}
+
+
+/*END OF THE CSS FOR PROFILE*/
+
+/*Wishlist CSS*/
+.profile-wishlist{
+    /* border: 1px solid; */
+    display: flex;
+    /* align-items: center; */
+    height: fit-content;
+    margin-top:30px;
+    width: 95%;
+    justify-content: flex-end;
+}
+/*END WISHLIST*/

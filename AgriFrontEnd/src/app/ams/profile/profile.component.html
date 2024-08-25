@@ -1,0 +1,48 @@
+
+<div class="user-profile">
+    <div class="user-details">
+        <h3>User Profile</h3>
+        <div class="profile-contorls">
+            <div class="profile-image-div">
+                <img src="" alt="">
+                <div class="user_info">
+                    <h4>Nagarjuna.s</h4>
+                    <address>76/14 Bharatrhiyar main road,S.S>Colony,Madurai-16</address>
+                </div>
+            </div>
+            <button class="eidt-but">
+                Edit Profile
+            </button>
+            <button class="update-but">
+                Update profile DP
+            </button>
+            <button class="remove-but">
+                Remove Profile DP
+            </button>
+        </div>
+        <div class="profile-inputs">
+            <form action="">
+                <div class="inputdiv width-half">
+                    <label for="">First Name</label>
+                    <input type="text">
+                </div>
+                <div class="inputdiv width-half">
+                    <label for="">Last Name</label>
+                    <input type="text">
+                </div>
+                <div class="inputdiv width-full">
+                    <label for="">UserName</label>
+                    <input type="text">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="routesection-profile">
+        <div class="orderstrackingnavbar profile-navigation">
+            <a routerLink="/AMS/Profile/WishList">WishList</a>
+            <a routerLink="/AMS/Profile/Cart">Cart</a>
+            <a routerLink="/AMS/Profile/Orders">Orders</a>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+</div>

@@ -32,6 +32,7 @@ namespace AgricultureProject.Services
             result.rating = product.rating;
             result.Comments = product.Comments;
             result.Sellerid = product.Sellerid;
+            result.buyerid = product.buyerid;   
             result.AlreadyGiven = product.AlreadyGiven;
     
             _connection.ProductReviewsTable.Update(result);

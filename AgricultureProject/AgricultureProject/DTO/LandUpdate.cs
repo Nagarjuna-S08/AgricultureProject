@@ -3,7 +3,7 @@
     public class LandUpdate
     {
         public int Id { get; set; }
-        public int Sellerid { get; set; }
+        //public int Sellerid { get; set; }
         public string Ownername { get; set; }
         public double Landarea { get; set; }
         public double Landprice { get; set; }

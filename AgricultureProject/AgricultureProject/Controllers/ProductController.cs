@@ -120,6 +120,18 @@ namespace AgricultureProject.Controllers
         }
 
 
+        [HttpPut("ImageUpload/{productId:int}")]
+        public async Task<ActionResult> FileUpload(IFormFile source, int productId)
+        {
+            var link = await _productService.FileUpload(source);
+            fileuploadDto ld = new fileuploadDto()
+            {
+                Landphoto1 = link
+            };
+            await _productService.updateFile(ld, productId);
+            return Ok(new { Message = "Successfully added", Link = link });
+        }
+
 
     }
 }

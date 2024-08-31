@@ -11,7 +11,8 @@ namespace AgricultureProject.DTO
         public double AmountperKG { get; set; }
         public string Harvesteddate { get; set; }
         public string Updateddate { get; set; }
-        //public byte[] Productimage { get; set; }
+
+        public string Productimage { get; set; }
 
     }
 }

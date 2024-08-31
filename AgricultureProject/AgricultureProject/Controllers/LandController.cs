@@ -57,14 +57,14 @@ namespace AgricultureProject.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> CreateProduct(LandCreate Land)
+        public async Task<ActionResult<int>> CreateProduct(LandCreate Land)
         {
             if (Land == null)
             {
-                return BadRequest();
+                return BadRequest(-1);
             }
-            await _landService.ProductCreate(Land);
-            return Ok("Added Successfully");
+            int id = await _landService.ProductCreate(Land);
+            return Ok(id);
         }
 
 
@@ -107,6 +107,19 @@ namespace AgricultureProject.Controllers
             return Ok(result);
         }
 
+
+
+        [HttpPut("ImageUpload/{landid:int}")]
+        public async Task<ActionResult> FileUpload(IFormFile source, int landid)
+        {
+            var link =await  _landService.FileUpload(source);
+            fileuploadDto ld = new fileuploadDto()
+            {
+                Landphoto1 = link
+            };
+            await _landService.updateFile(ld, landid);
+            return Ok(new { Message = "Successfully added", Link = link });
+        }
 
     }
 }

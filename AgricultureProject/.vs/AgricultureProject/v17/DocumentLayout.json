@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\AgricultureProject\\AgricultureProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|c:\\agricultureproject\\agricultureproject\\agricultureproject\\migrations\\20240807132255_initial5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|solutionrelative:agricultureproject\\migrations\\20240807132255_initial5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|c:\\agricultureproject\\agricultureproject\\agricultureproject\\controllers\\productreviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|solutionrelative:agricultureproject\\controllers\\productreviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|c:\\agricultureproject\\agricultureproject\\agricultureproject\\services\\productreviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|solutionrelative:agricultureproject\\services\\productreviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,12 +11,16 @@
       "RelativeMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|solutionrelative:agricultureproject\\services\\iservices\\iproductreviews.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|c:\\agricultureproject\\agricultureproject\\agricultureproject\\services\\iservices\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|solutionrelative:agricultureproject\\services\\iservices\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|c:\\agricultureproject\\agricultureproject\\agricultureproject\\controllers\\productreviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|solutionrelative:agricultureproject\\controllers\\productreviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|c:\\agricultureproject\\agricultureproject\\agricultureproject\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|solutionrelative:agricultureproject\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|c:\\agricultureproject\\agricultureproject\\agricultureproject\\dto\\productreviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|solutionrelative:agricultureproject\\dto\\productreviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|c:\\agricultureproject\\agricultureproject\\agricultureproject\\model\\productreviews.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50ED0CCD-E6A7-431B-B54D-5432E32670C5}|AgricultureProject\\AgricultureProject.csproj|solutionrelative:agricultureproject\\model\\productreviews.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,40 +30,39 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20240807132255_initial5.cs",
-              "DocumentMoniker": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\Migrations\\20240807132255_initial5.cs",
-              "RelativeDocumentMoniker": "AgricultureProject\\Migrations\\20240807132255_initial5.cs",
-              "ToolTip": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\Migrations\\20240807132255_initial5.cs",
-              "RelativeToolTip": "AgricultureProject\\Migrations\\20240807132255_initial5.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAUAAAA",
+              "DocumentIndex": 2,
+              "Title": "ProductReviewController.cs",
+              "DocumentMoniker": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\Controllers\\ProductReviewController.cs",
+              "RelativeDocumentMoniker": "AgricultureProject\\Controllers\\ProductReviewController.cs",
+              "ToolTip": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\Controllers\\ProductReviewController.cs",
+              "RelativeToolTip": "AgricultureProject\\Controllers\\ProductReviewController.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAIwAsAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T13:22:56.16Z",
+              "WhenOpened": "2024-08-31T06:10:53.455Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IproductService.cs",
-              "DocumentMoniker": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\Services\\IServices\\IproductService.cs",
-              "RelativeDocumentMoniker": "AgricultureProject\\Services\\IServices\\IproductService.cs",
-              "ToolTip": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\Services\\IServices\\IproductService.cs",
-              "RelativeToolTip": "AgricultureProject\\Services\\IServices\\IproductService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAbAAAA",
+              "DocumentIndex": 3,
+              "Title": "ProductReviewDto.cs",
+              "DocumentMoniker": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\DTO\\ProductReviewDto.cs",
+              "RelativeDocumentMoniker": "AgricultureProject\\DTO\\ProductReviewDto.cs",
+              "ToolTip": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\DTO\\ProductReviewDto.cs",
+              "RelativeToolTip": "AgricultureProject\\DTO\\ProductReviewDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T13:05:18.379Z"
+              "WhenOpened": "2024-08-31T06:11:51.669Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "IProductReviews.cs",
               "DocumentMoniker": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\Services\\IServices\\IProductReviews.cs",
               "RelativeDocumentMoniker": "AgricultureProject\\Services\\IServices\\IProductReviews.cs",
@@ -75,43 +70,37 @@
               "RelativeToolTip": "AgricultureProject\\Services\\IServices\\IProductReviews.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T13:05:15.239Z"
+              "WhenOpened": "2024-08-31T06:13:05.383Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "AgricultureProject\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "AgricultureProject\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAAAHcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T13:01:27.859Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductReviewController.cs",
-              "DocumentMoniker": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\Controllers\\ProductReviewController.cs",
-              "RelativeDocumentMoniker": "AgricultureProject\\Controllers\\ProductReviewController.cs",
-              "ToolTip": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\Controllers\\ProductReviewController.cs",
-              "RelativeToolTip": "AgricultureProject\\Controllers\\ProductReviewController.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAgwGYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T13:01:18.662Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ProductReviewService.cs",
               "DocumentMoniker": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\Services\\ProductReviewService.cs",
               "RelativeDocumentMoniker": "AgricultureProject\\Services\\ProductReviewService.cs",
               "ToolTip": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\Services\\ProductReviewService.cs",
               "RelativeToolTip": "AgricultureProject\\Services\\ProductReviewService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAA3AAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowCsAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T12:04:26.486Z"
+              "WhenOpened": "2024-08-31T06:13:13.852Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductReviews.cs",
+              "DocumentMoniker": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\Model\\ProductReviews.cs",
+              "RelativeDocumentMoniker": "AgricultureProject\\Model\\ProductReviews.cs",
+              "ToolTip": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\Model\\ProductReviews.cs",
+              "RelativeToolTip": "AgricultureProject\\Model\\ProductReviews.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T06:16:00.305Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             }
           ]
         }

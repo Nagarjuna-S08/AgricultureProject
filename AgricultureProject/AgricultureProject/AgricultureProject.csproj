@@ -17,4 +17,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\LandsPhotos\" />
+    <Folder Include="wwwroot\ProductPhotos\" />
+  </ItemGroup>
+
 </Project>

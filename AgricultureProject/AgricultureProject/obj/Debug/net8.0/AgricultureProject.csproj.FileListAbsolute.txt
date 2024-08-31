@@ -210,3 +210,4 @@ C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\Agr
 C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.genruntimeconfig.cache
 C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\ref\AgricultureProject.dll
 C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.sourcelink.json
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\AgricultureProject.staticwebassets.runtime.json

@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\LandsPhotos\\032fcb02-c00c-4f41-b548-f9ec77ac62c6.png",
+      "PackagePath": "staticwebassets\\LandsPhotos\\032fcb02-c00c-4f41-b548-f9ec77ac62c6.png"
+    },
+    {
+      "Id": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\LandsPhotos\\05332c22-dc2c-41c6-9f75-d66e69839c85.png",
+      "PackagePath": "staticwebassets\\LandsPhotos\\05332c22-dc2c-41c6-9f75-d66e69839c85.png"
+    },
+    {
+      "Id": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\LandsPhotos\\4c11dace-79ff-4dad-bd84-684cfa6f6d3f.png",
+      "PackagePath": "staticwebassets\\LandsPhotos\\4c11dace-79ff-4dad-bd84-684cfa6f6d3f.png"
+    },
+    {
+      "Id": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\LandsPhotos\\84a427ef-22ac-4763-8b75-ba784a728738.png",
+      "PackagePath": "staticwebassets\\LandsPhotos\\84a427ef-22ac-4763-8b75-ba784a728738.png"
+    },
+    {
+      "Id": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\LandsPhotos\\8cc9c4e8-7aae-4173-8720-ec363856a1f8.png",
+      "PackagePath": "staticwebassets\\LandsPhotos\\8cc9c4e8-7aae-4173-8720-ec363856a1f8.png"
+    },
+    {
+      "Id": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\LandsPhotos\\ba05bc35-88d8-458b-ac32-a120a1809b01.png",
+      "PackagePath": "staticwebassets\\LandsPhotos\\ba05bc35-88d8-458b-ac32-a120a1809b01.png"
+    },
+    {
+      "Id": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\LandsPhotos\\ff1a570f-826b-4f18-a08c-c22b5c341367.png",
+      "PackagePath": "staticwebassets\\LandsPhotos\\ff1a570f-826b-4f18-a08c-c22b5c341367.png"
+    },
+    {
+      "Id": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\ProductPhotos\\e8da8500-7261-48fd-b82e-c375767868ee.png",
+      "PackagePath": "staticwebassets\\ProductPhotos\\e8da8500-7261-48fd-b82e-c375767868ee.png"
+    },
+    {
+      "Id": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\ProductPhotos\\f6d7045c-cc81-4921-81e0-98f84c996b87.png",
+      "PackagePath": "staticwebassets\\ProductPhotos\\f6d7045c-cc81-4921-81e0-98f84c996b87.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AgricultureProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.AgricultureProject.props",
+      "PackagePath": "build\\AgricultureProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.AgricultureProject.props",
+      "PackagePath": "buildMultiTargeting\\AgricultureProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.AgricultureProject.props",
+      "PackagePath": "buildTransitive\\AgricultureProject.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

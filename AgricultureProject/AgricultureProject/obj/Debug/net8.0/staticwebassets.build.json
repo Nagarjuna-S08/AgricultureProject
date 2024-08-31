@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "SKvvUYpbO9EDjVHea/FxbTGKXk3dsogSg3s3AsMH5M8=",
+  "Hash": "pDyT2JLeJDdx2MnNwm5VzBdhzXnUbgeXBE2mGjJ96xk=",
   "Source": "AgricultureProject",
   "BasePath": "_content/AgricultureProject",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "AgricultureProject\\wwwroot",
+      "Source": "AgricultureProject",
+      "ContentRoot": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\",
+      "BasePath": "_content/AgricultureProject",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

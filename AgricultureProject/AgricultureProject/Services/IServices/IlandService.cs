@@ -6,8 +6,12 @@ namespace AgricultureProject.Services.IServices
 {
     public interface IlandService
     {
-        Task ProductCreate(LandCreate product);
+        Task<int> ProductCreate(LandCreate product);
         Task Update(LandUpdate product, int Id);
+
+        Task<string> FileUpload(IFormFile file);
+
+        Task updateFile(fileuploadDto  fileuploadDto, int Id);
         Task SaveChanges();
     }
 }

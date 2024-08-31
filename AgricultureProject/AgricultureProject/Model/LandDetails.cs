@@ -15,12 +15,7 @@ namespace AgricultureProject.Model
         public double Landprice { get; set; }
         public string Landaddress{get; set;}
         public string Updateddate {  get; set; }
-        public byte[] LAndphoto1 { get; set; }
-        public byte[] LAndphoto2 { get; set; }
-        public byte[] LAndphoto3 { get; set; }
-        public byte[] LAndphoto4 { get; set; }
-        public byte[] LAndphoto5 { get; set; }
-
+        public string Landphoto1 { get; set; }
 
     }
 }

@@ -13,11 +13,14 @@ namespace AgricultureProject.Services
     {
         private readonly DbConnection _connection;
         private readonly IMapper _mapper;
+        private readonly IWebHostEnvironment _environment;
 
-        public ProductService(DbConnection con,IMapper map)
+        public ProductService(DbConnection con,IMapper map, IWebHostEnvironment environment)
         {
-            _connection=con;
+            _connection = con;
             _mapper = map;
+            _environment = environment;
+
         }
 
         public async Task ProductCreate(ProductCreate product)
@@ -48,6 +51,60 @@ namespace AgricultureProject.Services
 
 
 
+        private string GetFilePath(string filename)
+        {
+
+            return System.IO.Path.Combine(this._environment.WebRootPath, "ProductPhotos", filename);
+        }
+
+        public async Task<string> FileUpload(IFormFile source)
+        {
+            string imageUrlForLink = "";
+            try
+            {
+                if (source != null && source.Length > 0)
+                {
+                    // Generate unique file name
+                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(source.FileName);
+
+                    // Get the path for saving the file
+                    string filePath = GetFilePath(fileName);
+
+                    // Ensure the directory exists
+                    string directory = Path.GetDirectoryName(filePath);
+                    if (!Directory.Exists(directory))
+                    {
+                        Directory.CreateDirectory(directory);
+                    }
+
+                    // Save the file
+                    using (FileStream stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await source.CopyToAsync(stream);
+                    }
+
+                    // Construct the relative URL for the image
+                    imageUrlForLink = $"https://localhost:7218/ProductPhotos/{fileName}";
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                return "Can't upload the file";
+            }
+
+            return imageUrlForLink;
+        }
+
+
+
+        public async Task updateFile(fileuploadDto fileuploadDto, int Id)
+        {
+            var result = await _connection.ProductTable.FindAsync(Id);
+            result.Productimage = fileuploadDto.Landphoto1;
+            _connection.ProductTable.Update(result);
+            await SaveChanges();
+        }
 
 
         //public async Task<List<ProductCreate>> GetAllAsyn(Expression<Func<ProductDetails, bool>> filter = null)

@@ -17,6 +17,8 @@ import { ProfileComponent } from './ams/profile/profile.component';
 import { ProfileWishlistComponent } from './ams/profile/profile-wishlist/profile-wishlist.component';
 import { ProfileCartComponent } from './ams/profile/profile-cart/profile-cart.component';
 import { ProfileOrdersComponent } from './ams/profile/profile-orders/profile-orders.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { ProfileOrdersComponent } from './ams/profile/profile-orders/profile-ord
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,6 +7,7 @@
 }
 body{
     width:98.7vw;
+    width:99vw;
     height: 100vh;
     overflow-x:hidden;
 }
@@ -33,7 +34,7 @@ body{
     position:fixed;
     left:5%;
     background-color: rgb(228, 228, 228);
-    height:60px;
+    height:80px;
     width: 90%;
     display: flex;
     justify-content:space-evenly;
@@ -45,7 +46,7 @@ body{
 .navBar > a{
     text-decoration: none;
     color: rgb(0, 0, 0);
-    font-size:16px;
+    font-size:20px;
     font-weight: 650;
 }
 
@@ -256,11 +257,13 @@ body{
     display: flex;
     /* justify-content:flex-start;
     align-items:flex-start; */
+    
+    /* align-items: center; */
     gap: 10px;
-    padding: 5px 10px;
+    padding-top: 30px;
     /* height:100vh; */
     /* flex-direction: column; */
-    justify-content: center;
+    justify-content:space-around;
     
 }
 
@@ -492,6 +495,7 @@ body{
     flex-wrap: wrap;
     padding: 10px 10px;
     gap:16px;
+    /* border: 1px solid ; */
 }
 
 .eachProduct{
@@ -506,6 +510,8 @@ body{
     overflow: hidden;
     padding: 0px 0px;
     gap: 8px;
+    margin-top:10px;
+    margin-left:30px;
 }
 .productimg{
     width:350px;
@@ -828,7 +834,7 @@ body{
 .order-details .items-details{
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 10px;
     font-size: 12px;
 }
@@ -1192,4 +1198,47 @@ img[alt="Delete"]{
     cursor: pointer;
 }
 /*Ends of cart css*/
+
+
+
+
+/*Funtionaity CSS for the  NAVBAR */
+a.colorChange{
+    color: #199716;
+    /* font-size: 89px; */
+    /* background-color: #012c3f; */
+}
+/*Funtionaity CSS for the  NAVBAR ENDING*/
+
+/*Design Changes CSS*/
+.searchdiv{
+    width:500px;
+    height:60px;
+    display: flex;
+    justify-content: space-between;
+}
+.searchdiv > input,.searchdiv > select{
+    font-size: 20px;
+    width: 100%;
+}
+
+button,select{
+    cursor: pointer;
+}
+/*ENDING OF THE CSS*/
+
+
+
+/*Validation CSS START */
+.inputdiv >input:focus{
+   border: 2px solid rgb(125, 214, 255);
+}
+input.ng-invalid.ng-touched , select.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+input.ng-invalid.ng-touched ::placeholder{
+    color: red;
+}
+/*Validation CSS END*/
 

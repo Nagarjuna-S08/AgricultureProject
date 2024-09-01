@@ -3,30 +3,30 @@
         <img src="assets/Images/sellMyProduct.png" alt="">
         <div class="formdiv">
             <h4>Sell Your Products</h4>
-            <form action="">
+            <form action="" [formGroup]="ProductForm">
                 <div class="inputdiv">
                     <label for="Productname">Product Name</label>
-                    <input type="text" id="Productname" placeholder="Enter Name">
+                    <input type="text" id="Productname" placeholder="Enter Name" formControlName="ProductName">
                 </div>
                 <div class="inputdiv">
                     <label for="Totalstock">Total Stock</label>
-                    <input type="text" id="Totalstock" placeholder="Enter Stock in KG">
+                    <input type="text" id="Totalstock" placeholder="Enter Stock in KG" formControlName="TotalStock">
                 </div>
                 <div class="inputdiv">
                     <label for="Harvesteddate">Harvested Date</label>
-                    <input type="text" id="Harvesteddate" placeholder="Enter Harvested Date">
+                    <input type="date" id="Harvesteddate" placeholder="Enter Harvested Date" formControlName="HarvestedDate">
                 </div>
                 <div class="inputdiv">
                     <label for="Priceperkg">Price Per KG</label>
-                    <input type="text" id="Priceperkg" placeholder="Enter Per KG Amount">
+                    <input type="text" id="Priceperkg" placeholder="Enter Per KG Amount" formControlName="PricePerKg">
                 </div>
                 <div class="inputdiv fileinput">
                     <label for="file">Upload Product Photo<img src="assets/Images/fileuploadwhite.png" alt=""></label>
                     <input type="file" id="file">
                 </div>
                 <div class="buttondiv">
-                    <button class="button add">Add</button>
-                    <button class="button clear">Clear</button>
+                    <button class="button add" type="submit">Add</button>
+                    <button class="button clear" type="submit">Clear</button>
                 </div>
             </form>
         </div>

@@ -2,30 +2,30 @@
     <div class="sellmyproductsSection1">
         <div class="formdiv">
             <h4>Sell Your Land</h4>
-            <form action="">
+            <form action="" [formGroup]="LandForm" (submit)="SubmitForm()">
                 <div class="inputdiv">
                     <label for="LandArea">Land Area</label>
-                    <input type="text" id="LandArea" placeholder="Enter Area in Sq.ft">
+                    <input type="text" id="LandArea" placeholder="Enter Area in Sq.ft" formControlName="LandArea">
                 </div>
                 <div class="inputdiv">
                     <label for="LandPrice">Land Price</label>
-                    <input type="text" id="LandPrice" placeholder="Enter Amount in Lakhs">
+                    <input type="text" id="LandPrice" placeholder="Enter Amount in Lakhs" formControlName="LandPrice">
                 </div>
                 <div class="inputdiv">
                     <label for="LandAddress">Land Address</label>
-                    <input type="text" id="LandAddress" placeholder="Enter Address of the Land">
+                    <input type="text" id="LandAddress" placeholder="Enter Address of the Land" formControlName="LandAddress">
                 </div>
                 <div class="inputdiv">
-                    <label for="LandHolderName">Land Holder Name</label>
-                    <input type="text" id="LandHolderName" placeholder="Enter Owner Name">
+                    <label for="LandOwnerName">Land Owner Name</label>
+                    <input type="text" id="LandOwnerName" placeholder="Enter Owner Name" formControlName="LandOwnername">
                 </div>
                 <div class="inputdiv fileinput">
                     <label for="file">Upload Land Photos<img src="assets/Images/fileuploadwhite.png" alt=""></label>
-                    <input type="file" id="file">
+                    <input type="file" id="file" (change)="FileChange($event)">
                 </div>
                 <div class="buttondiv">
-                    <button class="button add">Add</button>
-                    <button class="button clear">Clear</button>
+                    <button class="button add" type="submit">Add</button>
+                    <button class="button clear" type="button">Clear</button>
                 </div>
             </form>
         </div>

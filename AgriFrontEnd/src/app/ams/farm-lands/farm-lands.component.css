@@ -1,0 +1,10 @@
+.searchdiv{
+    width:500px;
+    height:60px;
+    display: flex;
+    justify-content: space-between;
+}
+.searchdiv > input{
+    font-size: 20px;
+    width: 100%;
+}

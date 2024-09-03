@@ -5,19 +5,19 @@
             <form action="" [formGroup]="LandForm" (submit)="SubmitForm()">
                 <div class="inputdiv">
                     <label for="LandArea">Land Area</label>
-                    <input type="text" id="LandArea" placeholder="Enter Area in Sq.ft" formControlName="LandArea">
+                    <input type="text" id="LandArea" placeholder="Enter Area in Sq.ft" formControlName="landarea">
                 </div>
                 <div class="inputdiv">
                     <label for="LandPrice">Land Price</label>
-                    <input type="text" id="LandPrice" placeholder="Enter Amount in Lakhs" formControlName="LandPrice">
+                    <input type="text" id="LandPrice" placeholder="Enter Amount in Lakhs" formControlName="landprice">
                 </div>
                 <div class="inputdiv">
                     <label for="LandAddress">Land Address</label>
-                    <input type="text" id="LandAddress" placeholder="Enter Address of the Land" formControlName="LandAddress">
+                    <input type="text" id="LandAddress" placeholder="Enter Address of the Land" formControlName="landaddress">
                 </div>
                 <div class="inputdiv">
                     <label for="LandOwnerName">Land Owner Name</label>
-                    <input type="text" id="LandOwnerName" placeholder="Enter Owner Name" formControlName="LandOwnername">
+                    <input type="text" id="LandOwnerName" placeholder="Enter Owner Name" formControlName="ownername">
                 </div>
                 <div class="inputdiv fileinput">
                     <label for="file">Upload Land Photos<img src="assets/Images/fileuploadwhite.png" alt=""></label>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="buttondiv">
                     <button class="button add" type="submit">Add</button>
-                    <button class="button clear" type="button">Clear</button>
+                    <button class="button clear" type="button" (click)="Clear()">Clear</button>
                 </div>
             </form>
         </div>
@@ -39,13 +39,13 @@
         <div class="editmyproduct editmyland">
 
 
-            <div class="landdetaileach editmyLandEach">
+            <div class="landdetaileach editmyLandEach" *ngFor="let data of LandDetails">
                 <img src="assets/Images/landBackground.png" alt="">
                 <div class="aboudetails">
-                    <p>Address : 76/14 Bhararthiyar main road , S.S.Colony Madurai ,Tamilnadu,India</p>
+                    <p>Address : {{data.seller.organizationname}}, {{data.seller.organizationaddress}}, {{data.seller.organizationphonenumber}}</p>
                     <div class="pricearea">
-                        <h4>Area : 200000 Sq.ft</h4>
-                        <h4>Amount : 1.22 Cr</h4>
+                        <h4>Area : {{data.landarea}}</h4>
+                        <h4>Amount : {{data.landprice}}</h4>
                     </div>
                     <div class="ownerdetails">
                         <p>Owner :</p>
@@ -60,65 +60,7 @@
             </div>
 
 
-            <div class="landdetaileach editmyLandEach">
-                <img src="assets/Images/landBackground.png" alt="">
-                <div class="aboudetails">
-                    <p>Address : 76/14 Bhararthiyar main road , S.S.Colony Madurai ,Tamilnadu,India</p>
-                    <div class="pricearea">
-                        <h4>Area : 200000 Sq.ft</h4>
-                        <h4>Amount : 1.22 Cr</h4>
-                    </div>
-                    <div class="ownerdetails">
-                        <p>Owner :</p>
-                        <p>S.Nagarjuna</p>
-                        <p>Ph.No.:9944972187</p>
-                    </div>
-                    <div class="buttondiv">
-                        <button type="button" class="button edit">Edit</button>
-                        <button type="button" class="button delete">Delete</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="landdetaileach editmyLandEach">
-                <img src="assets/Images/landBackground.png" alt="">
-                <div class="aboudetails">
-                    <p>Address : 76/14 Bhararthiyar main road , S.S.Colony Madurai ,Tamilnadu,India</p>
-                    <div class="pricearea">
-                        <h4>Area : 200000 Sq.ft</h4>
-                        <h4>Amount : 1.22 Cr</h4>
-                    </div>
-                    <div class="ownerdetails">
-                        <p>Owner :</p>
-                        <p>S.Nagarjuna</p>
-                        <p>Ph.No.:9944972187</p>
-                    </div>
-                    <div class="buttondiv">
-                        <button type="button" class="button edit">Edit</button>
-                        <button type="button" class="button delete">Delete</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="landdetaileach editmyLandEach">
-                <img src="assets/Images/landBackground.png" alt="">
-                <div class="aboudetails">
-                    <p>Address : 76/14 Bhararthiyar main road , S.S.Colony Madurai ,Tamilnadu,India</p>
-                    <div class="pricearea">
-                        <h4>Area : 200000 Sq.ft</h4>
-                        <h4>Amount : 1.22 Cr</h4>
-                    </div>
-                    <div class="ownerdetails">
-                        <p>Owner :</p>
-                        <p>S.Nagarjuna</p>
-                        <p>Ph.No.:9944972187</p>
-                    </div>
-                    <div class="buttondiv">
-                        <button type="button" class="button edit">Edit</button>
-                        <button type="button" class="button delete">Delete</button>
-                    </div>
-                </div>
-            </div>
+            
 
         </div>
     </div>

@@ -515,7 +515,7 @@ body{
 }
 .productimg{
     width:350px;
-    min-height:200px;
+    height:220px;
 }
 
 .productTitle{
@@ -1239,6 +1239,14 @@ input.ng-invalid.ng-touched , select.ng-invalid.ng-touched{
 
 input.ng-invalid.ng-touched ::placeholder{
     color: red;
+}
+
+button:active{
+    background-color: #03256e;
+}
+
+input[type="date"]{
+    padding-right: 20px;
 }
 /*Validation CSS END*/
 

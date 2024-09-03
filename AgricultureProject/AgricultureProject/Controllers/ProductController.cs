@@ -64,13 +64,13 @@ namespace AgricultureProject.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> CreateProduct(ProductCreate product) {
+        public async Task<ActionResult<int>> CreateProduct(ProductCreate product) {
             if(product == null)
             {
-                return BadRequest();
+                return BadRequest(-1);
             }
-            await _productService.ProductCreate(product);
-            return Ok("Added Successfully");
+            int id = await _productService.ProductCreate(product);
+            return Ok(id);
         }
 
 
@@ -85,7 +85,7 @@ namespace AgricultureProject.Controllers
                 return BadRequest();
             }
             await _masterService.Delete(Id);
-            return Ok("Deleted Succesfully");
+            return Ok();
         }
 
 

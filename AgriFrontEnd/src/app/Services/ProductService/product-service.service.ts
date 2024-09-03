@@ -8,6 +8,7 @@ import { ProductUpdate } from 'src/app/Models/ProductUpdate';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProductServiceService {
 
   serverLink:string="/api/Product"

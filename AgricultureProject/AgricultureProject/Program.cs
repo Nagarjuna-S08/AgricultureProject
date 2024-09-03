@@ -13,7 +13,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 
-
+//Comfiguration for the CORS applictaion request 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("Policy", x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+});
 
 
 
@@ -59,7 +63,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseStaticFiles();   
+app.UseStaticFiles();
+
+app.UseCors("Policy");
 
 app.UseHttpsRedirection();
 

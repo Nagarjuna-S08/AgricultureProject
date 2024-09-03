@@ -23,12 +23,13 @@ namespace AgricultureProject.Services
 
         }
 
-        public async Task ProductCreate(ProductCreate product)
+        public async Task<int> ProductCreate(ProductCreate product)
         {
             var result = _mapper.Map<ProductDetails>(product);
             await _connection.ProductTable.AddAsync(result);
             await SaveChanges();
 
+            return result.Id;
         }
 
 

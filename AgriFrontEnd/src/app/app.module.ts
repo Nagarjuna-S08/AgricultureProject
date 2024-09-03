@@ -19,6 +19,9 @@ import { ProfileCartComponent } from './ams/profile/profile-cart/profile-cart.co
 import { ProfileOrdersComponent } from './ams/profile/profile-orders/profile-orders.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { Environment } from './Environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -42,9 +45,22 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,// required animations module
+    ToastrModule.forRoot({
+      timeOut: 3000, // Duration in milliseconds
+      positionClass: 'toast-top-right', // Position of the toast
+      preventDuplicates: true, // Prevents duplicate toasts
+      closeButton: true, // Adds a close button to the toast
+      progressBar: true, // Shows a progress bar
+      progressAnimation: 'decreasing', // Progress animation ('increasing' or 'decreasing')
+      easeTime: 300, // Duration of the ease effect
+      // tapToDismiss: true, // Allows dismissing the toast by clicking on it
+    })
   ],
-  providers: [],
+  providers: [
+    Environment
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

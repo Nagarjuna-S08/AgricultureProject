@@ -1,32 +1,33 @@
+
 <div class="sellmyproducts">
     <div class="sellmyproductsSection1">
         <img src="assets/Images/sellMyProduct.png" alt="">
         <div class="formdiv">
             <h4>Sell Your Products</h4>
-            <form action="" [formGroup]="ProductForm">
+            <form action="" [formGroup]="ProductForm" (submit)="SubmitForm()">
                 <div class="inputdiv">
                     <label for="Productname">Product Name</label>
-                    <input type="text" id="Productname" placeholder="Enter Name" formControlName="ProductName">
+                    <input type="text" id="Productname" placeholder="Enter Name" formControlName="productname">
                 </div>
                 <div class="inputdiv">
                     <label for="Totalstock">Total Stock</label>
-                    <input type="text" id="Totalstock" placeholder="Enter Stock in KG" formControlName="TotalStock">
+                    <input type="text" id="Totalstock" placeholder="Enter Stock in KG" formControlName="Totalquantity">
                 </div>
                 <div class="inputdiv">
                     <label for="Harvesteddate">Harvested Date</label>
-                    <input type="date" id="Harvesteddate" placeholder="Enter Harvested Date" formControlName="HarvestedDate">
+                    <input type="date" id="Harvesteddate" placeholder="Enter Harvested Date" formControlName="Harvesteddate">
                 </div>
                 <div class="inputdiv">
                     <label for="Priceperkg">Price Per KG</label>
-                    <input type="text" id="Priceperkg" placeholder="Enter Per KG Amount" formControlName="PricePerKg">
+                    <input type="text" id="Priceperkg" placeholder="Enter Per KG Amount" formControlName="AmountperKG">
                 </div>
                 <div class="inputdiv fileinput">
                     <label for="file">Upload Product Photo<img src="assets/Images/fileuploadwhite.png" alt=""></label>
-                    <input type="file" id="file">
+                    <input type="file" id="file" (change)="FileChange($event)">
                 </div>
                 <div class="buttondiv">
                     <button class="button add" type="submit">Add</button>
-                    <button class="button clear" type="submit">Clear</button>
+                    <button class="button clear" type="button" (click)="Clear()">Clear</button>
                 </div>
             </form>
         </div>
@@ -37,212 +38,27 @@
             <input type="search" placeholder="Search">
             <img src="assets/Images/searchlogo.png" alt="">
         </div>
-        <div class="editmyproduct">
+        <div class="editmyproduct" >
 
-            <div class="eachProduct editmyproductEach">
-                <img class="productimg" src="assets/Images/feildtotablebackground.png" alt="">
+            <div class="eachProduct editmyproductEach" *ngFor="let data of ProductDetail" >
+                <img class="productimg" [src]="data.productimage" alt="">
                 <div class="productTitle">
-                    <h4>Onion</h4>
-                    <h4>34 Rs/Kg</h4>
+                    <h4>{{data.productname}}</h4>
+                    <h4>{{data.amountperKG}}  Rs/Kg</h4>
                 </div>
-                <h5>Total Stock : 100kg</h5>
-                <h5>Harvested Date : 12/06/2024</h5>
-                <h5>Update Date : 12/06/2024</h5>
-                <p>From : From : S.Nagarjuna ,76/14 Bharathiyar main road, S.SColony , Madurai-16</p>
+                <h5>Total Stock : {{data.totalquantity}}</h5>
+                <h5>Harvested Date : {{data.harvesteddate}}</h5>
+                <h5>Update Date : {{data.updateddate}}</h5>
+                <p>From : {{data.seller.organizationname}}, {{data.seller.organizationaddress}}, {{data.seller.organizationphonenumber}}</p>
                 <div class="commentdiv">
                     <div class="buttondiv">
-                        <button type="button" class="button edit">Edit</button>
-                        <button type="button" class="button delete">Delete</button>
+                        <button type="button" class="button edit" >Edit</button>
+                        <button type="button" class="button delete" (click)="DeleteApiSubscribe(data.id)">Delete</button>
                     </div>
                 </div>
             </div> 
 
-            <div class="eachProduct editmyproductEach">
-                <img class="productimg" src="assets/Images/feildtotablebackground.png" alt="">
-                <div class="productTitle">
-                    <h4>Onion</h4>
-                    <h4>34 Rs/Kg</h4>
-                </div>
-                <h5>Total Stock : 100kg</h5>
-                <h5>Harvested Date : 12/06/2024</h5>
-                <h5>Update Date : 12/06/2024</h5>
-                <p>From : From : S.Nagarjuna ,76/14 Bharathiyar main road, S.SColony , Madurai-16</p>
-                <div class="commentdiv">
-                    <div class="buttondiv">
-                        <button type="button" class="button edit">Edit</button>
-                        <button type="button" class="button delete">Delete</button>
-                    </div>
-                </div>
-            </div> 
-
-            <div class="eachProduct editmyproductEach">
-                <img class="productimg" src="assets/Images/feildtotablebackground.png" alt="">
-                <div class="productTitle">
-                    <h4>Onion</h4>
-                    <h4>34 Rs/Kg</h4>
-                </div>
-                <h5>Total Stock : 100kg</h5>
-                <h5>Harvested Date : 12/06/2024</h5>
-                <h5>Update Date : 12/06/2024</h5>
-                <p>From : From : S.Nagarjuna ,76/14 Bharathiyar main road, S.SColony , Madurai-16</p>
-                <div class="commentdiv">
-                    <div class="buttondiv">
-                        <button type="button" class="button edit">Edit</button>
-                        <button type="button" class="button delete">Delete</button>
-                    </div>
-                </div>
-            </div> 
-
-            <div class="eachProduct editmyproductEach">
-                <img class="productimg" src="assets/Images/feildtotablebackground.png" alt="">
-                <div class="productTitle">
-                    <h4>Onion</h4>
-                    <h4>34 Rs/Kg</h4>
-                </div>
-                <h5>Total Stock : 100kg</h5>
-                <h5>Harvested Date : 12/06/2024</h5>
-                <h5>Update Date : 12/06/2024</h5>
-                <p>From : From : S.Nagarjuna ,76/14 Bharathiyar main road, S.SColony , Madurai-16</p>
-                <div class="commentdiv">
-                    <div class="buttondiv">
-                        <button type="button" class="button edit">Edit</button>
-                        <button type="button" class="button delete">Delete</button>
-                    </div>
-                </div>
-            </div> 
-
-            <div class="eachProduct editmyproductEach">
-                <img class="productimg" src="assets/Images/feildtotablebackground.png" alt="">
-                <div class="productTitle">
-                    <h4>Onion</h4>
-                    <h4>34 Rs/Kg</h4>
-                </div>
-                <h5>Total Stock : 100kg</h5>
-                <h5>Harvested Date : 12/06/2024</h5>
-                <h5>Update Date : 12/06/2024</h5>
-                <p>From : From : S.Nagarjuna ,76/14 Bharathiyar main road, S.SColony , Madurai-16</p>
-                <div class="commentdiv">
-                    <div class="buttondiv">
-                        <button type="button" class="button edit">Edit</button>
-                        <button type="button" class="button delete">Delete</button>
-                    </div>
-                </div>
-            </div> 
-
-
-            <div class="eachProduct editmyproductEach">
-                <img class="productimg" src="assets/Images/feildtotablebackground.png" alt="">
-                <div class="productTitle">
-                    <h4>Onion</h4>
-                    <h4>34 Rs/Kg</h4>
-                </div>
-                <h5>Total Stock : 100kg</h5>
-                <h5>Harvested Date : 12/06/2024</h5>
-                <h5>Update Date : 12/06/2024</h5>
-                <p>From : From : S.Nagarjuna ,76/14 Bharathiyar main road, S.SColony , Madurai-16</p>
-                <div class="commentdiv">
-                    <div class="buttondiv">
-                        <button type="button" class="button edit">Edit</button>
-                        <button type="button" class="button delete">Delete</button>
-                    </div>
-                </div>
-            </div> 
-
-
-            <div class="eachProduct editmyproductEach">
-                <img class="productimg" src="assets/Images/feildtotablebackground.png" alt="">
-                <div class="productTitle">
-                    <h4>Onion</h4>
-                    <h4>34 Rs/Kg</h4>
-                </div>
-                <h5>Total Stock : 100kg</h5>
-                <h5>Harvested Date : 12/06/2024</h5>
-                <h5>Update Date : 12/06/2024</h5>
-                <p>From : From : S.Nagarjuna ,76/14 Bharathiyar main road, S.SColony , Madurai-16</p>
-                <div class="commentdiv">
-                    <div class="buttondiv">
-                        <button type="button" class="button edit">Edit</button>
-                        <button type="button" class="button delete">Delete</button>
-                    </div>
-                </div>
-            </div> 
-
-
-            <div class="eachProduct editmyproductEach">
-                <img class="productimg" src="assets/Images/feildtotablebackground.png" alt="">
-                <div class="productTitle">
-                    <h4>Onion</h4>
-                    <h4>34 Rs/Kg</h4>
-                </div>
-                <h5>Total Stock : 100kg</h5>
-                <h5>Harvested Date : 12/06/2024</h5>
-                <h5>Update Date : 12/06/2024</h5>
-                <p>From : From : S.Nagarjuna ,76/14 Bharathiyar main road, S.SColony , Madurai-16</p>
-                <div class="commentdiv">
-                    <div class="buttondiv">
-                        <button type="button" class="button edit">Edit</button>
-                        <button type="button" class="button delete">Delete</button>
-                    </div>
-                </div>
-            </div> 
-
-
-
-            <div class="eachProduct editmyproductEach">
-                <img class="productimg" src="assets/Images/feildtotablebackground.png" alt="">
-                <div class="productTitle">
-                    <h4>Onion</h4>
-                    <h4>34 Rs/Kg</h4>
-                </div>
-                <h5>Total Stock : 100kg</h5>
-                <h5>Harvested Date : 12/06/2024</h5>
-                <h5>Update Date : 12/06/2024</h5>
-                <p>From : From : S.Nagarjuna ,76/14 Bharathiyar main road, S.SColony , Madurai-16</p>
-                <div class="commentdiv">
-                    <div class="buttondiv">
-                        <button type="button" class="button edit">Edit</button>
-                        <button type="button" class="button delete">Delete</button>
-                    </div>
-                </div>
-            </div> 
-
-
-            <div class="eachProduct editmyproductEach">
-                <img class="productimg" src="assets/Images/feildtotablebackground.png" alt="">
-                <div class="productTitle">
-                    <h4>Onion</h4>
-                    <h4>34 Rs/Kg</h4>
-                </div>
-                <h5>Total Stock : 100kg</h5>
-                <h5>Harvested Date : 12/06/2024</h5>
-                <h5>Update Date : 12/06/2024</h5>
-                <p>From : From : S.Nagarjuna ,76/14 Bharathiyar main road, S.SColony , Madurai-16</p>
-                <div class="commentdiv">
-                    <div class="buttondiv">
-                        <button type="button" class="button edit">Edit</button>
-                        <button type="button" class="button delete">Delete</button>
-                    </div>
-                </div>
-            </div> 
-
-
-            <div class="eachProduct editmyproductEach">
-                <img class="productimg" src="assets/Images/feildtotablebackground.png" alt="">
-                <div class="productTitle">
-                    <h4>Onion</h4>
-                    <h4>34 Rs/Kg</h4>
-                </div>
-                <h5>Total Stock : 100kg</h5>
-                <h5>Harvested Date : 12/06/2024</h5>
-                <h5>Update Date : 12/06/2024</h5>
-                <p>From : From : S.Nagarjuna ,76/14 Bharathiyar main road, S.SColony , Madurai-16</p>
-                <div class="commentdiv">
-                    <div class="buttondiv">
-                        <button type="button" class="button edit">Edit</button>
-                        <button type="button" class="button delete">Delete</button>
-                    </div>
-                </div>
-            </div> 
+            
         </div>
     </div>
 </div>

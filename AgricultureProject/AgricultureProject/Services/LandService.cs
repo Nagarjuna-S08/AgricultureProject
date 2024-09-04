@@ -66,6 +66,27 @@ namespace AgricultureProject.Services
             return imageUrlForLink;
         }
 
+        public async Task DeleteFile(int Id)
+        {
+            var source = _connection.LandTable.Find(Id);
+
+            if (source != null)
+            {
+
+                string[] result = source.Landphoto1.Split('/');
+
+                string filePath = GetFilePath(result[result.Length - 1]);
+
+                if (File.Exists(filePath))
+                {
+                    File.Delete(filePath);
+                }
+
+            }
+
+        }
+
+
         public async Task<int> ProductCreate(LandCreate product)
         {
             var result = _mapper.Map<LandDetails>(product);

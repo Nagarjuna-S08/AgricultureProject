@@ -11,6 +11,7 @@ namespace AgricultureProject.DTO
         public double Landprice { get; set; }
         public string Landaddress { get; set; }
         public string Updateddate { get; set; }
+        public string Landphoto1 { get; set; }
 
     }
 }

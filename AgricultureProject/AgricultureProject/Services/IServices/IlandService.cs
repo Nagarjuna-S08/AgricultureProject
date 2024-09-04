@@ -8,10 +8,9 @@ namespace AgricultureProject.Services.IServices
     {
         Task<int> ProductCreate(LandCreate product);
         Task Update(LandUpdate product, int Id);
-
         Task<string> FileUpload(IFormFile file);
-
         Task updateFile(fileuploadDto  fileuploadDto, int Id);
+        Task DeleteFile(int Id);
         Task SaveChanges();
     }
 }

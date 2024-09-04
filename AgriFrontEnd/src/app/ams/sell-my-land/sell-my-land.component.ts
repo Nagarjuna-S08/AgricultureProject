@@ -43,8 +43,8 @@ export class SellMyLandComponent implements OnInit {
     this.LandForm.patchValue({
       LandPhoto : UpdatedFile
     })
-    const FileData = new FormData()
-    FileData.append('source',UpdatedFile)
+    this.FileData = new FormData()
+    this.FileData.append('source',UpdatedFile)
 
     this.LandForm.get('LandPhoto')?.updateValueAndValidity();
     this.tost.info(UpdatedFile.name,"Updated File")
@@ -103,6 +103,7 @@ export class SellMyLandComponent implements OnInit {
     this.obj.DeleteApi(id).subscribe({
       next:(data)=>{
         this.tost.success("Deleted Successfully","Deleted")
+        this.GetApi()
       },
       error:(err)=>{
         console.log(err);

@@ -97,6 +97,22 @@ namespace AgricultureProject.Services
             return imageUrlForLink;
         }
 
+        public async Task DeleteFile(int Id)
+        {
+            var source = _connection.ProductTable.Find(Id);
+
+            if (source != null)
+            {
+                string[] result = source.Productimage.Split('/');
+
+                string filePath = GetFilePath(result[result.Length - 1]);
+
+                if (File.Exists(filePath))
+                {
+                    File.Delete(filePath);
+                }
+            }
+        }
 
 
         public async Task updateFile(fileuploadDto fileuploadDto, int Id)

@@ -40,21 +40,21 @@
 
 
             <div class="landdetaileach editmyLandEach" *ngFor="let data of LandDetails">
-                <img src="assets/Images/landBackground.png" alt="">
+                <img [src]="data.landphoto1" alt="">
                 <div class="aboudetails">
-                    <p>Address : {{data.seller.organizationname}}, {{data.seller.organizationaddress}}, {{data.seller.organizationphonenumber}}</p>
+                    <p>Address : {{data.landaddress}}</p>
                     <div class="pricearea">
                         <h4>Area : {{data.landarea}}</h4>
                         <h4>Amount : {{data.landprice}}</h4>
                     </div>
                     <div class="ownerdetails">
                         <p>Owner :</p>
-                        <p>S.Nagarjuna</p>
-                        <p>Ph.No.:9944972187</p>
+                        <p>{{data.ownername}}</p>
+                        <p>Ph.No.:{{data.seller.organizationphonenumber}}</p>
                     </div>
                     <div class="buttondiv">
                         <button type="button" class="button edit">Edit</button>
-                        <button type="button" class="button delete">Delete</button>
+                        <button type="button" class="button delete" (click)="DeleteApi(data.id)">Delete</button>
                     </div>
                 </div>
             </div>

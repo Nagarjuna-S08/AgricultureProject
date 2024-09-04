@@ -84,6 +84,7 @@ namespace AgricultureProject.Controllers
             {
                 return BadRequest();
             }
+            await _productService.DeleteFile(Id);
             await _masterService.Delete(Id);
             return Ok();
         }

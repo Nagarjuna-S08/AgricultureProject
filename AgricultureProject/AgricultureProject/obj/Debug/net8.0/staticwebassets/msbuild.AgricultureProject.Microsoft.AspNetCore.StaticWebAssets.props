@@ -1,11 +1,11 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\LandsPhotos\b5a9659a-2d36-4f83-b5be-92adb10a65ba.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\LandsPhotos\3555d0f9-397a-439c-b08c-d890cb45936b.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>AgricultureProject</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/AgricultureProject</BasePath>
-      <RelativePath>LandsPhotos/b5a9659a-2d36-4f83-b5be-92adb10a65ba.png</RelativePath>
+      <RelativePath>LandsPhotos/3555d0f9-397a-439c-b08c-d890cb45936b.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -14,14 +14,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\LandsPhotos\b5a9659a-2d36-4f83-b5be-92adb10a65ba.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\LandsPhotos\3555d0f9-397a-439c-b08c-d890cb45936b.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\35b4485f-2ee6-4140-abfb-e898585a93a1.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\32a76d2a-5a34-42a8-a624-cb39c8c86cc0.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>AgricultureProject</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/AgricultureProject</BasePath>
-      <RelativePath>ProductPhotos/35b4485f-2ee6-4140-abfb-e898585a93a1.jpg</RelativePath>
+      <RelativePath>ProductPhotos/32a76d2a-5a34-42a8-a624-cb39c8c86cc0.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -30,14 +30,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\35b4485f-2ee6-4140-abfb-e898585a93a1.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\32a76d2a-5a34-42a8-a624-cb39c8c86cc0.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\56c83261-8252-403a-bf3d-1d4cc7131ce4.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\a1a54aa3-5039-42aa-8ec1-a5bfb13459cc.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>AgricultureProject</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/AgricultureProject</BasePath>
-      <RelativePath>ProductPhotos/56c83261-8252-403a-bf3d-1d4cc7131ce4.png</RelativePath>
+      <RelativePath>ProductPhotos/a1a54aa3-5039-42aa-8ec1-a5bfb13459cc.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -46,87 +46,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\56c83261-8252-403a-bf3d-1d4cc7131ce4.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\93cfb18d-a474-4bb2-85e9-f2da5ebcfd66.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>AgricultureProject</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AgricultureProject</BasePath>
-      <RelativePath>ProductPhotos/93cfb18d-a474-4bb2-85e9-f2da5ebcfd66.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\93cfb18d-a474-4bb2-85e9-f2da5ebcfd66.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\b7d3ed58-2660-4c39-8320-b5f2e5a413ae.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>AgricultureProject</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AgricultureProject</BasePath>
-      <RelativePath>ProductPhotos/b7d3ed58-2660-4c39-8320-b5f2e5a413ae.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\b7d3ed58-2660-4c39-8320-b5f2e5a413ae.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\bbc6c631-854e-41e4-b4c4-e16402147444.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>AgricultureProject</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AgricultureProject</BasePath>
-      <RelativePath>ProductPhotos/bbc6c631-854e-41e4-b4c4-e16402147444.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\bbc6c631-854e-41e4-b4c4-e16402147444.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\c9e86731-3e93-428a-ab11-001b99be282f.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>AgricultureProject</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AgricultureProject</BasePath>
-      <RelativePath>ProductPhotos/c9e86731-3e93-428a-ab11-001b99be282f.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\c9e86731-3e93-428a-ab11-001b99be282f.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\cd3bdb20-ed3f-414e-83e5-e16045ffafbb.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>AgricultureProject</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AgricultureProject</BasePath>
-      <RelativePath>ProductPhotos/cd3bdb20-ed3f-414e-83e5-e16045ffafbb.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\cd3bdb20-ed3f-414e-83e5-e16045ffafbb.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductPhotos\a1a54aa3-5039-42aa-8ec1-a5bfb13459cc.jpg))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

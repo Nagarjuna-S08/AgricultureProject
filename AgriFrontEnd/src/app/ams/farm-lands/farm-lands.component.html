@@ -50,18 +50,18 @@
 
         <div class="displaysection">
 
-            <div class="landdetaileach">
-                <img src="assets/Images/landBackground.png" alt="">
+            <div class="landdetaileach" *ngFor="let data of LandDetails">
+                <img [src]="data.landphoto1" alt="">
                 <div class="aboudetails">
-                    <p>Address : 76/14 Bhararthiyar main road , S.S.Colony Madurai ,Tamilnadu,India</p>
+                    <p>Address : {{data.landaddress}}</p>
                     <div class="pricearea">
-                        <h4>Area : 200000 Sq.ft</h4>
-                        <h4>Amount : 1.22 Cr</h4>
+                        <h4>Area : {{data.landarea}} Sq.ft</h4>
+                        <h4>Amount : {{data.landprice}} Cr</h4>
                     </div>
                     <div class="ownerdetails">
                         <p>Owner :</p>
-                        <p>S.Nagarjuna</p>
-                        <p>Ph.No.:9944972187</p>
+                        <p>{{data.ownername}}</p>
+                        <p>Ph.No.:{{data.seller.organizationphonenumber}}</p>
                     </div>
                     <div class="buttondiv">
                         <button type="button" class="button wishlist">Add To Wishlist</button>
@@ -70,65 +70,7 @@
                 </div>
             </div>
 
-            <div class="landdetaileach">
-                <img src="assets/Images/landBackground.png" alt="">
-                <div class="aboudetails">
-                    <p>Address : 76/14 Bhararthiyar main road , S.S.Colony Madurai ,Tamilnadu,India</p>
-                    <div class="pricearea">
-                        <h4>Area : 200000 Sq.ft</h4>
-                        <h4>Amount : 1.22 Cr</h4>
-                    </div>
-                    <div class="ownerdetails">
-                        <p>Owner :</p>
-                        <p>S.Nagarjuna</p>
-                        <p>Ph.No.:9944972187</p>
-                    </div>
-                    <div class="buttondiv">
-                        <button type="button" class="button wishlist">Add To Wishlist</button>
-                        <button type="button" class="button Moredetails">More Details</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="landdetaileach">
-                <img src="assets/Images/landBackground.png" alt="">
-                <div class="aboudetails">
-                    <p>Address : 76/14 Bhararthiyar main road , S.S.Colony Madurai ,Tamilnadu,India</p>
-                    <div class="pricearea">
-                        <h4>Area : 200000 Sq.ft</h4>
-                        <h4>Amount : 1.22 Cr</h4>
-                    </div>
-                    <div class="ownerdetails">
-                        <p>Owner :</p>
-                        <p>S.Nagarjuna</p>
-                        <p>Ph.No.:9944972187</p>
-                    </div>
-                    <div class="buttondiv">
-                        <button type="button" class="button wishlist">Add To Wishlist</button>
-                        <button type="button" class="button Moredetails">More Details</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="landdetaileach">
-                <img src="assets/Images/landBackground.png" alt="">
-                <div class="aboudetails">
-                    <p>Address : 76/14 Bhararthiyar main road , S.S.Colony Madurai ,Tamilnadu,India</p>
-                    <div class="pricearea">
-                        <h4>Area : 200000 Sq.ft</h4>
-                        <h4>Amount : 1.22 Cr</h4>
-                    </div>
-                    <div class="ownerdetails">
-                        <p>Owner :</p>
-                        <p>S.Nagarjuna</p>
-                        <p>Ph.No.:9944972187</p>
-                    </div>
-                    <div class="buttondiv">
-                        <button type="button" class="button wishlist">Add To Wishlist</button>
-                        <button type="button" class="button Moredetails">More Details</button>
-                    </div>
-                </div>
-            </div>
+           
         </div>
     </div>
 </div>

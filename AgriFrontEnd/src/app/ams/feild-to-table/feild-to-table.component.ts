@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { CartCreate } from 'src/app/Models/CartCreate';
+import { CartServiceService } from 'src/app/Services/CartService/cart-service.service';
 import { ProductServiceService } from 'src/app/Services/ProductService/product-service.service';
 
 @Component({
@@ -8,9 +10,16 @@ import { ProductServiceService } from 'src/app/Services/ProductService/product-s
   styleUrls: ['./feild-to-table.component.css']
 })
 export class FeildToTableComponent implements OnInit{
-    FeildToTable:any=[]
+  FeildToTable:any=[]
 
-  constructor(private toat:ToastrService,private obj:ProductServiceService){}
+  CartAddDetails:CartCreate={
+    buyerid:0,
+    sellerid:0,
+    productid:0,
+    quantity:0,
+    totalamount:0
+  }
+  constructor(private tost:ToastrService,private obj:ProductServiceService,private CartObj:CartServiceService){}
   
   ngOnInit(): void {
     this.GetApi()
@@ -18,7 +27,6 @@ export class FeildToTableComponent implements OnInit{
 
 
   GetApi(){
-
     this.obj.GetApi().subscribe({
       next:(data:any)=>{
         this.FeildToTable=data
@@ -29,12 +37,21 @@ export class FeildToTableComponent implements OnInit{
     })
   }
 
-  wishList(){
+  CartAdd(ProductId:number , PricePerKg:number , TotalKg:String){
+    this.CartAddDetails.productid=ProductId
+    this.CartAddDetails.quantity = Number(TotalKg)
+    this.CartAddDetails.totalamount = this.CartAddDetails.quantity * PricePerKg
+    this.CartAddDetails.sellerid=1;
+    this.CartAddDetails.buyerid=1;
 
-  }
-
-  CartAdd(){
-    
+    this.CartObj.PostApi(this.CartAddDetails).subscribe({
+      next:(data:any)=>{
+        this.tost.success("Product Added to Cart")
+      },
+      error:(error)=>{
+        console.log(error);
+      }
+    })
   }
 
 }

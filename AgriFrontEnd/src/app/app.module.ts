@@ -17,7 +17,7 @@ import { ProfileComponent } from './ams/profile/profile.component';
 import { ProfileWishlistComponent } from './ams/profile/profile-wishlist/profile-wishlist.component';
 import { ProfileCartComponent } from './ams/profile/profile-cart/profile-cart.component';
 import { ProfileOrdersComponent } from './ams/profile/profile-orders/profile-orders.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { Environment } from './Environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -56,7 +56,8 @@ import { ToastrModule } from 'ngx-toastr';
       progressAnimation: 'decreasing', // Progress animation ('increasing' or 'decreasing')
       easeTime: 300, // Duration of the ease effect
       // tapToDismiss: true, // Allows dismissing the toast by clicking on it
-    })
+    }),
+    FormsModule
   ],
   providers: [
     Environment

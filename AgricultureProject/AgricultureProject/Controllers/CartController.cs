@@ -49,6 +49,21 @@ namespace AgricultureProject.Controllers
             return Ok(result);
         }
 
+        [HttpGet("BuyerCart/{Id:int}")]
+        public async Task<ActionResult<List<CartDetails>>> GetBuyerCart(int Id)
+        {
+            if (Id == 0)
+            {
+                return BadRequest();
+            }
+            var result = await _masterService.GetAsyn(i => i.Buyerid == Id, includeProperties: "Seller,Buyer,Product");
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return Ok(result);
+        }
+
         [HttpPost]
         public async Task<IActionResult> CreateProduct(CartCreate Cart)
         {
@@ -57,7 +72,7 @@ namespace AgricultureProject.Controllers
                 return BadRequest();
             }
             await _cartService.ProductCreate(Cart);
-            return Ok("Added Successfully");
+            return Ok();
         }
 
         [HttpDelete("{Id:int}")]

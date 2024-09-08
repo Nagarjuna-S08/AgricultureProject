@@ -13,5 +13,10 @@ namespace AgricultureProject.Model
         [ForeignKey("Land")]
         public int Landid { get; set; }
         public LandDetails Land { get; set; }
+
+        [ForeignKey("Seller")]
+        public int Sellerid { get; set; }
+        public SellerDetails Seller { get; set; }
+
     }
 }

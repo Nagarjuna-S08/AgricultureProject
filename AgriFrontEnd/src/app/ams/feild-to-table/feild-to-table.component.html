@@ -31,18 +31,18 @@
                 <div class="commentdivinner">
                     <div class="quantitydiv">
                         <h4>Quantity</h4>
-                        <select name="" id="">
-                            <option value="">20 Kg</option>
-                            <option value="">20 Kg</option>
-                            <option value="">20 Kg</option>
-                            <option value="">20 Kg</option>
-                            <option value="">20 Kg</option>
+                        <select name="" id="" #ItemKg >
+                            <option value="2">2 Kg</option>
+                            <option value="4">4 Kg</option>
+                            <option value="6">6 Kg</option>
+                            <option value="10">10 Kg</option>
+                            <option value="15">15 Kg</option>
+                            <option value="20">20 Kg</option>
                         </select>
                     </div>
-                    <button type="button" class="button cartbutton">Add to Cart</button>
+                    <button type="button" class="button cartbutton" (click)="CartAdd(data.id,data.amountperKG,ItemKg.value)">Add to Cart</button>
                 </div>
             </div>
         </div> 
-
     </div>
 </div>

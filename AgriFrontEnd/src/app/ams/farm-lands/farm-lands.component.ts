@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { WishListCreate } from 'src/app/Models/WishListCreate';
 import { LandServiceService } from 'src/app/Services/LandService/land-service.service';
+import { WishListServiceService } from 'src/app/Services/WishListService/wish-list-service.service';
 
 @Component({
   selector: 'app-farm-lands',
@@ -10,8 +12,13 @@ import { LandServiceService } from 'src/app/Services/LandService/land-service.se
 export class FarmLandsComponent implements OnInit{
     
     LandDetails:any=[]
+    WishListCreateDetail : WishListCreate={
+      buyerid:0,
+      landid:0,
+      sellerid:0
+    }
 
-    constructor(private tost:ToastrService,private obj:LandServiceService){}
+    constructor(private tost:ToastrService,private obj:LandServiceService,private WishListObj:WishListServiceService){}
 
     ngOnInit(): void {
       this.GetApi()
@@ -28,4 +35,20 @@ export class FarmLandsComponent implements OnInit{
         }
       })
     }
+
+    WishListAdd(LandId:number,sellerid:number){
+      
+      this.WishListCreateDetail.buyerid=1;
+      this.WishListCreateDetail.sellerid=sellerid
+      this.WishListCreateDetail.landid=LandId
+      this.WishListObj.PostApi(this.WishListCreateDetail).subscribe({
+        next:(data)=>{
+          this.tost.success("Added to WishList","Added")
+        },
+        error:(err)=>{
+          console.log(err);
+        }
+      })
+    }
+  
 }

@@ -26,7 +26,7 @@ namespace AgricultureProject.Controllers
         [HttpGet]
         public async Task<ActionResult<List<WishlistDetails>>> GetAll()
         {
-            var result = await _masterService.GetAllAsyn(includeProperties: "Buyer,Land");
+            var result = await _masterService.GetAllAsyn(includeProperties: "Seller,Buyer,Land");
             if (result == null)
             {
                 return NotFound();
@@ -51,6 +51,20 @@ namespace AgricultureProject.Controllers
         }
 
 
+        [HttpGet("BuyerWhisList/{Id:int}")]
+        public async Task<ActionResult<List<WishlistDetails>>> GetBuyerWishList(int Id)
+        {
+            if (Id == 0)
+            {
+                return BadRequest();
+            }
+            var result = await _masterService.GetAsyn(i => i.Buyerid == Id, includeProperties: "Seller,Buyer,Land");
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return Ok(result);
+        }
 
 
 
@@ -63,7 +77,7 @@ namespace AgricultureProject.Controllers
                 return BadRequest();
             }
             await _wishlistService.ProductCreate(Wishlist);
-            return Ok("Added Successfully");
+            return Ok();
         }
 
 

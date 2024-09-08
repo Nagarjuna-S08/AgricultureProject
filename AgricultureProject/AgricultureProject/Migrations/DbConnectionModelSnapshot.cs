@@ -294,11 +294,16 @@ namespace AgricultureProject.Migrations
                     b.Property<int>("Landid")
                         .HasColumnType("integer");
 
+                    b.Property<int>("Sellerid")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
                     b.HasIndex("Buyerid");
 
                     b.HasIndex("Landid");
+
+                    b.HasIndex("Sellerid");
 
                     b.ToTable("WishlistTable");
                 });
@@ -404,9 +409,17 @@ namespace AgricultureProject.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("AgricultureProject.Model.SellerDetails", "Seller")
+                        .WithMany()
+                        .HasForeignKey("Sellerid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Buyer");
 
                     b.Navigation("Land");
+
+                    b.Navigation("Seller");
                 });
 #pragma warning restore 612, 618
         }

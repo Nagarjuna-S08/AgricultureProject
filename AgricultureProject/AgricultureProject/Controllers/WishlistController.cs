@@ -51,7 +51,7 @@ namespace AgricultureProject.Controllers
         }
 
 
-        [HttpGet("BuyerWhisList/{Id:int}")]
+        [HttpGet("BuyerWishList/{Id:int}")]
         public async Task<ActionResult<List<WishlistDetails>>> GetBuyerWishList(int Id)
         {
             if (Id == 0)
@@ -106,7 +106,7 @@ namespace AgricultureProject.Controllers
                 return BadRequest();
             }
             await _wishlistService.Update(dtoupdate, Id);
-            return Ok(dtoupdate);
+            return Ok();
         }
 
     }

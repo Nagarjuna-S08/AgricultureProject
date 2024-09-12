@@ -8,43 +8,43 @@ import { WishListServiceService } from 'src/app/Services/WishListService/wish-li
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit{
+export class ProfileComponent{
 
-  CartDetails:any=[]
-  WishListDetails:any=[]
+  // CartDetails:any=[]
+  // WishListDetails:any=[]
 
-  constructor(private toat:ToastrService,private CartObj:CartServiceService,private WishListObj:WishListServiceService){}
+  // constructor(private toat:ToastrService,private CartObj:CartServiceService,private WishListObj:WishListServiceService){}
 
-  ngOnInit(): void {
+  // ngOnInit(): void {
 
-    this.GetCartApi(1)
-    this.GetWishListApi(1)
+  //   this.GetCartApi(1)
+  //   this.GetWishListApi(1)
 
-  }
-
-
+  // }
 
 
-  GetCartApi(BuyerId:number){
-    this.CartObj.GetBuyerCartApi(BuyerId).subscribe({
-      next:(data:any)=>{
-        this.CartDetails=data
-      },
-      error:(err)=>{
-        console.log(err);
-      }
-    })
-  }
+
+
+  // GetCartApi(BuyerId:number){
+  //   this.CartObj.GetBuyerCartApi(BuyerId).subscribe({
+  //     next:(data:any)=>{
+  //       this.CartDetails=data
+  //     },
+  //     error:(err)=>{
+  //       console.log(err);
+  //     }
+  //   })
+  // }
   
-  GetWishListApi(BuyerId:number){
-    this.WishListObj.GetBuyerWishList(BuyerId).subscribe({
-      next:(data:any)=>{
-        this.WishListDetails=data
-      },
-      error:(err)=>{
-        console.log(err);
-      }
-    })
-  }
+  // GetWishListApi(BuyerId:number){
+  //   this.WishListObj.GetBuyerWishList(BuyerId).subscribe({
+  //     next:(data:any)=>{
+  //       this.WishListDetails=data
+  //     },
+  //     error:(err)=>{
+  //       console.log(err);
+  //     }
+  //   })
+  // }
 
 }

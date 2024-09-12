@@ -10,22 +10,24 @@
         </div>
 
 
-        <div class="eachItemCart">
-            <img class="itemimage" src="" alt="">
+        <div class="eachItemCart" *ngFor="let data of CartDetails">
+            <img class="itemimage" [src]="data.product.productimage" alt="">
             <div class="info-div">
-                <h5>Onion</h5>
+                <h5>{{data.product.productname}}</h5>
                 <h6>
-                    From : S.Nagarjuna, 76/14 Bahrathiyar main road
+                    From :  {{data.seller.organizationname}}, {{data.seller.organizationaddress}}, {{data.seller.organizationphonenumber}}
                 </h6>
             </div>
-            <select name="" id="">
-                <option value="">89 Kg</option>
-                <option value="">89 Kg</option>
-                <option value="">89 Kg</option>
-                <option value="">89 Kg</option>
+            <select name="" id="" [value]="data.quantity" #item (change)="UpdateCart(item.value,data.id,data.product.amountperKG)">
+                <option value="2">2 Kg</option>
+                <option value="4">4 Kg</option>
+                <option value="6">6 Kg</option>
+                <option value="10">10 Kg</option>
+                <option value="15">15 Kg</option>
+                <option value="20">20 Kg</option>
             </select>
-            <p class="price">87 Rs</p>
-            <img src="assets/Images/deleteimage.png" alt="Delete">
+            <p class="price">{{data.totalamount}} Rs</p>
+            <img class="DeleteButtonHover" src="assets/Images/deleteimage.png" alt="Delete" (click)="DeleteApi(data.id)">
         </div>
     </div>
 

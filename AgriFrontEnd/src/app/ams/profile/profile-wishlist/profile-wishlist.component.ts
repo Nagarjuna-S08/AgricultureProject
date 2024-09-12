@@ -22,6 +22,8 @@ export class ProfileWishlistComponent implements OnInit{
     this.WishListObj.GetBuyerWishList(BuyerId).subscribe({
       next:(data:any)=>{
         this.WishListDetails=data
+        console.log(this.WishListDetails);
+        
       },
       error:(err)=>{
         console.log(err);

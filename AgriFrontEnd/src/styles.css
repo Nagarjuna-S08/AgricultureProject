@@ -1248,5 +1248,9 @@ button:active{
 input[type="date"]{
     padding-right: 20px;
 }
+
+.DeleteButtonHover{
+    cursor: pointer;
+}
 /*Validation CSS END*/
 

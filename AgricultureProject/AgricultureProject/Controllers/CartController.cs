@@ -83,7 +83,7 @@ namespace AgricultureProject.Controllers
                 return BadRequest();
             }
             await _masterService.Delete(Id);
-            return Ok("Deleted Succesfully");
+            return Ok();
         }
 
         [HttpPut("{Id:int}")]
@@ -94,7 +94,7 @@ namespace AgricultureProject.Controllers
                 return BadRequest();
             }
             await _cartService.Update(dtoupdate, Id);
-            return Ok(dtoupdate);
+            return Ok();
         }
     }
 }

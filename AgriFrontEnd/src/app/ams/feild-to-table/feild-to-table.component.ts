@@ -49,7 +49,7 @@ export class FeildToTableComponent implements OnInit{
         this.tost.success("Product Added to Cart")
       },
       error:(error)=>{
-        console.log(error);
+        this.tost.error("The Item is already exists in the Cart.","Invalid");
       }
     })
   }

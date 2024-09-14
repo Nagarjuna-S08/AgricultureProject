@@ -46,7 +46,7 @@ export class FarmLandsComponent implements OnInit{
           this.tost.success("Added to WishList","Added")
         },
         error:(err)=>{
-          console.log(err);
+          this.tost.error("The product already exists in the wishlist.","Invalid");
         }
       })
     }

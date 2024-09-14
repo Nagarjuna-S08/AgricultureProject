@@ -7,23 +7,25 @@
     <div class="editmyproduct editmyland">
 
 
-        <div class="landdetaileach editmyLandEach">
+        <div class="landdetaileach editmyLandEach" *ngFor="let data of WishListDetails">
             <img src="assets/Images/landBackground.png" alt="">
             <div class="aboudetails">
-                <p>Address : 76/14 Bhararthiyar main road , S.S.Colony Madurai ,Tamilnadu,India</p>
+                <p>Address : {{data.land.landaddress}}</p>
                 <div class="pricearea">
-                    <h4>Area : 200000 Sq.ft</h4>
-                    <h4>Amount : 1.22 Cr</h4>
+                    <h4>Area : {{data.land.landarea}} Sq.ft</h4>
+                    <h4>Amount : {{data.land.landprice}} Cr</h4>
                 </div>
                 <div class="ownerdetails">
                     <p>Owner :</p>
-                    <p>S.Nagarjuna</p>
-                    <p>Ph.No.:9944972187</p>
+                    <p>{{data.land.ownername}}</p>
+                    <p>Ph.No.:{{data.seller.organizationphonenumber}}</p>
                 </div>
                 <div class="buttondiv">
                     <button type="button" class="button Moredetails">More Details</button>
                 </div>
             </div>
         </div>
+
+
     </div>
 </div>

@@ -19,8 +19,19 @@ namespace AgricultureProject.Services
         public async Task ProductCreate(CartCreate cart)
         {
             var result = _mapper.Map<CartDetails>(cart);
-            await _connection.CartTable.AddAsync(result);
-            await SaveChanges();
+            var alreadyExist = _connection.CartTable.FirstOrDefault(x => x.Sellerid == result.Sellerid && x.Buyerid == result.Buyerid);
+            if (alreadyExist != null)
+            {
+
+                throw new Exception("The Item is  already exists in the Cart.");
+
+            }
+            else
+            {
+                await _connection.CartTable.AddAsync(result);
+                await SaveChanges();
+            }
+            
         }
 
         public async Task SaveChanges()

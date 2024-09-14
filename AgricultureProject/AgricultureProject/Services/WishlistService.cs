@@ -19,8 +19,17 @@ namespace AgricultureProject.Services
         public async Task ProductCreate(WishlistCreate wishlist)
         {
             var result = _mapper.Map<WishlistDetails>(wishlist);
-            await _connection.WishlistTable.AddAsync(result);
-            await SaveChanges();
+            var alreadyExist = _connection.WishlistTable.FirstOrDefault(x => x.Sellerid == result.Sellerid && x.Buyerid == result.Buyerid);
+            if (alreadyExist != null){
+
+                throw new Exception("The product already exists in the wishlist.");
+                
+            }
+            else
+            {
+                await _connection.WishlistTable.AddAsync(result);
+                await SaveChanges();
+            }
         }
 
         public async Task SaveChanges()

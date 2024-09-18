@@ -124,38 +124,38 @@ namespace AgricultureProject.Controllers
         [HttpPost("AddFromCart/{BuyerId:int}/{Paymentmethod}/{Paymentdate}")]
         public async Task<IActionResult> AddFromCart(int BuyerId,string Paymentdate,string Paymentmethod )
         {
-        
+
             var dataCart = await _masterCart.GetAllAsyn(i => i.Buyerid == BuyerId);
 
-            if (dataCart == null)
+            if (dataCart == null || !dataCart.Any())
             {
                 return NotFound("No items in Cart");
             }
-            var groupData = dataCart.GroupBy(dataCart => dataCart.Sellerid).ToList();
+            var groupData = dataCart.GroupBy(i => i.Sellerid).ToList();
 
             foreach (var group in groupData)
             {
-                foreach (var item in group)
+
+                var productIds = string.Join(",", group.Select(item => item.Product.Id.ToString()));
+                var productNames = string.Join(",", group.Select(item => item.Product.Productname));
+
+                OrderDetails order = new OrderDetails
                 {
-                    var productids = string.Join(",", item.Product.Id.ToString());
-                    var productNames = string.Join(",", item.Product.Productname.ToString());
+                    Buyerid = BuyerId,                          
+                    Sellerid = group.Key,                      
+                    Quantity = group.Sum(item => item.Quantity),   
+                    Totalamount = group.Sum(item => item.Totalamount), 
+                    Paymentdate = Paymentdate,
+                    Paymentmethod = Paymentmethod,
+                    Productids = productIds,                   
+                    ProductNames = productNames,               
+                    Status = "Pending"
+                };
 
-                    OrderDetails order = new OrderDetails();
-                    order.Buyerid = item.Buyerid;
-                    order.Sellerid= item.Sellerid;
-                    order.Quantity = item.Quantity;
-                    order.Totalamount = item.Totalamount;
-                    order.Paymentdate = Paymentdate;
-                    order.Paymentmethod = Paymentmethod;
-                    order.Productids = productids;
-                    order.ProductNames = productNames;
-                    order.Status = "Pending";
-
-                    await _orderService.ProductCreate(order);
-                }
+                await _orderService.ProductCreate(order);
             }
-
             return Ok("Added Successfully");
+
         }
     }
 }

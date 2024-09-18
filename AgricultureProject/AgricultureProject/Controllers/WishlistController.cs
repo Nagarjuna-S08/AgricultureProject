@@ -92,7 +92,7 @@ namespace AgricultureProject.Controllers
                 return BadRequest();
             }
             await _masterService.Delete(Id);
-            return Ok("Deleted Succesfully");
+            return Ok();
         }
 
 

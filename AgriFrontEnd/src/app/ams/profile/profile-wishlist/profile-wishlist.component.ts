@@ -18,6 +18,20 @@ export class ProfileWishlistComponent implements OnInit{
   }
 
 
+  DeleteApi(id:number){
+    this.WishListObj.DeleteApi(id).subscribe({
+      next:(data)=>{
+        this.GetWishListApi(1)
+        this.toat.success("Deleted Sucessfully","Deleted")
+        // console.log("Deleted Successfully");
+      },
+      error:(err)=>{
+        console.log(err);
+      }
+    })
+  }
+
+
   GetWishListApi(BuyerId:number){
     this.WishListObj.GetBuyerWishList(BuyerId).subscribe({
       next:(data:any)=>{

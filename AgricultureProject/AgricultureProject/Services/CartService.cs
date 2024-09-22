@@ -19,18 +19,18 @@ namespace AgricultureProject.Services
         public async Task ProductCreate(CartCreate cart)
         {
             var result = _mapper.Map<CartDetails>(cart);
-            var alreadyExist = _connection.CartTable.FirstOrDefault(x => x.Sellerid == result.Sellerid && x.Buyerid == result.Buyerid);
-            if (alreadyExist != null)
-            {
+            //var alreadyExist = _connection.CartTable.FirstOrDefault(x => x.Sellerid == result.Sellerid && x.Buyerid == result.Buyerid && );
+            //if (alreadyExist != null)
+            //{
 
-                throw new Exception("The Item is  already exists in the Cart.");
+            //    throw new Exception("The Item is  already exists in the Cart.");
 
-            }
-            else
-            {
+            //}
+            //else
+            //{
                 await _connection.CartTable.AddAsync(result);
                 await SaveChanges();
-            }
+            //}
             
         }
 
@@ -46,6 +46,18 @@ namespace AgricultureProject.Services
             result.Quantity = cart.Quantity;
             result.Totalamount = cart.Totalamount;
             _connection.CartTable.Update(result);
+            await SaveChanges();
+        }
+
+
+        public async Task DeleteBuyerCart(int BuyerId)
+        {
+           var result =  _connection.CartTable.Where(i=>i.Buyerid == BuyerId).ToList();
+
+            foreach (var item in result)
+            {
+                _connection.CartTable.Remove(item);
+            }
             await SaveChanges();
         }
     }

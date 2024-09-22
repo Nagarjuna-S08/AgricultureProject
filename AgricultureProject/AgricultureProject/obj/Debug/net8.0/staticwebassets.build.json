@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GMUKWBvsMcPeHscz7Wjg/yDW5wapeqh6dhwU9ed6BgQ=",
+  "Hash": "C5xXk4O8VJn3Hgp0E6hxS84cv96jXwdpBvDH6BEWf3k=",
   "Source": "AgricultureProject",
   "BasePath": "_content/AgricultureProject",
   "Mode": "Default",
@@ -74,6 +74,25 @@
       "OriginalItemSpec": "wwwroot\\ProductPhotos\\59a199d9-4646-4a53-88dc-1336455cc7e2.jpg"
     },
     {
+      "Identity": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\ProductPhotos\\60668bb2-b0c1-44e8-b32c-14d0ec8c7019.jpeg",
+      "SourceId": "AgricultureProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\",
+      "BasePath": "_content/AgricultureProject",
+      "RelativePath": "ProductPhotos/60668bb2-b0c1-44e8-b32c-14d0ec8c7019.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ProductPhotos\\60668bb2-b0c1-44e8-b32c-14d0ec8c7019.jpeg"
+    },
+    {
       "Identity": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\ProductPhotos\\a9441b7d-ed4c-49ab-ab27-1e96fd8f7de4.jpg",
       "SourceId": "AgricultureProject",
       "SourceType": "Discovered",
@@ -91,25 +110,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\ProductPhotos\\a9441b7d-ed4c-49ab-ab27-1e96fd8f7de4.jpg"
-    },
-    {
-      "Identity": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\ProductPhotos\\b3085243-bd97-4062-b4ef-7120dd094999.jpg",
-      "SourceId": "AgricultureProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\",
-      "BasePath": "_content/AgricultureProject",
-      "RelativePath": "ProductPhotos/b3085243-bd97-4062-b4ef-7120dd094999.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ProductPhotos\\b3085243-bd97-4062-b4ef-7120dd094999.jpg"
     }
   ]
 }

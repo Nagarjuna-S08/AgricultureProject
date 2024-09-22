@@ -7,5 +7,6 @@ namespace AgricultureProject.Services.IServices
         Task ProductCreate(CartCreate cart);
         Task Update(CartUpdate cart, int Id);
         Task SaveChanges();
+        Task DeleteBuyerCart(int buyerId);
     }
 }

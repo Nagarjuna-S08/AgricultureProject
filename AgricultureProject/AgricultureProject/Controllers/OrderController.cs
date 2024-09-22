@@ -39,40 +39,20 @@ namespace AgricultureProject.Controllers
         }
 
 
-        [HttpGet("Onedata/{Id:int}")]
+        [HttpGet("GetSellerOrder/{Id:int}")]
         public async Task<ActionResult<List<OrderDetails>>> GetOne(int Id)
         {
             if (Id == 0)
             {
                 return BadRequest();
             }
-            var result = await _masterService.GetAsyn(i => i.Id == Id, includeProperties: "Seller,Buyer");
+            var result = await _masterService.GetAsyn(i => i.Sellerid == Id, includeProperties: "Seller,Buyer");
             if (result == null)
             {
                 return NotFound();
             }
             return Ok(result);
         }
-
-
-
-
-
-
-        //[HttpPost] 
-        //public async Task<IActionResult> CreateProduct(OrderCreate Order)
-        //{
-        //    if (Order == null)
-        //    {
-        //        return BadRequest();
-        //    }
-        //    await _orderService.ProductCreate(Order);
-        //    return Ok("Added Successfully");
-        //}
-
-
-
-
 
         [HttpDelete("{Id:int}")]
         public async Task<IActionResult> DeleteProduct(int Id)
@@ -82,11 +62,8 @@ namespace AgricultureProject.Controllers
                 return BadRequest();
             }
             await _masterService.Delete(Id);
-            return Ok("Deleted Succesfully");
+            return Ok();
         }
-
-
-
 
         [HttpPut("{Id:int}")]
         public async Task<IActionResult> ProductUpdate([FromBody] OrderUpdate dtoupdate, int Id)
@@ -96,65 +73,71 @@ namespace AgricultureProject.Controllers
                 return BadRequest();
             }
             await _orderService.Update(dtoupdate, Id);
-            return Ok(dtoupdate);
+            return Ok();
         }
-
-
-        //[HttpPost("AddFromCart/{BuyerId:int}")]
-        //public async Task<IActionResult> AddFromCart([FromBody]OrderCreate order,int BuyerId)
-        //{
-        //    var dataCart = await _masterCart.GetAllAsyn(i => i.Buyerid == BuyerId);
-
-        //    if(dataCart == null)
-        //    {
-        //        return NotFound("No items in Cart");
-        //    }
-        //    var productids = string.Join(",",dataCart.Select(dataCart => dataCart.Product.Id.ToString()));
-        //    var productNames = string.Join(",", dataCart.Select(dataCart => dataCart.Product.Productname.ToString()));
-
-        //    order.Productids = productids;
-        //    order.ProductNames = productNames;
-
-        //    await _orderService.ProductCreate(order);
-
-        //    return Ok("Added Successfully");
-        //}
 
 
         [HttpPost("AddFromCart/{BuyerId:int}/{Paymentmethod}/{Paymentdate}")]
         public async Task<IActionResult> AddFromCart(int BuyerId,string Paymentdate,string Paymentmethod )
         {
 
-            var dataCart = await _masterCart.GetAllAsyn(i => i.Buyerid == BuyerId);
+            var dataCart = await _masterCart.GetAllAsyn(i => i.Buyerid == BuyerId,"Seller,Buyer,Product");
+
+            //OrderDetails order = new OrderDetails();
 
             if (dataCart == null || !dataCart.Any())
             {
-                return NotFound("No items in Cart");
+                return NotFound();
             }
             var groupData = dataCart.GroupBy(i => i.Sellerid).ToList();
+            Console.WriteLine(groupData);
 
-            foreach (var group in groupData)
+
+            foreach (var item in groupData)
             {
+                Console.WriteLine($"SellerId: {item.Key}");
 
-                var productIds = string.Join(",", group.Select(item => item.Product.Id.ToString()));
-                var productNames = string.Join(",", group.Select(item => item.Product.Productname));
-
-                OrderDetails order = new OrderDetails
+                foreach (var group in item)
                 {
-                    Buyerid = BuyerId,                          
-                    Sellerid = group.Key,                      
-                    Quantity = group.Sum(item => item.Quantity),   
-                    Totalamount = group.Sum(item => item.Totalamount), 
+                    Console.WriteLine($"Product: {group.Product.Productname}, Buyer: {group.Buyer.Buyername}");
+                }
+
+                // Use `item` (which is the grouped collection) to apply `Where`, `Select`, and `Sum`
+                var productIds = string.Join(",", item
+                    .Where(i => i.Product != null)   // Check if Product is not null
+                    .Select(i => i.Product.Id.ToString()));
+
+                var productNames = string.Join(",", item
+                    .Where(i => i.Product != null)   // Check if Product is not null
+                    .Select(i => i.Product.Productname));
+
+                var productQuantities = string.Join(",", item
+                    .Select(i => i.Quantity));
+
+                var ProductAmount = string.Join(",", item
+                    .Select(i => i.Totalamount));
+
+                // Create a new `OrderDetails` instance for each grouped seller
+                var order = new OrderDetails
+                {
+                    Buyerid = BuyerId,
+                    Sellerid = item.Key,  // `item.Key` contains the grouped SellerId
+                    Quantity = item.Count(), 
+                    Totalamount = item.Sum(i => i.Totalamount),  // Sum over the grouped items
                     Paymentdate = Paymentdate,
                     Paymentmethod = Paymentmethod,
-                    Productids = productIds,                   
-                    ProductNames = productNames,               
+                    Productids = productIds,
+                    ProductNames = productNames,
+                    ProductAmount = ProductAmount,
+                    productQuantities = productQuantities,
                     Status = "Pending"
                 };
 
+                // Save the new order for each group of products
                 await _orderService.ProductCreate(order);
             }
-            return Ok("Added Successfully");
+            
+            return Ok();
 
         }
     }

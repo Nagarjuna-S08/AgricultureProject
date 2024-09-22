@@ -23,5 +23,7 @@ namespace AgricultureProject.Model
         public string Paymentmethod {  get; set; }
         public string Paymentdate { get; set; }
         public string Status { get; set;}
+        public string ProductAmount { get; set; }
+        public string productQuantities { get; set; }
     }
 }

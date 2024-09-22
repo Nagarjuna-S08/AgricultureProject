@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { CartServiceService } from 'src/app/Services/CartService/cart-service.service';
 
 @Component({
   selector: 'app-profile-orders',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class ProfileOrdersComponent {
 
+  constructor(private toast : ToastrService,private obj:CartServiceService){}
+  
 }

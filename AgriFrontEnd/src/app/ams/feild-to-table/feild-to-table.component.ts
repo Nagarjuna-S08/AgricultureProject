@@ -19,6 +19,7 @@ export class FeildToTableComponent implements OnInit{
     quantity:0,
     totalamount:0
   }
+
   constructor(private tost:ToastrService,private obj:ProductServiceService,private CartObj:CartServiceService){}
   
   ngOnInit(): void {
@@ -37,16 +38,17 @@ export class FeildToTableComponent implements OnInit{
     })
   }
 
-  CartAdd(ProductId:number , PricePerKg:number , TotalKg:String){
+  CartAdd(ProductId:number , PricePerKg:number , TotalKg:String , sellerId:number){
     this.CartAddDetails.productid=ProductId
     this.CartAddDetails.quantity = Number(TotalKg)
     this.CartAddDetails.totalamount = this.CartAddDetails.quantity * PricePerKg
-    this.CartAddDetails.sellerid=1;
+    this.CartAddDetails.sellerid= sellerId;
     this.CartAddDetails.buyerid=1;
 
     this.CartObj.PostApi(this.CartAddDetails).subscribe({
       next:(data:any)=>{
         this.tost.success("Product Added to Cart")
+        this.GetApi()
       },
       error:(error)=>{
         this.tost.error("The Item is already exists in the Cart.","Invalid");

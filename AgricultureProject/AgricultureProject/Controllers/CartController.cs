@@ -96,5 +96,19 @@ namespace AgricultureProject.Controllers
             await _cartService.Update(dtoupdate, Id);
             return Ok();
         }
+
+
+        [HttpDelete("DeleteBuyerCart/{id:int}")]
+        public async Task<IActionResult> DeleteCartOfBuyer(int id)
+        {
+            if (id == 0)
+            {
+                return BadRequest();
+            }
+
+            await _cartService.DeleteBuyerCart(id);
+
+            return Ok();
+        }
     }
 }

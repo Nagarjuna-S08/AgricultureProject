@@ -38,4 +38,8 @@ export class CartServiceService {
   DeleteApi(id:number):Observable<any>{
     return this.http.delete<any>(this.envi.environmentUrl+this.ServerLink+`/${id}`)
   }
+
+  DeleteBuyerCartApi(id:number):Observable<any>{
+    return this.http.delete<any>(this.envi.environmentUrl+this.ServerLink+`/DeleteBuyerCart/${id}`)
+  }
 }

@@ -34,4 +34,11 @@ export class OrderServiceService {
     return this.http.get(this.envi.environmentUrl+this.serverLink+`/GetSellerOrder/${id}`)
   }
 
+  GetOneApi(id:number){
+    return this.http.get(this.envi.environmentUrl+this.serverLink+`/GetOneApi/${id}`)
+  }
+
+  GetAcceptedOrder(Sellerid:number){
+    return this.http.get(this.envi.environmentUrl+this.serverLink+`/GetTheAcceptedRecords/${Sellerid}`)
+  }
 }

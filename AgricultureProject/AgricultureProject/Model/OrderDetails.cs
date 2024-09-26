@@ -25,5 +25,6 @@ namespace AgricultureProject.Model
         public string Status { get; set;}
         public string ProductAmount { get; set; }
         public string productQuantities { get; set; }
+        public bool AcceptCheck { get; set; } = false;
     }
 }

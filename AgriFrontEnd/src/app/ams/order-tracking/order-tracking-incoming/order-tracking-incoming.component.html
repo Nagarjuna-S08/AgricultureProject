@@ -1,3 +1,4 @@
+<app-order-pop-up *ngIf="PopupObj.PopUpShown" [PopUpData]="POPUPData"></app-order-pop-up>
 <div class="incomingOrder">
     <div class="searchdiv order-search">
         <input type="search" placeholder="Search">
@@ -8,7 +9,7 @@
         <div class="order-details" *ngFor="let data of OrderSeller">
             <div class="items">
                 <h2>Number of Items : {{data.quantity}}</h2>
-                <a href="" class="more-details" >More Details</a>
+                <a href="#" class="more-details" (click)="onClick($event,data.id)">More Details</a>
             </div>
             <div class="customer-details">
                 <h2>Customer Name : {{data.buyer.buyername}}</h2>

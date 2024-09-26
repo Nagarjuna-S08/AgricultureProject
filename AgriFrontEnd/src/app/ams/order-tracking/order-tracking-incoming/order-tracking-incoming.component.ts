@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { OrderUpdate } from 'src/app/Models/OrderUpdate';
 import { OrderServiceService } from 'src/app/Services/OrderService/order-service.service';
+import { OrderPopUpServiceService } from 'src/app/Services/PopUpServices/order-pop-up-service.service';
 
 @Component({
   selector: 'app-order-tracking-incoming',
@@ -9,15 +10,31 @@ import { OrderServiceService } from 'src/app/Services/OrderService/order-service
   styleUrls: ['./order-tracking-incoming.component.css']
 })
 export class OrderTrackingIncomingComponent implements OnInit{
-  constructor(private OrderObj:OrderServiceService,private Tost:ToastrService){}
+  constructor(private OrderObj:OrderServiceService,private Tost:ToastrService,public PopupObj:OrderPopUpServiceService){}
   
   OrderSeller:any=[]
+  POPUPData:any=null
 
   OrderUpdate:OrderUpdate={
     id:0,
     delivarydate:'',
     status:''
   }
+
+  onClick(event: Event,orderid:number) {
+    event.preventDefault(); // This will prevent routing or navigation
+    this.OrderObj.GetOneApi(orderid).subscribe({
+      next:(data)=>{
+        this.POPUPData=data
+        this.PopupObj.isClick(); // Call your function here
+      },
+      error:(err)=>{
+        console.log(err);
+      }
+    })
+    
+  }
+
   ngOnInit(): void {
     this.GetApi(1)
   }

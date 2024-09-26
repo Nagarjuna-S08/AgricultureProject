@@ -22,6 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { Environment } from './Environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { OrderPopUpComponent } from './ams/order-tracking/order-pop-up/order-pop-up.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ToastrModule } from 'ngx-toastr';
     ProfileComponent,
     ProfileWishlistComponent,
     ProfileCartComponent,
-    ProfileOrdersComponent
+    ProfileOrdersComponent,
+    OrderPopUpComponent
   ],
   imports: [
     BrowserModule,

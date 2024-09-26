@@ -46,13 +46,44 @@ namespace AgricultureProject.Controllers
             {
                 return BadRequest();
             }
-            var result = await _masterService.GetAsyn(i => i.Sellerid == Id, includeProperties: "Seller,Buyer");
+            var result = await _masterService.GetAsyn(i => i.Sellerid == Id && i.AcceptCheck == false, includeProperties: "Seller,Buyer");
             if (result == null)
             {
                 return NotFound();
             }
             return Ok(result);
         }
+
+        [HttpGet("GetOneApi/{id:int}")]
+        public async Task<ActionResult<List<OrderDetails>>> GetOneID(int id)
+        {
+            if (id == 0)
+            {
+                return BadRequest();
+            }
+            var result = await _masterService.GetAsyn(i => i.Id == id, includeProperties: "Seller,Buyer");
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return Ok(result);
+        }
+
+        [HttpGet("GetTheAcceptedRecords/{sellerId:int}")]
+        public async Task<ActionResult<List<OrderDetails>>> GetAcceptedRecord(int id)
+        {
+            if (id == 0)
+            {
+                return BadRequest();
+            }
+            var result = await _masterService.GetAsyn(i => i.Sellerid == id && i.AcceptCheck==true, includeProperties: "Seller,Buyer");
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return Ok(result);
+        }
+        
 
         [HttpDelete("{Id:int}")]
         public async Task<IActionResult> DeleteProduct(int Id)

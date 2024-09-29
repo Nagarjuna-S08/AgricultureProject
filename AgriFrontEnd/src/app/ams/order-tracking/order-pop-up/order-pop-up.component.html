@@ -1,9 +1,35 @@
 <div class="bgBlack" (click)="PopUpObj.isClick()"></div>
 <div class="PopUpContainer">
-    <form action="">
-        <div class="inputdiv">
-            <label for="DelivaryDate">Delivary Date</label>
-            <input type="text" id="DelivaryDate" placeholder="Delivary Date" >
+    <form action="" [formGroup]="PopUpForm">
+        <div class="orders order-details pop-updetails">
+            <div class="order-details pop-updetails" *ngFor="let data of PopUpData">
+                <div class="items">
+                    <h2>Number of Items : {{data.quantity}}</h2>
+                </div>
+                <div class="customer-details">
+                    <h2>Customer Name : {{data.buyer.buyername}}</h2>
+                    <h2>Contact No : {{data.buyer.buyerphonenumber}}</h2>
+                    <address>Shipping Address : {{data.buyer.buyeraddress}}
+                    </address>
+                    <div class="items-details">
+                        <h3>Item Id : {{data.productids}}</h3>
+                        <h3>Item Name : {{data.productNames}}</h3>
+                        <h3>Item Quantity : {{data.productQuantities}}</h3>
+                        <h3>Item Amount in Rupees: {{data.productAmount}}</h3>
+    
+                        <h2>Total Amount : {{data.totalamount}} Rs</h2>
+                    </div>
+                </div>
+                <div class="inputdiv" style="margin-top: 20px;">
+                    <label for="DelivaryDate">Delivary Date</label>
+                    <input type="date" id="DelivaryDate" placeholder="Delivary Date" formControlName="delivarydate">
+                </div>
+            
+                <div class="buttondiv popupButtons">
+                    <button class="button add" type="submit" (click)="PopUpSubmit(data.id)">Add</button>
+                    <button class="button clear" type="button" (click)="PopUpObj.isClick()">Close</button>
+                </div>
+            </div>
         </div>
     </form>
 </div>

@@ -760,6 +760,7 @@ body{
     padding:15px 15px;
     padding-top: 140px;
     border: 1px solid ;
+    width: 100vw;
 }
 
 .orderstrackingnavbar{
@@ -896,6 +897,14 @@ body{
     color: white;
     font-size:medium;
     font-weight:650;
+}
+
+.shiped-detail > option{
+    color: black;
+    font-weight:500;
+    font-size:18px;
+    border-radius: 0px;
+    /* padding-left: 1000px; */
 }
 /*END of the CSS*/
 
@@ -1255,3 +1264,14 @@ input[type="date"]{
     cursor: pointer;
 }
 /*Validation CSS END*/
+
+/*Pop up CSS*/
+.pop-updetails{
+    width: 100%;
+    background-color: transparent;
+}
+
+.popupButtons{
+    margin-top: 20px;
+}
+/**/

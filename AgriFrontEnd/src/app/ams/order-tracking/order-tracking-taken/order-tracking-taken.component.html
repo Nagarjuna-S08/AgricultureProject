@@ -19,100 +19,24 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>S.Nagarjuna</td>
-                    <td>1234</td>
-                    <td>3</td>
-                    <td>Online</td>
-                    <td>07-04-2024</td>
+                <tr *ngFor="let data of OrderDetails">
+                    <td>{{data.id}}</td>
+                    <td>{{data.buyer.buyername}}</td>
+                    <td>{{data.id}}</td>
+                    <td>{{data.quantity}}</td>
+                    <td>{{data.paymentmethod}}</td>
+                    <td>{{data.paymentdate}}</td>
                     <td>
-                        <select class="shiped-detail">
-                            <option selected disabled>Shipped</option>
-                            <option>1</option>
+                        <select class="shiped-detail" [value]="data.status" #orderTrackDetail (change)="PutApi(data.id,orderTrackDetail.value)">
+                            <option value="Pending">Pending</option>
+                            <option value="Shipped">Shipped</option>
+                            <option value="Delivered">Delivered</option>
                         </select>
                     </td>
                     <td><img src="assets/Images/MoreDetails.png" alt=""></td>
                 </tr>
 
-                <tr>
-                    <td>1</td>
-                    <td>S.Nagarjuna</td>
-                    <td>1234</td>
-                    <td>3</td>
-                    <td>Online</td>
-                    <td>07-04-2024</td>
-                    <td>
-                        <select class="shiped-detail">
-                            <option selected disabled>Shipped</option>
-                            <option>1</option>
-                        </select>
-                    </td>
-                    <td><img src="assets/Images/MoreDetails.png" alt=""></td>
-                </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>S.Nagarjuna</td>
-                    <td>1234</td>
-                    <td>3</td>
-                    <td>Online</td>
-                    <td>07-04-2024</td>
-                    <td>
-                        <select class="shiped-detail">
-                            <option selected disabled>Shipped</option>
-                            <option>1</option>
-                        </select>
-                    </td>
-                    <td><img src="assets/Images/MoreDetails.png" alt=""></td>
-                </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>S.Nagarjuna</td>
-                    <td>1234</td>
-                    <td>3</td>
-                    <td>Online</td>
-                    <td>07-04-2024</td>
-                    <td>
-                        <select class="shiped-detail">
-                            <option selected disabled>Shipped</option>
-                            <option>1</option>
-                        </select>
-                    </td>
-                    <td><img src="assets/Images/MoreDetails.png" alt=""></td>
-                </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>S.Nagarjuna</td>
-                    <td>1234</td>
-                    <td>3</td>
-                    <td>Online</td>
-                    <td>07-04-2024</td>
-                    <td>
-                        <select class="shiped-detail">
-                            <option selected disabled>Shipped</option>
-                            <option>1</option>
-                        </select>
-                    </td>
-                    <td><img src="assets/Images/MoreDetails.png" alt=""></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>S.Nagarjuna</td>
-                    <td>1234</td>
-                    <td>3</td>
-                    <td>Online</td>
-                    <td>07-04-2024</td>
-                    <td>
-                        <select class="shiped-detail">
-                            <option selected disabled>Shipped</option>
-                            <option>1</option>
-                        </select>
-                    </td>
-                    <td><img src="assets/Images/MoreDetails.png" alt=""></td>
-                </tr>
+                
             </tbody>
         </table>
     </div>

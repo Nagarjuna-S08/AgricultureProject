@@ -18,7 +18,8 @@ export class OrderTrackingIncomingComponent implements OnInit{
   OrderUpdate:OrderUpdate={
     id:0,
     delivarydate:'',
-    status:''
+    status:'',
+    acceptCheck:false
   }
 
   onClick(event: Event,orderid:number) {

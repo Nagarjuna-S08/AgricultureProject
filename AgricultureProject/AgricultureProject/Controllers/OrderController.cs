@@ -69,7 +69,7 @@ namespace AgricultureProject.Controllers
             return Ok(result);
         }
 
-        [HttpGet("GetTheAcceptedRecords/{sellerId:int}")]
+        [HttpGet("GetTheAcceptedRecords/{id:int}")]
         public async Task<ActionResult<List<OrderDetails>>> GetAcceptedRecord(int id)
         {
             if (id == 0)
@@ -83,7 +83,23 @@ namespace AgricultureProject.Controllers
             }
             return Ok(result);
         }
-        
+
+
+        [HttpGet("GetTheAcceptedRecordsForBuyer/{id:int}")]
+        public async Task<ActionResult<List<OrderDetails>>> GetAcceptedRecordBuyer(int id)
+        {
+            if (id == 0)
+            {
+                return BadRequest();
+            }
+            var result = await _masterService.GetAsyn(i => i.Buyerid == id && i.AcceptCheck == true, includeProperties: "Seller,Buyer");
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return Ok(result);
+        }
+
 
         [HttpDelete("{Id:int}")]
         public async Task<IActionResult> DeleteProduct(int Id)
@@ -107,6 +123,16 @@ namespace AgricultureProject.Controllers
             return Ok();
         }
 
+        [HttpPut("Status/{id:int}/{status}")]
+        public async Task<IActionResult> StatusUpdate(int id, string status)
+        {
+            if (id == 0)
+            {
+                return BadRequest();
+            }
+            await _orderService.UpdateStatus(id, status);
+            return Ok();
+        }
 
         [HttpPost("AddFromCart/{BuyerId:int}/{Paymentmethod}/{Paymentdate}")]
         public async Task<IActionResult> AddFromCart(int BuyerId,string Paymentdate,string Paymentmethod )

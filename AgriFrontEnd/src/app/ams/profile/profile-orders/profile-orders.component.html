@@ -13,68 +13,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>S.Nagarjuna</td>
-                <td>1234</td>
-                <td>3</td>
-                <td>Online</td>
-                <td>07-04-2024</td>
-                <td>Shipped</td>
-                <td><img src="assets/Images/MoreDetails.png" alt=""></td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>S.Nagarjuna</td>
-                <td>1234</td>
-                <td>3</td>
-                <td>Online</td>
-                <td>07-04-2024</td>
-                <td>Shipped</td>
-                <td><img src="assets/Images/MoreDetails.png" alt=""></td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>S.Nagarjuna</td>
-                <td>1234</td>
-                <td>3</td>
-                <td>Online</td>
-                <td>07-04-2024</td>
-                <td>Shipped</td>
-                <td><img src="assets/Images/MoreDetails.png" alt=""></td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>S.Nagarjuna</td>
-                <td>1234</td>
-                <td>3</td>
-                <td>Online</td>
-                <td>07-04-2024</td>
-                <td>Shipped</td>
-                <td><img src="assets/Images/MoreDetails.png" alt=""></td>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>S.Nagarjuna</td>
-                <td>1234</td>
-                <td>3</td>
-                <td>Online</td>
-                <td>07-04-2024</td>
-                <td>Shipped</td>
-                <td><img src="assets/Images/MoreDetails.png" alt=""></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>S.Nagarjuna</td>
-                <td>1234</td>
-                <td>3</td>
-                <td>Online</td>
-                <td>07-04-2024</td>
-                <td>Shipped</td>
+            <tr *ngFor="let data of OrderDetailsForBuyer">
+                <td>{{data.id}}</td>
+                <td>{{data.buyer.buyername}}</td>
+                <td>{{data.id}}</td>
+                <td>{{data.quantity}}</td>
+                <td>{{data.paymentmethod}}</td>
+                <td>{{data.paymentdate}}</td>
+                <td>{{data.status}}</td>
                 <td><img src="assets/Images/MoreDetails.png" alt=""></td>
             </tr>
         </tbody>

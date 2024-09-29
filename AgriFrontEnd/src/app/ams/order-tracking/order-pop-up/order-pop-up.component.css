@@ -9,12 +9,17 @@
 }
 .PopUpContainer{
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top:0;
+    left:0;
     padding: 15px 15px;
     height: fit-content;
     width:fit-content;
     z-index: 21;
-    background-color: antiquewhite;
+    background-color:white;
     /* transform: translateX(50%) translateY(50%); */
+    /* margin: auto; */
+    /* margin-left: 34%; */
+    top: 22%;
+    left: 34%;
+    border-radius: 8px ;
 }

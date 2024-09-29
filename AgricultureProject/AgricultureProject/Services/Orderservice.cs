@@ -34,7 +34,15 @@ namespace AgricultureProject.Services
             var result = await _connection.OrderTable.FindAsync(Id);
             result.Delivarydate = order.Delivarydate;
             result.Status = order.Status;
+            result.AcceptCheck = order.AcceptCheck;
             _connection.OrderTable.Update(result);
+            await SaveChanges();
+        }
+
+        public async Task UpdateStatus(int id,string status)
+        {
+            var result = await _connection.OrderTable.FindAsync(id);
+            result.Status = status;
             await SaveChanges();
         }
     }

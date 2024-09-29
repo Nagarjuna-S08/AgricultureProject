@@ -31,14 +31,22 @@ export class OrderServiceService {
   }
 
   GetSellerOrderApi(id:number):Observable<any>{
-    return this.http.get(this.envi.environmentUrl+this.serverLink+`/GetSellerOrder/${id}`)
+    return this.http.get<any>(this.envi.environmentUrl+this.serverLink+`/GetSellerOrder/${id}`)
   }
 
-  GetOneApi(id:number){
-    return this.http.get(this.envi.environmentUrl+this.serverLink+`/GetOneApi/${id}`)
+  GetOneApi(id:number):Observable<any>{
+    return this.http.get<any>(this.envi.environmentUrl+this.serverLink+`/GetOneApi/${id}`)
   }
 
-  GetAcceptedOrder(Sellerid:number){
-    return this.http.get(this.envi.environmentUrl+this.serverLink+`/GetTheAcceptedRecords/${Sellerid}`)
+  GetAcceptedOrder(Sellerid:number):Observable<any>{
+    return this.http.get<any>(this.envi.environmentUrl+this.serverLink+`/GetTheAcceptedRecords/${Sellerid}`)
+  }
+
+  GetAcceptedOrderBuyer(BuyerId:number):Observable<any>{
+    return this.http.get<any>(this.envi.environmentUrl+this.serverLink+`/GetTheAcceptedRecordsForBuyer/${BuyerId}`)
+  }
+
+  PutApiStatus(OrderId:number,Status:string):Observable<any>{
+    return this.http.put<any>(this.envi.environmentUrl+this.serverLink+`/Status/${OrderId}/${Status}`,{})
   }
 }

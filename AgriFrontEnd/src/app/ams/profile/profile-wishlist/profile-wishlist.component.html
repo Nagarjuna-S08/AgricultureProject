@@ -8,7 +8,7 @@
 
 
         <div class="landdetaileach editmyLandEach" *ngFor="let data of WishListDetails">
-            <img src="assets/Images/landBackground.png" alt="">
+            <img [src]="data.land.landphoto1" alt="">
             <div class="aboudetails">
                 <p>Address : {{data.land.landaddress}}</p>
                 <div class="pricearea">

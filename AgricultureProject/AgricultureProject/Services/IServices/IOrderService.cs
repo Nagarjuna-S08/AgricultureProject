@@ -7,6 +7,7 @@ namespace AgricultureProject.Services.IServices
     {
         Task ProductCreate(OrderDetails order);
         Task Update(OrderUpdate order, int Id);
+        Task UpdateStatus(int Id,string status);
         Task SaveChanges();
     }
 }

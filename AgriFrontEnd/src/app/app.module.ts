@@ -23,6 +23,13 @@ import { Environment } from './Environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { OrderPopUpComponent } from './ams/order-tracking/order-pop-up/order-pop-up.component';
+import { LoginComponent } from './login/login.component';
+import { BuyerComponent } from './login/buyer/buyer.component';
+import { SellerLoginComponent } from './login/seller-login/seller-login.component';
+import { AdminLoginComponent } from './login/admin-login/admin-login.component';
+import { RegisterPageComponent } from './register-page/register-page.component';
+import { SellerRegisterComponent } from './register-page/seller-register/seller-register.component';
+import { BuyerRegisterComponent } from './register-page/buyer-register/buyer-register.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +48,14 @@ import { OrderPopUpComponent } from './ams/order-tracking/order-pop-up/order-pop
     ProfileWishlistComponent,
     ProfileCartComponent,
     ProfileOrdersComponent,
-    OrderPopUpComponent
+    OrderPopUpComponent,
+    LoginComponent,
+    BuyerComponent,
+    SellerLoginComponent,
+    AdminLoginComponent,
+    RegisterPageComponent,
+    SellerRegisterComponent,
+    BuyerRegisterComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { WishListCreate } from 'src/app/Models/WishListCreate';
 import { LandServiceService } from 'src/app/Services/LandService/land-service.service';
+import { LandMoreDetailsPopUpService } from 'src/app/Services/PopUpServices/MoreDetailsPopUp/land-more-details-pop-up.service';
 import { WishListServiceService } from 'src/app/Services/WishListService/wish-list-service.service';
 
 @Component({
@@ -17,13 +18,28 @@ export class FarmLandsComponent implements OnInit{
       landid:0,
       sellerid:0
     }
+    POPUPData:any=null
 
-    constructor(private tost:ToastrService,private obj:LandServiceService,private WishListObj:WishListServiceService){}
+    constructor(private tost:ToastrService,private obj:LandServiceService,private WishListObj:WishListServiceService,public PopupObj:LandMoreDetailsPopUpService){}
 
     ngOnInit(): void {
       this.GetApi()
     }
 
+    onClick(Landid:number) {
+      this.obj.GetOneApi(Landid).subscribe({
+        next:(data)=>{
+          this.POPUPData=data
+          this.PopupObj.isClick(); // Call your function here
+          console.log(this.POPUPData);
+          
+        },
+        error:(err)=>{
+          console.log(err);
+        }
+      })
+      
+    }
 
     GetApi(){
       this.obj.GetApi().subscribe({

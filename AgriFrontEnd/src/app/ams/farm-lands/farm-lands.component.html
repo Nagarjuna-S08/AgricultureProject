@@ -1,3 +1,4 @@
+<app-farm-lands-more-details-pop-up *ngIf="PopupObj.PopUpShown" [PopUpData]="POPUPData"></app-farm-lands-more-details-pop-up>
 <div class="Farmlands">
     <div class="frambackground">
         
@@ -65,7 +66,7 @@
                     </div>
                     <div class="buttondiv">
                         <button type="button" class="button wishlist" (click)="WishListAdd(data.id,data.seller.id)">Add To Wishlist</button>
-                        <button type="button" class="button Moredetails">More Details</button>
+                        <button type="button" class="button Moredetails" (click)="onClick(data.id)">More Details</button>
                     </div>
                 </div>
             </div>

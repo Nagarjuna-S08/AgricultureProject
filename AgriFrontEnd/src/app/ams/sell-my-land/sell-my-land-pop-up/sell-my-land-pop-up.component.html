@@ -1,0 +1,33 @@
+<div class="bgBlack" (click)="PopUpObj.isClick()"></div>
+<div class="PopUpContainer">
+    <form action="" >
+        <div class="orders order-details pop-updetails">
+            <div class="order-details pop-updetails">
+                <div class="items" style="margin-bottom: 30px;">
+                    <h2>Land Details</h2>
+                </div>
+                <div class="inputdiv">
+                    <label for="LandArea">Land Area</label>
+                    <input type="text" id="LandArea" placeholder="Enter Area in Sq.ft"  [(ngModel)]="LandUpdate.landarea" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="inputdiv">
+                    <label for="LandPrice">Land Price</label>
+                    <input type="text" id="LandPrice" placeholder="Enter Amount in Lakhs"  [(ngModel)]="LandUpdate.landprice" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="inputdiv">
+                    <label for="LandAddress">Land Address</label>
+                    <input type="text" id="LandAddress" placeholder="Enter Address of the Land"  [(ngModel)]="LandUpdate.landaddress" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="inputdiv">
+                    <label for="LandOwnerName">Land Owner Name</label>
+                    <input type="text" id="LandOwnerName" placeholder="Enter Owner Name"  [(ngModel)]="LandUpdate.ownername" [ngModelOptions]="{standalone: true}">
+                </div>
+            
+                <div class="buttondiv popupButtons">
+                    <button class="button add" type="submit" (click)="PopUpSubmit()">Add</button>
+                    <button class="button clear" type="button" (click)="PopUpObj.isClick()">Close</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

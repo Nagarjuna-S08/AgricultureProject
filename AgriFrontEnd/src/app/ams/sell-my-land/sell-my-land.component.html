@@ -1,3 +1,4 @@
+<app-sell-my-land-pop-up *ngIf="PopupObj.PopUpShown" [PopUpData]="POPUPData"></app-sell-my-land-pop-up>
 <div class="sellmyproducts">
     <div class="sellmyproductsSection1">
         <div class="formdiv">
@@ -53,7 +54,7 @@
                         <p>Ph.No.:{{data.seller.organizationphonenumber}}</p>
                     </div>
                     <div class="buttondiv">
-                        <button type="button" class="button edit">Edit</button>
+                        <button type="button" class="button edit" (click)="onClick(data.id)">Edit</button>
                         <button type="button" class="button delete" (click)="DeleteApi(data.id)">Delete</button>
                     </div>
                 </div>

@@ -1,0 +1,32 @@
+<div class="bgBlack" (click)="PopUpObj.isClick()"></div>
+<div class="PopUpContainer">
+    <form action="" >
+        <div class="orders order-details pop-updetails">
+            <div class="order-details pop-updetails">
+                <div class="items" style="margin-bottom: 30px;">
+                    <h2>Product Details</h2>
+                </div>
+                <div class="inputdiv">
+                    <label for="Productname">Product Name</label>
+                    <input type="text" id="Productname" placeholder="Enter Name" [(ngModel)]="ProductUpdate.productname" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="inputdiv">
+                    <label for="Totalstock">Total Stock</label>
+                    <input type="text" id="Totalstock" placeholder="Enter Stock in KG" [(ngModel)]="ProductUpdate.totalquantity" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="inputdiv">
+                    <label for="Harvesteddate">Harvested Date</label>
+                    <input type="date" id="Harvesteddate" placeholder="Enter Harvested Date" [(ngModel)]="ProductUpdate.harvesteddate" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="inputdiv">
+                    <label for="Priceperkg">Price Per KG</label>
+                    <input type="text" id="Priceperkg" placeholder="Enter Per KG Amount" [(ngModel)]="ProductUpdate.amountperKG" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="buttondiv popupButtons">
+                    <button class="button add" type="submit" (click)="PopUpSubmit()">Add</button>
+                    <button class="button clear" type="button" (click)="PopUpObj.isClick()">Close</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

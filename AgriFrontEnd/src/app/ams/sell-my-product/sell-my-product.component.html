@@ -1,4 +1,4 @@
-
+<app-sell-my-product-pop-up *ngIf="PopupObj.PopUpShown" [PopUpData]="POPUPData"></app-sell-my-product-pop-up>
 <div class="sellmyproducts">
     <div class="sellmyproductsSection1">
         <img src="assets/Images/sellMyProduct.png" alt="">
@@ -52,7 +52,7 @@
                 <p>From : {{data.seller.organizationname}}, {{data.seller.organizationaddress}}, {{data.seller.organizationphonenumber}}</p>
                 <div class="commentdiv">
                     <div class="buttondiv">
-                        <button type="button" class="button edit" >Edit</button>
+                        <button type="button" class="button edit" (click)="onClick(data.id)">Edit</button>
                         <button type="button" class="button delete" (click)="DeleteApiSubscribe(data.id)">Delete</button>
                     </div>
                 </div>

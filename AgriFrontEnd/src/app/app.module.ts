@@ -30,6 +30,9 @@ import { AdminLoginComponent } from './login/admin-login/admin-login.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { SellerRegisterComponent } from './register-page/seller-register/seller-register.component';
 import { BuyerRegisterComponent } from './register-page/buyer-register/buyer-register.component';
+import { SellMyLandPopUpComponent } from './ams/sell-my-land/sell-my-land-pop-up/sell-my-land-pop-up.component';
+import { SellMyProductPopUpComponent } from './ams/sell-my-product/sell-my-product-pop-up/sell-my-product-pop-up.component';
+import { FarmLandsMoreDetailsPopUpComponent } from './ams/farm-lands/farm-lands-more-details-pop-up/farm-lands-more-details-pop-up.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +58,10 @@ import { BuyerRegisterComponent } from './register-page/buyer-register/buyer-reg
     AdminLoginComponent,
     RegisterPageComponent,
     SellerRegisterComponent,
-    BuyerRegisterComponent
+    BuyerRegisterComponent,
+    SellMyLandPopUpComponent,
+    SellMyProductPopUpComponent,
+    FarmLandsMoreDetailsPopUpComponent
   ],
   imports: [
     BrowserModule,

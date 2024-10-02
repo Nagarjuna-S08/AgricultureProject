@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { LandCreate } from 'src/app/Models/LandCreate';
-import { ProductCreate } from 'src/app/Models/ProductCreate';
 import { LandServiceService } from 'src/app/Services/LandService/land-service.service';
+import { LandPopUpService } from 'src/app/Services/PopUpServices/SellLandPopUp/land-pop-up.service';
 
 @Component({
   selector: 'app-sell-my-land',
@@ -15,6 +15,7 @@ export class SellMyLandComponent implements OnInit {
   LandForm!:FormGroup;
   LandDetails:any=[]
   FileData:FormData = new FormData()
+  POPUPData:any=null
 
   LandCreateDetail:LandCreate={
     sellerid:0,
@@ -25,7 +26,7 @@ export class SellMyLandComponent implements OnInit {
     updateddate:''
   }
 
-  constructor(private tost:ToastrService,private obj:LandServiceService){}
+  constructor(private tost:ToastrService,private obj:LandServiceService,public PopupObj:LandPopUpService){}
 
   ngOnInit(): void {
     this.LandForm = new FormGroup({
@@ -36,6 +37,21 @@ export class SellMyLandComponent implements OnInit {
       LandPhoto : new FormControl('',Validators.required)
     })
     this.GetApi()
+  }
+  
+  onClick(Landid:number) {
+     // This will prevent routing or navigation
+    this.obj.GetOneApi(Landid).subscribe({
+      next:(data)=>{
+        this.POPUPData=data
+        // debugger
+        this.PopupObj.isClick(); // Call your function here
+      },
+      error:(err)=>{
+        console.log(err);
+      }
+    })
+    
   }
 
   FileChange(event:any){

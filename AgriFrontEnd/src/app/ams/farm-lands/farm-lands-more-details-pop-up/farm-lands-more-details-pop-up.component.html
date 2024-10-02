@@ -1,0 +1,26 @@
+<div class="bgBlack" (click)="PopUpObj.isClick()"></div>
+<div class="PopUpContainer">
+    <form action="" [formGroup]="PopUpForm">
+        <div class="orders order-details pop-updetails">
+            <div class="order-details pop-updetails" *ngFor="let data of PopUpData">
+                <div class="items">
+                    <h2>Land Details</h2>
+                </div>
+                <div class="customer-details">
+                    <h2>Owner Name : {{data.ownername}}</h2>
+                    <h2>Contact No : {{data.seller.organizationphonenumber}}</h2>
+                    <address>Land Address : {{data.landaddress}}
+                    </address>
+                    <div class="items-details">
+                        <h3>Land Area : {{data.landarea}}</h3>
+                        <h2>Land Price: {{data.landprice}} Rs</h2>
+                        <h3>Update Date: {{data.updateddate}}</h3>
+                    </div>
+                </div>
+                <div class="buttondiv popupButtons">
+                    <button class="button clear" type="button" (click)="PopUpObj.isClick()">Close</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

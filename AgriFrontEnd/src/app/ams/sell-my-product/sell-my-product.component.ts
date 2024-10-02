@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { ProductCreate } from 'src/app/Models/ProductCreate';
 import { ProductUpdate } from 'src/app/Models/ProductUpdate';
+import { ProductPopUPService } from 'src/app/Services/PopUpServices/ProductPopUp/product-pop-up.service';
 import { ProductServiceService } from 'src/app/Services/ProductService/product-service.service';
 
 
@@ -25,8 +26,9 @@ export class SellMyProductComponent implements OnInit{
     Productimage:''
   } 
   formData: FormData = new FormData();
+  POPUPData:any=null
 
-  constructor(private obj:ProductServiceService,private toat:ToastrService){}
+  constructor(private obj:ProductServiceService,private toat:ToastrService,public PopupObj:ProductPopUPService){}
 
   ngOnInit(): void {
     this.ProductForm = new FormGroup({
@@ -39,6 +41,25 @@ export class SellMyProductComponent implements OnInit{
 
     this.GetApiSubcribe()
   }
+
+  onClick(Productid:number) {
+    // debugger
+    // This will prevent routing or navigation
+   this.obj.GetOneApi(Productid).subscribe({
+    next:(data)=>{
+      this.POPUPData=data
+      this.PopupObj.isClick()
+      console.log("Data is Tranfered");
+      
+    },
+    error:(err)=>{
+      console.log(err);
+    },
+    complete: () => {
+      console.log("API call complete");
+    }
+   })
+ }
 
   FileChange(event: any) {
     const UpdatedFile = event.target.files[0];

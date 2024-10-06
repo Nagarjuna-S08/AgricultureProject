@@ -13,8 +13,26 @@ import { ProfileComponent } from './ams/profile/profile.component';
 import { ProfileWishlistComponent } from './ams/profile/profile-wishlist/profile-wishlist.component';
 import { ProfileCartComponent } from './ams/profile/profile-cart/profile-cart.component';
 import { ProfileOrdersComponent } from './ams/profile/profile-orders/profile-orders.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterPageComponent } from './register-page/register-page.component';
+import { SellerLoginComponent } from './login/seller-login/seller-login.component';
+import { AdminLoginComponent } from './login/admin-login/admin-login.component';
+import { BuyerComponent } from './login/buyer/buyer.component';
+import { SellerRegisterComponent } from './register-page/seller-register/seller-register.component';
+import { BuyerRegisterComponent } from './register-page/buyer-register/buyer-register.component';
 
 const routes: Routes = [
+  {path:'Login',title:'AMS',component:LoginComponent,children:[
+    {path:'Seller',title:'AMS',component:SellerLoginComponent},
+    {path:'Buyer',title:'AMS',component:BuyerComponent},
+    {path:'Admin',title:'AMS',component:AdminLoginComponent},
+
+    {path:'',redirectTo:'Seller',pathMatch:'full'}
+  ]},
+  {path:'Register',title:'AMS',component:RegisterPageComponent,children:[
+    {path:'Seller',title:'AMS',component:SellerRegisterComponent},
+    {path:'Buyer',title:'AMS',component:BuyerRegisterComponent}
+  ]},
   {path:'AMS',title:'AMS',component:AMSComponent,children:[
     {path:'Home',title:'AMS',component:HomeComponent},
 
@@ -41,8 +59,8 @@ const routes: Routes = [
 
     {path:'',redirectTo:'AMS/Home',pathMatch:'full'}
   ]},
-  {path:'',redirectTo:'AMS/Home',pathMatch:'full'},
-  {path:'**',redirectTo:'AMS/Home',pathMatch:'full'}
+  {path:'',redirectTo:'Login',pathMatch:'full'},
+  {path:'**',redirectTo:'Login',pathMatch:'full'}
 ];
 
 @NgModule({

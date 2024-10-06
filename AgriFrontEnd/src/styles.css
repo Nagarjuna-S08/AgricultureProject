@@ -1219,6 +1219,7 @@ a.colorChange{
     /* font-size: 89px; */
     /* background-color: #012c3f; */
 }
+
 /*Funtionaity CSS for the  NAVBAR ENDING*/
 
 /*Design Changes CSS*/
@@ -1274,4 +1275,127 @@ input[type="date"]{
 .popupButtons{
     margin-top: 20px;
 }
+/**/
+
+/*LOGIN CSS */
+.form{
+    backdrop-filter:blur(0px);
+    /* border: 1px solid; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+}
+.input{
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 5px solid whitesmoke;
+    border-bottom-style:solid;
+    cursor: pointer;
+    font-size:18px ;
+    font-weight: 700;
+    width: 100%;
+    height: 35px;
+    color: white;
+}
+
+.input::placeholder{
+    color:beige;
+    font-weight: 100;
+    font-style: oblique;
+    opacity: 0;
+}
+.h{
+    position: relative;
+    width: 80%;
+}
+.input+.label{
+    position: absolute;
+    left:7px;
+    bottom: 5px;
+    z-index:-3;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    transition: all 0.3s;
+}
+.input:focus::placeholder{
+ opacity: 1;
+ 
+}
+.form .input:focus+.label,
+.form .input:valid+.label{
+    transition: all 0.3s;
+    transform: translateY(-35px);
+    font-size: 15px; 
+    letter-spacing: 3px;
+    z-index: -3;  
+}
+.input{
+    min-width:80%;
+    margin-right: 10px;
+    margin-top: 50px;
+}
+
+/* .forms{
+   border: 1px solid linear-gradient( black , grey);
+} */
+.btn{
+    min-width: 100%;
+    margin-top:20px;
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+.btn > button{
+    width:160px;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    font-weight: 800;
+    text-transform: capitalize;
+    background-color:rgb(1, 30, 73);
+    color:white;
+    border-radius: 6px;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    transition: all 0.2s linear;
+}
+
+.btn > button:active{
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.534);
+}
+.forgotPassword{
+    margin-top: 20px;
+    width: 105%;
+    padding: 15px 10px 10px 15px;
+    display:flex;
+    justify-content: space-between;
+    gap:30px;
+    align-items: center;
+    /* border: 1px solid ; */
+}
+.forgotPassword > a{
+    font-size:18px;
+    word-break: break-all;
+    text-decoration: none;
+    color: white;
+}
+.forgotPassword > a > span {
+    color: rgb(1, 30, 73);
+    font-weight: 800;
+}
+/* .formRegister{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    border: 1px solid;
+ } */
+
+
 /**/

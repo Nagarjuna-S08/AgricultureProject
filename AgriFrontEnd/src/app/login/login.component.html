@@ -1,1 +1,15 @@
-<p>login works!</p>
+<div class="body">
+    <div class="loginbox">
+        <div class="profile-navigation Login-navbar">
+            <a routerLinkActive="colorChangeLogin" routerLink="/Login/Seller">Seller</a>
+            <a routerLinkActive="colorChangeLogin" routerLink="/Login/Admin">Admin</a>
+            <a routerLinkActive="colorChangeLogin" routerLink="/Login/Buyer">Buyer</a>
+        </div>  
+        <div class="heading">
+            <h2>Login</h2>
+        </div>
+        <div class="RouteComp">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

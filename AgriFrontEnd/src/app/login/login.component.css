@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.body{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.01), rgba(0,0,0,0.01),rgba(0,0,0,0.01),rgba(0,0,0,0.300)),url(/assets/Images/green-field-tree-blue-skygreat-as-backgroundweb-banner-generative-ai.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.loginbox{
+    border: 2px solid white;
+    border-radius: 5px;
+    backdrop-filter: blur(25px);
+    min-height: 50vh;
+    min-width: 25vw;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap:15px;
+    box-shadow: 2px 2px 30px 0px rgba(39, 37, 37, 0.452);
+}
+.Login-navbar{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    /* border: 1px solid; */
+}
+
+.Login-navbar > a{
+    text-decoration: none;
+    font-size: 20PX;
+    font-weight: 600;
+    letter-spacing: 1PX;
+    padding: 10px 40px 10px 40px;
+    transition: all 1s ease;
+    /* color:white; */
+}
+a.colorChangeLogin{
+    color:white;
+    background-color: rgb(1, 30, 73);
+    border-radius: 8px;
+}
+.RouteComp{
+    width: 100%;
+    height: fit-content;
+    /* padding: 10px 8px 15px 8px; */
+    /* border: 1px solid; */
+}
+.heading{
+    color: white;
+    letter-spacing: 0.8px;
+}

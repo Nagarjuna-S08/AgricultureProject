@@ -211,3 +211,12 @@ C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\Agr
 C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\ref\AgricultureProject.dll
 C:\AgricultureProject\AgricultureProject\AgricultureProject\obj\Debug\net8.0\AgricultureProject.sourcelink.json
 C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\AgricultureProject.staticwebassets.runtime.json
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\AgricultureProject\AgricultureProject\AgricultureProject\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

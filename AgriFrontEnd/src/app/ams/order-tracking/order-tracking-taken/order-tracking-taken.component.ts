@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/AuthService_Gaurd/auth.service';
 import { OrderServiceService } from 'src/app/Services/OrderService/order-service.service';
 
 @Component({
@@ -9,12 +10,12 @@ import { OrderServiceService } from 'src/app/Services/OrderService/order-service
 })
 export class OrderTrackingTakenComponent implements OnInit{
 
-  constructor(private OrderObj:OrderServiceService,private Toast:ToastrService){}
+  constructor(private OrderObj:OrderServiceService,private Toast:ToastrService,private authObj:AuthService){}
 
   OrderDetails:any=[]
 
   ngOnInit(): void {
-    this.GetApi(1);
+    this.GetApi(this.authObj.GetUserId(this.authObj.GetToken()));
   }
 
 

@@ -5,9 +5,13 @@
         <div class="profile-contorls">
             <div class="profile-image-div">
                 <img src="" alt="">
-                <div class="user_info">
-                    <h4>Nagarjuna.s</h4>
-                    <address>76/14 Bharatrhiyar main road,S.S>Colony,Madurai-16</address>
+                <div class="user_info" *ngIf="authObj.GetRole(authObj.GetToken())=='Buyer'">
+                    <h4>{{UserDetail[0]?.buyername}}</h4>
+                    <address>{{UserDetail[0]?.buyeraddress}} - {{UserDetail[0]?.email}}</address>
+                </div>
+                <div class="user_info" *ngIf="authObj.GetRole(authObj.GetToken())=='Seller'">
+                    <h4>{{UserDetail[0]?.organizationname}}</h4>
+                    <address>{{UserDetail[0]?.organizationaddress}} - {{UserDetail[0]?.email}}</address>
                 </div>
             </div>
             <button class="eidt-but">
@@ -39,10 +43,10 @@
     </div>
     <div class="routesection-profile">
         <div class="orderstrackingnavbar profile-navigation">
-            <a routerLinkActive="colorChange" routerLink="/AMS/Profile/WishList">WishList</a>
-            <a routerLinkActive="colorChange" routerLink="/AMS/Profile/Cart">Cart</a>
-            <a routerLinkActive="colorChange" routerLink="/AMS/Profile/Orders">Orders</a>
+            <a routerLinkActive="colorChange" routerLink="/AMS/Profile/WishList" *ngIf="authObj.GetRole(authObj.GetToken())=='Buyer'">WishList</a>
+            <a routerLinkActive="colorChange" routerLink="/AMS/Profile/Cart" *ngIf="authObj.GetRole(authObj.GetToken())=='Buyer'">Cart</a>
+            <a routerLinkActive="colorChange" routerLink="/AMS/Profile/Orders" *ngIf="authObj.GetRole(authObj.GetToken())=='Buyer'">Orders</a>
         </div>
-        <router-outlet></router-outlet>
+        <router-outlet *ngIf="authObj.GetRole(authObj.GetToken())=='Buyer'"></router-outlet>
     </div>
 </div>

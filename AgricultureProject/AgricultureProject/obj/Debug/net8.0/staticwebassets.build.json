@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "C5xXk4O8VJn3Hgp0E6hxS84cv96jXwdpBvDH6BEWf3k=",
+  "Hash": "NA7QM2oF6mXwD/lHv/lHC9PsZykcRAY0EREAfpT8EAw=",
   "Source": "AgricultureProject",
   "BasePath": "_content/AgricultureProject",
   "Mode": "Default",
@@ -74,12 +74,12 @@
       "OriginalItemSpec": "wwwroot\\ProductPhotos\\59a199d9-4646-4a53-88dc-1336455cc7e2.jpg"
     },
     {
-      "Identity": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\ProductPhotos\\60668bb2-b0c1-44e8-b32c-14d0ec8c7019.jpeg",
+      "Identity": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\ProductPhotos\\7be039a0-d974-44a6-b878-c20500e477c1.jpg",
       "SourceId": "AgricultureProject",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\",
       "BasePath": "_content/AgricultureProject",
-      "RelativePath": "ProductPhotos/60668bb2-b0c1-44e8-b32c-14d0ec8c7019.jpeg",
+      "RelativePath": "ProductPhotos/7be039a0-d974-44a6-b878-c20500e477c1.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -90,7 +90,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ProductPhotos\\60668bb2-b0c1-44e8-b32c-14d0ec8c7019.jpeg"
+      "OriginalItemSpec": "wwwroot\\ProductPhotos\\7be039a0-d974-44a6-b878-c20500e477c1.jpg"
     },
     {
       "Identity": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\ProductPhotos\\a9441b7d-ed4c-49ab-ab27-1e96fd8f7de4.jpg",

@@ -27,11 +27,10 @@ namespace AgricultureProject.Controllers
         {
             // For demonstration, we're accepting any username and password.
             // In a real application, you should validate the user credentials from a database.
-            var result =await _masterServiceBuyer.GetAsyn(i=>i.Buyername==model.Username && i.Buyerpassword==model.Password);    
-
+            var result =await _masterServiceBuyer.GetAllAsyn(i=>i.Buyername==model.Username && i.Buyerpassword==model.Password,"");    
             if (result.Count() != 0) // Replace with real validation
             {
-                var token = _tokenService.GenerateToken(model.Username);
+                var token = _tokenService.GenerateToken(result[0].Id,result[0].Buyername, result[0].Buyeraddress, result[0].Buyerphonenumber,"Buyer");
                 return Ok(new { Token = token });
             }
             else
@@ -49,7 +48,7 @@ namespace AgricultureProject.Controllers
 
             if (result.Count() > 0 ) // Replace with real validation
             {
-                var token = _tokenService.GenerateToken(model.Username);
+                var token = _tokenService.GenerateToken(result[0].Id ,result[0].Organizationname, result[0].Organizationaddress, result[0].Organizationphonenumber,"Seller");
                 return Ok(new { Token = token });
             }
             else

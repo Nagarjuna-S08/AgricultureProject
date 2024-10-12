@@ -1,12 +1,13 @@
 <div class="navBar">
     <a routerLinkActive="colorChange" routerLink="/AMS/Home">Home</a>
-    <a routerLinkActive="colorChange" routerLink="/AMS/AgritechEssentials">AgriTech Essensials</a>
-    <a routerLinkActive="colorChange" routerLink="/AMS/FarmLands">FarmLands</a>
-    <a routerLinkActive="colorChange" routerLink="/AMS/FeildToTable">FeildToTable</a>
+    <a routerLinkActive="colorChange" routerLink="/AMS/AgritechEssentials" *ngIf="authObjNav.GetRole(authObjNav.GetToken())=='Seller'">AgriTech Essensials</a>
+    <a routerLinkActive="colorChange" routerLink="/AMS/FarmLands" *ngIf="authObjNav.GetRole(authObjNav.GetToken())=='Seller' || authObjNav.GetRole(authObjNav.GetToken())=='Buyer'">FarmLands</a>
+    <a routerLinkActive="colorChange" routerLink="/AMS/FeildToTable" *ngIf="authObjNav.GetRole(authObjNav.GetToken())=='Seller' || authObjNav.GetRole(authObjNav.GetToken())=='Buyer'">FeildToTable</a>
     <a routerLinkActive="colorChange" routerLink="/AMS/Reviews">Reviews</a>
-    <a routerLinkActive="colorChange" routerLink="/AMS/SellMyProduct">SellMyProduct</a>
-    <a routerLinkActive="colorChange" routerLink="/AMS/SellMyLand">SellMyLand</a>
-    <a routerLinkActive="colorChange" routerLink="/AMS/OrderTracking">Orders Tracking</a>
-    <a routerLinkActive="colorChange" routerLink="/AMS/LoginRequests">LoginRequests</a>
-    <a routerLinkActive="colorChange" routerLink="/AMS/Profile">Profile</a>
+    <a routerLinkActive="colorChange" routerLink="/AMS/SellMyProduct" *ngIf="authObjNav.GetRole(authObjNav.GetToken())=='Seller'">SellMyProduct</a>
+    <a routerLinkActive="colorChange" routerLink="/AMS/SellMyLand" *ngIf="authObjNav.GetRole(authObjNav.GetToken())=='Seller'">SellMyLand</a>
+    <a routerLinkActive="colorChange" routerLink="/AMS/OrderTracking" *ngIf="authObjNav.GetRole(authObjNav.GetToken())=='Seller'">Orders Tracking</a>
+    <a routerLinkActive="colorChange" routerLink="/AMS/LoginRequests" *ngIf="authObjNav.GetRole(authObjNav.GetToken())=='Admin'">LoginRequests</a>
+    <a routerLinkActive="colorChange" routerLink="/AMS/Profile" *ngIf="authObjNav.GetRole(authObjNav.GetToken())=='Seller' || authObjNav.GetRole(authObjNav.GetToken())=='Buyer'">Profile</a>
+    <a (click)="Logout($event)">Logout</a>
 </div>

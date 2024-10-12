@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/AuthService_Gaurd/auth.service';
 import { WishListCreate } from 'src/app/Models/WishListCreate';
 import { LandServiceService } from 'src/app/Services/LandService/land-service.service';
 import { LandMoreDetailsPopUpService } from 'src/app/Services/PopUpServices/MoreDetailsPopUp/land-more-details-pop-up.service';
@@ -20,7 +21,7 @@ export class FarmLandsComponent implements OnInit{
     }
     POPUPData:any=null
 
-    constructor(private tost:ToastrService,private obj:LandServiceService,private WishListObj:WishListServiceService,public PopupObj:LandMoreDetailsPopUpService){}
+    constructor(private tost:ToastrService,private obj:LandServiceService,private WishListObj:WishListServiceService,public PopupObj:LandMoreDetailsPopUpService,private authObj:AuthService){}
 
     ngOnInit(): void {
       this.GetApi()
@@ -54,7 +55,7 @@ export class FarmLandsComponent implements OnInit{
 
     WishListAdd(LandId:number,sellerid:number){
       
-      this.WishListCreateDetail.buyerid=1;
+      this.WishListCreateDetail.buyerid=this.authObj.GetUserId(this.authObj.GetToken());
       this.WishListCreateDetail.sellerid=sellerid
       this.WishListCreateDetail.landid=LandId
       this.WishListObj.PostApi(this.WishListCreateDetail).subscribe({

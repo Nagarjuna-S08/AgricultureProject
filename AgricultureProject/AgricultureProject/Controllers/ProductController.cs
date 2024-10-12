@@ -5,6 +5,7 @@ using AgricultureProject.Services;
 using AgricultureProject.Services.IServices;
 using AgricultureProject.Services.MasterServices;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Globalization;
@@ -29,6 +30,7 @@ namespace AgricultureProject.Controllers
 
 
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<List<ProblemDetails>>> GetAll()
         {
             var result =await _masterService.GetAllAsyn(includeProperties: "Seller");
@@ -39,11 +41,21 @@ namespace AgricultureProject.Controllers
             return Ok(result);
         }
 
-
+        [HttpGet("SellerProduct/{id:int}")]
+        public async Task<ActionResult<List<ProblemDetails>>> GetSellerProduct(int id)
+        {
+            var result = await _masterService.GetAllAsyn(i=>i.Sellerid==id,includeProperties: "Seller");
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return Ok(result);
+        }
 
 
 
         [HttpGet("Onedata/{Id:int}")]
+        [Authorize]
         public async Task<ActionResult<List<ProblemDetails>>> GetOne(int Id)
         {
             if (Id == 0)
@@ -64,6 +76,7 @@ namespace AgricultureProject.Controllers
 
 
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<int>> CreateProduct(ProductCreate product) {
             if(product == null)
             {

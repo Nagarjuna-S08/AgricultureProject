@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/AuthService_Gaurd/auth.service';
 import { OrderUpdate } from 'src/app/Models/OrderUpdate';
 import { OrderServiceService } from 'src/app/Services/OrderService/order-service.service';
 import { OrderPopUpServiceService } from 'src/app/Services/PopUpServices/order-pop-up-service.service';
@@ -10,7 +11,7 @@ import { OrderPopUpServiceService } from 'src/app/Services/PopUpServices/order-p
   styleUrls: ['./order-tracking-incoming.component.css']
 })
 export class OrderTrackingIncomingComponent implements OnInit{
-  constructor(private OrderObj:OrderServiceService,private Tost:ToastrService,public PopupObj:OrderPopUpServiceService){}
+  constructor(private OrderObj:OrderServiceService,private Tost:ToastrService,public PopupObj:OrderPopUpServiceService,private authObj:AuthService){}
   
   OrderSeller:any=[]
   POPUPData:any=null
@@ -37,7 +38,7 @@ export class OrderTrackingIncomingComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.GetApi(1)
+    this.GetApi(this.authObj.GetUserId(this.authObj.GetToken()))
   }
 
   PutApi(OrderID:number,DelivaryDate:string,DelivaryStatus:string){

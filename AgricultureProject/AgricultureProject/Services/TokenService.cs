@@ -14,7 +14,7 @@ namespace AgricultureProject.Services
             _configuration = configuration;
         }
 
-        public string GenerateToken(string username)
+        public string GenerateToken(int BuyerId,string username,string BuyerAddress,string BuyerPhoneNumber,string Role)
         {
             // Read JWT settings
             var jwtSettings = _configuration.GetSection("JwtSettings");
@@ -27,10 +27,13 @@ namespace AgricultureProject.Services
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             // Create claims
-            var claims = new[]
+            List<Claim> claims = new List<Claim>
             {
-            new Claim(JwtRegisteredClaimNames.Sub, username),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                new Claim("UserName",username),
+                new Claim("UserAddress",BuyerAddress),
+                new Claim("UserPhoneNumber",BuyerPhoneNumber),
+                new Claim("UserId",BuyerId.ToString()),
+                new Claim("Role",Role)
             };
 
             // Create the token

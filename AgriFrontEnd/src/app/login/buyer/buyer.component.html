@@ -1,14 +1,14 @@
-<form action="" class="forms form">
+<form action="" class="forms form" (submit)="LoginFun()">
     <div class="h user">
-        <input type="text" class="input" minlength="8" id="username" required>
-        <label class="label" for="username"><i class="fa-solid fa-user"></i> USER NAME</label>
+        <input type="text" class="input" id="useremail" required [(ngModel)]="loginModel.username"  [ngModelOptions]="{standalone: true}">
+        <label class="label" for="useremail"><i class="fa-solid fa-user"></i> USER Email</label>
     </div>
     <div class="h pass">
-        <input type="text" class="input"  required id="Password">
+        <input type="text" class="input"  required id="Password" [(ngModel)]="loginModel.password"  [ngModelOptions]="{standalone: true}">
         <label class="label" for="Password"><i class="fa-solid fa-envelope"></i> PASSWORD</label>
     </div>
     <div class="btn">
-        <button type="button">Submit</button>
+        <button type="submit">Submit</button>
     </div>
     <div class="forgotPassword">
         <a href="/Register/Buyer">Don't have an account, <span>Register?</span></a>

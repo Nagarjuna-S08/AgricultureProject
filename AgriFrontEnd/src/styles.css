@@ -29,19 +29,40 @@ body{
 }
 
 /*NavBar CSS*/
-.navBar{
+/* .navBar{
     position:fixed;
     left:5%;
     background-color: rgb(228, 228, 228);
     height:80px;
-    width: 90%;
+    width:fit-content;
     display: flex;
     justify-content:space-evenly;
+    gap: 20px;
     align-items: center;
     border-radius: 20px;
     margin-top: 25px;
     z-index: 3;
+    padding-left: 40px;
+    padding-right: 40px;
+} */
+.navBar {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(228, 228, 228);
+    height: 80px;
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 25px;
+    z-index: 3;
+    padding-left: 40px;
+    padding-right: 40px;
 }
+
 .navBar > a{
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -920,7 +941,7 @@ body{
     background-color:#B6FBB5;
     min-height:100vh;
     max-height: fit-content;
-
+    width: 100vw;
 }
 
 .user-details{

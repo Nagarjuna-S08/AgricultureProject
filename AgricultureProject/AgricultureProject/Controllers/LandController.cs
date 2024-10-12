@@ -35,6 +35,17 @@ namespace AgricultureProject.Controllers
             return Ok(result);
         }
 
+        [HttpGet("SellerLand/{id:int}")]
+        public async Task<ActionResult<List<LandDetails>>> GetSellerLand(int id)
+        {
+            var result = await _masterService.GetAllAsyn(i=>i.Sellerid==id,includeProperties: "Seller");
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return Ok(result);
+        }
+
 
         [HttpGet("Onedata/{Id:int}")]
         public async Task<ActionResult<List<LandDetails>>> GetOne(int Id)

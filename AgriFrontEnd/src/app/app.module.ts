@@ -18,7 +18,7 @@ import { ProfileWishlistComponent } from './ams/profile/profile-wishlist/profile
 import { ProfileCartComponent } from './ams/profile/profile-cart/profile-cart.component';
 import { ProfileOrdersComponent } from './ams/profile/profile-orders/profile-orders.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { Environment } from './Environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
@@ -33,6 +33,7 @@ import { BuyerRegisterComponent } from './register-page/buyer-register/buyer-reg
 import { SellMyLandPopUpComponent } from './ams/sell-my-land/sell-my-land-pop-up/sell-my-land-pop-up.component';
 import { SellMyProductPopUpComponent } from './ams/sell-my-product/sell-my-product-pop-up/sell-my-product-pop-up.component';
 import { FarmLandsMoreDetailsPopUpComponent } from './ams/farm-lands/farm-lands-more-details-pop-up/farm-lands-more-details-pop-up.component';
+import { InterceptorFileInterceptor } from './AuthService_Gaurd/interceptor-file.interceptor';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,12 @@ import { FarmLandsMoreDetailsPopUpComponent } from './ams/farm-lands/farm-lands-
     FormsModule
   ],
   providers: [
-    Environment
+    Environment,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorFileInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

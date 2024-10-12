@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/AuthService_Gaurd/auth.service';
 import { ProductCreate } from 'src/app/Models/ProductCreate';
 import { ProductUpdate } from 'src/app/Models/ProductUpdate';
 import { ProductPopUPService } from 'src/app/Services/PopUpServices/ProductPopUp/product-pop-up.service';
@@ -28,7 +29,7 @@ export class SellMyProductComponent implements OnInit{
   formData: FormData = new FormData();
   POPUPData:any=null
 
-  constructor(private obj:ProductServiceService,private toat:ToastrService,public PopupObj:ProductPopUPService){}
+  constructor(private obj:ProductServiceService,private toat:ToastrService,public PopupObj:ProductPopUPService,private authObj:AuthService){}
 
   ngOnInit(): void {
     this.ProductForm = new FormGroup({
@@ -39,7 +40,7 @@ export class SellMyProductComponent implements OnInit{
       Productimage : new FormControl('',[Validators.required])
     })
 
-    this.GetApiSubcribe()
+    this.GetApiSubcribe(this.authObj.GetUserId(this.authObj.GetToken()))
   }
 
   onClick(Productid:number) {
@@ -82,7 +83,7 @@ export class SellMyProductComponent implements OnInit{
       this.ProductCreateDetail.Harvesteddate=this.ProductForm.get('Harvesteddate')?.value
       this.ProductCreateDetail.Updateddate=new Date().toISOString();
       this.ProductCreateDetail.Productimage=this.ProductForm.get('Productimage')?.value
-      this.ProductCreateDetail.sellerid=1
+      this.ProductCreateDetail.sellerid=this.authObj.GetUserId(this.authObj.GetToken())
       console.log(this.ProductCreateDetail);
       this.PostApiSubcribe(this.ProductCreateDetail)
 
@@ -114,7 +115,7 @@ export class SellMyProductComponent implements OnInit{
     this.obj.DeleteApi(id).subscribe({
       next:(value)=>{
         console.log("Deleted Successfully");
-        this.GetApiSubcribe()
+        this.GetApiSubcribe(this.authObj.GetUserId(this.authObj.GetToken()))
       },
       error:(error)=>{
         console.log(error);
@@ -122,8 +123,8 @@ export class SellMyProductComponent implements OnInit{
     })
   }
 
-  GetApiSubcribe(){
-      this.obj.GetApi().subscribe({
+  GetApiSubcribe(id:number){
+      this.obj.GetSellerApi(id).subscribe({
         next:(data:any)=>{
           this.ProductDetail = data
           console.log(this.ProductDetail);
@@ -143,7 +144,7 @@ export class SellMyProductComponent implements OnInit{
           this.obj.ImageUploadApi(productId, this.formData).subscribe({
             next: (response) => {
               console.log('File uploaded successfully', response);
-              this.GetApiSubcribe();
+              this.GetApiSubcribe(this.authObj.GetUserId(this.authObj.GetToken()));
               this.Clear();
             },
             error: (error) => {
@@ -153,7 +154,7 @@ export class SellMyProductComponent implements OnInit{
         } 
         else {
           console.warn('Product created, but no file selected for upload.');
-          this.GetApiSubcribe();
+          this.GetApiSubcribe(this.authObj.GetUserId(this.authObj.GetToken()));
           this.Clear();
         }
       },

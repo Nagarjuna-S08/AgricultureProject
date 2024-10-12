@@ -20,6 +20,7 @@ import { AdminLoginComponent } from './login/admin-login/admin-login.component';
 import { BuyerComponent } from './login/buyer/buyer.component';
 import { SellerRegisterComponent } from './register-page/seller-register/seller-register.component';
 import { BuyerRegisterComponent } from './register-page/buyer-register/buyer-register.component';
+import { LoginActiveGuard } from './AuthService_Gaurd/GaurdFolder/login-active.guard';
 
 const routes: Routes = [
   {path:'Login',title:'AMS',component:LoginComponent,children:[
@@ -28,7 +29,7 @@ const routes: Routes = [
     {path:'Admin',title:'AMS',component:AdminLoginComponent},
 
     {path:'',redirectTo:'Seller',pathMatch:'full'}
-  ]},
+  ],canActivate:[LoginActiveGuard]},
   {path:'Register',title:'AMS',component:RegisterPageComponent,children:[
     {path:'Seller',title:'AMS',component:SellerRegisterComponent},
     {path:'Buyer',title:'AMS',component:BuyerRegisterComponent}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/AuthService_Gaurd/auth.service';
 import { CartCreate } from 'src/app/Models/CartCreate';
 import { CartServiceService } from 'src/app/Services/CartService/cart-service.service';
 import { ProductServiceService } from 'src/app/Services/ProductService/product-service.service';
@@ -20,7 +21,7 @@ export class FeildToTableComponent implements OnInit{
     totalamount:0
   }
 
-  constructor(private tost:ToastrService,private obj:ProductServiceService,private CartObj:CartServiceService){}
+  constructor(private tost:ToastrService,private obj:ProductServiceService,private CartObj:CartServiceService,private authObj:AuthService){}
   
   ngOnInit(): void {
     this.GetApi()
@@ -43,7 +44,7 @@ export class FeildToTableComponent implements OnInit{
     this.CartAddDetails.quantity = Number(TotalKg)
     this.CartAddDetails.totalamount = this.CartAddDetails.quantity * PricePerKg
     this.CartAddDetails.sellerid= sellerId;
-    this.CartAddDetails.buyerid=1;
+    this.CartAddDetails.buyerid=this.authObj.GetUserId(this.authObj.GetToken());
 
     this.CartObj.PostApi(this.CartAddDetails).subscribe({
       next:(data:any)=>{

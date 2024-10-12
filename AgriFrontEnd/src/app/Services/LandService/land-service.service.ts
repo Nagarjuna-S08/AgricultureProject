@@ -17,6 +17,10 @@ export class LandServiceService {
     return this.http.get<any>(this.envi.environmentUrl+this.serverLink);
   }
 
+  GetSellerApi(id:number):Observable<any>{
+    return this.http.get<any>(this.envi.environmentUrl+this.serverLink+`/SellerLand/${id}`);
+  }
+
   PostApi(PostData:LandCreate):Observable<number>{
     return this.http.post<number>(this.envi.environmentUrl+this.serverLink,PostData)
   }

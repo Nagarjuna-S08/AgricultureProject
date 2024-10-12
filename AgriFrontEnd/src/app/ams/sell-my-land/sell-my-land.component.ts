@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/AuthService_Gaurd/auth.service';
 import { LandCreate } from 'src/app/Models/LandCreate';
 import { LandServiceService } from 'src/app/Services/LandService/land-service.service';
 import { LandPopUpService } from 'src/app/Services/PopUpServices/SellLandPopUp/land-pop-up.service';
@@ -26,7 +27,7 @@ export class SellMyLandComponent implements OnInit {
     updateddate:''
   }
 
-  constructor(private tost:ToastrService,private obj:LandServiceService,public PopupObj:LandPopUpService){}
+  constructor(private tost:ToastrService,private obj:LandServiceService,public PopupObj:LandPopUpService,private authObj:AuthService){}
 
   ngOnInit(): void {
     this.LandForm = new FormGroup({
@@ -36,7 +37,7 @@ export class SellMyLandComponent implements OnInit {
       ownername : new FormControl('',Validators.required),  // allow Name in any formet name . s or s . name
       LandPhoto : new FormControl('',Validators.required)
     })
-    this.GetApi()
+    this.GetApi(this.authObj.GetUserId(this.authObj.GetToken()))
   }
   
   onClick(Landid:number) {
@@ -101,8 +102,8 @@ export class SellMyLandComponent implements OnInit {
 
 
 
-  GetApi(){
-    this.obj.GetApi().subscribe({
+  GetApi(id:number){
+    this.obj.GetSellerApi(id).subscribe({
       next:(data:any)=>{
         this.LandDetails=data
         console.log(this.LandDetails);
@@ -119,7 +120,7 @@ export class SellMyLandComponent implements OnInit {
     this.obj.DeleteApi(id).subscribe({
       next:(data)=>{
         this.tost.success("Deleted Successfully","Deleted")
-        this.GetApi()
+        this.GetApi(this.authObj.GetUserId(this.authObj.GetToken()))
       },
       error:(err)=>{
         console.log(err);
@@ -136,7 +137,7 @@ export class SellMyLandComponent implements OnInit {
           this.obj.ImageUploadApi(LandId, this.FileData).subscribe({
             next: (response) => {
               console.log('File uploaded successfully', response);
-              this.GetApi();
+              this.GetApi(this.authObj.GetUserId(this.authObj.GetToken()));
               this.Clear();
             },
             error: (error) => {
@@ -146,7 +147,7 @@ export class SellMyLandComponent implements OnInit {
         } 
         else {
           console.warn('Product created, but no file selected for upload.');
-          this.GetApi();
+          this.GetApi(this.authObj.GetUserId(this.authObj.GetToken()));
           this.Clear();
         }
       }

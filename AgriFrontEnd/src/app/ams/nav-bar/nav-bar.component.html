@@ -8,6 +8,7 @@
     <a routerLinkActive="colorChange" routerLink="/AMS/SellMyLand" *ngIf="authObjNav.GetRole(authObjNav.GetToken())=='Seller'">SellMyLand</a>
     <a routerLinkActive="colorChange" routerLink="/AMS/OrderTracking" *ngIf="authObjNav.GetRole(authObjNav.GetToken())=='Seller'">Orders Tracking</a>
     <a routerLinkActive="colorChange" routerLink="/AMS/LoginRequests" *ngIf="authObjNav.GetRole(authObjNav.GetToken())=='Admin'">LoginRequests</a>
-    <a routerLinkActive="colorChange" routerLink="/AMS/Profile" *ngIf="authObjNav.GetRole(authObjNav.GetToken())=='Seller' || authObjNav.GetRole(authObjNav.GetToken())=='Buyer'">Profile</a>
+    <a routerLinkActive="colorChange" routerLink="/AMS/Profile" *ngIf="authObjNav.GetRole(authObjNav.GetToken())=='Buyer'">Profile</a>
+    <a routerLinkActive="colorChange" routerLink="/AMS/SellerProfile" *ngIf="authObjNav.GetRole(authObjNav.GetToken())=='Seller'">Profile</a>
     <a (click)="Logout($event)">Logout</a>
 </div>

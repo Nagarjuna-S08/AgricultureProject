@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NA7QM2oF6mXwD/lHv/lHC9PsZykcRAY0EREAfpT8EAw=",
+  "Hash": "OZMjMr6bYp1NuwVrGrtSSnVpd2uPBs3ychfviXD4PLs=",
   "Source": "AgricultureProject",
   "BasePath": "_content/AgricultureProject",
   "Mode": "Default",
@@ -16,25 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\LandsPhotos\\8dece1b4-bda7-45b5-b728-bd98d451ceac.png",
-      "SourceId": "AgricultureProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\",
-      "BasePath": "_content/AgricultureProject",
-      "RelativePath": "LandsPhotos/8dece1b4-bda7-45b5-b728-bd98d451ceac.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\LandsPhotos\\8dece1b4-bda7-45b5-b728-bd98d451ceac.png"
-    },
     {
       "Identity": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\ProductPhotos\\3893bc8a-4f90-431c-8053-0a3c4f9dec65.jpg",
       "SourceId": "AgricultureProject",

@@ -65,7 +65,7 @@
                         <p>Ph.No.:{{data.seller.organizationphonenumber}}</p>
                     </div>
                     <div class="buttondiv">
-                        <button type="button" class="button wishlist" (click)="WishListAdd(data.id,data.seller.id)">Add To Wishlist</button>
+                        <button type="button" *ngIf="authObj.GetRole(authObj.GetToken())!='Seller'" class="button wishlist" (click)="WishListAdd(data.id,data.seller.id)">Add To Wishlist</button>
                         <button type="button" class="button Moredetails" (click)="onClick(data.id)">More Details</button>
                     </div>
                 </div>

@@ -39,7 +39,7 @@ export class SellerLoginComponent {
           this.TokenObj.GetRole(this.TokenObj.GetToken())
         },
         error:(err)=>{
-          console.log(err);
+          this.toast.error(err.error,"Invalid")
         }
       })
     }

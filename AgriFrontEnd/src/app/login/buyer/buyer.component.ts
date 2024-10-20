@@ -41,6 +41,7 @@ export class BuyerComponent {
       },
       error:(err)=>{
         console.log(err);
+        this.toast.error(err.error,"Invalid")
       }
     })
   }

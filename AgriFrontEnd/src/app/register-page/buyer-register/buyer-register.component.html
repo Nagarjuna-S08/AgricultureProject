@@ -1,50 +1,41 @@
-<form action="" class="forms form">
-    <div class="h user">
-        <input type="text" class="input" minlength="8" id="username" required>
-        <label class="label" for="username"><i class="fa-solid fa-user"></i> USER NAME</label>
+<form action="" class="forms form" (submit)="RegisterSeller($event,valiadtePassword)">
+    <div class="container">
+        <div class="side-left">
+            <div class="h user">
+                <input type="text" class="input" id="buyername" required [(ngModel)]="buyerForm.buyername"  [ngModelOptions]="{standalone: true}">
+                <label class="label" for="buyername"> BUYER NAME</label>
+            </div>
+            <div class="h mail">
+                <input type="text" class="input"  required id="email" [(ngModel)]="buyerForm.email"  [ngModelOptions]="{standalone: true}">
+                <label class="label" for="email"> BUYER EMAIL</label>
+            </div>
+            <div class="h user">
+                <input type="text" class="input" id="buyeraddress" required [(ngModel)]="buyerForm.buyeraddress"  [ngModelOptions]="{standalone: true}">
+                <label class="label" for="buyeraddress"> BUYER ADDRESS</label>
+            </div>
+            <div class="h mail">
+                <input type="text" class="input"  required id="buyerphonenumber" [(ngModel)]="buyerForm.buyerphonenumber"  [ngModelOptions]="{standalone: true}">
+                <label class="label" for="buyerphonenumber"> PHONE NUMBER</label>
+            </div>
+        </div>
+        <div class="side-right">
+            <div class="h user">
+                <input type="text" class="input" id="buyerpassword" required [(ngModel)]="buyerForm.buyerpassword"  [ngModelOptions]="{standalone: true}">
+                <label class="label" for="buyerpassword"> PASSWORD</label>
+            </div>
+            <div class="h user">
+                <input type="text" class="input" id="conformbuyerpassword" required #valiadtePassword >
+                <label class="label" for="conformbuyerpassword"> CONFORM PASSWORD</label>
+            </div>
+        </div>
     </div>
-    <div class="h mail">
-        <input type="email" class="input"  required id="email">
-        <label class="label" for="email"><i class="fa-solid fa-envelope"></i> EMAIL</label>
-    </div>
-    <div class="h user">
-        <input type="text" class="input" minlength="8" id="username" required>
-        <label class="label" for="username"><i class="fa-solid fa-user"></i> USER NAME</label>
-    </div>
-    <div class="h mail">
-        <input type="email" class="input"  required id="email">
-        <label class="label" for="email"><i class="fa-solid fa-envelope"></i> EMAIL</label>
-    </div>
-    <div class="h user">
-        <input type="text" class="input" minlength="8" id="username" required>
-        <label class="label" for="username"><i class="fa-solid fa-user"></i> USER NAME</label>
-    </div>
-    <div class="h mail">
-        <input type="email" class="input"  required id="email">
-        <label class="label" for="email"><i class="fa-solid fa-envelope"></i> EMAIL</label>
-    </div>
-    <div class="h user">
-        <input type="text" class="input" minlength="8" id="username" required>
-        <label class="label" for="username"><i class="fa-solid fa-user"></i> USER NAME</label>
-    </div>
-    <div class="h mail">
-        <input type="email" class="input"  required id="email">
-        <label class="label" for="email"><i class="fa-solid fa-envelope"></i> EMAIL</label>
-    </div>
-    <div class="h user">
-        <input type="text" class="input" minlength="8" id="username" required>
-        <label class="label" for="username"><i class="fa-solid fa-user"></i> USER NAME</label>
-    </div>
-    <div class="h mail">
-        <input type="email" class="input"  required id="email">
-        <label class="label" for="email"><i class="fa-solid fa-envelope"></i> EMAIL</label>
-    </div>
-    <div class="btn">
-        <button type="submit">Submit</button>
-        <!-- <button type="button">Close</button> -->
-    </div>
-    <div class="forgotPassword">
-        <a href="/Login/Buyer">Alraedy have an account, <span>Login?</span></a>
-        <a href=""><span>Forgot Password?</span></a>
+    <div class="bottom-details">
+        <div class="btn">
+            <button type="submit">Submit</button>
+            <!-- <button type="button">Close</button> -->
+        </div>
+        <div class="forgotPassword">
+            <a href="/Login/Buyer">Already have an account, <span>Login?</span></a>
+        </div>
     </div>
 </form>

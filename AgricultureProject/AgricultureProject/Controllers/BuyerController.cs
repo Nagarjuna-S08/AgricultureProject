@@ -58,15 +58,23 @@ namespace AgricultureProject.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> CreateProduct(BuyerCreate Buyer)
+        public async Task<ActionResult> CreateProduct(BuyerCreate Buyer)
         {
             if (Buyer == null)
             {
-                return BadRequest();
+                return BadRequest("Invalid buyer data.");
+            }
+
+            var matches = await _masterService.GetAllAsyn(i => i.email == Buyer.email, "");
+
+            if (matches.Any())
+            {
+                return BadRequest("User already exists.");
             }
             await _buyerService.ProductCreate(Buyer);
-            return Ok("Added Successfully");
+            return Ok();
         }
+
 
 
 

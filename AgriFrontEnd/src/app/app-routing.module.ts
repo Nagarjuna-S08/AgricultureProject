@@ -21,6 +21,8 @@ import { BuyerComponent } from './login/buyer/buyer.component';
 import { SellerRegisterComponent } from './register-page/seller-register/seller-register.component';
 import { BuyerRegisterComponent } from './register-page/buyer-register/buyer-register.component';
 import { LoginActiveGuard } from './AuthService_Gaurd/GaurdFolder/login-active.guard';
+import { RoleGaurdGuard } from './AuthService_Gaurd/GaurdFolder/role-gaurd.guard';
+import { ProfileSellerComponent } from './ams/profile-seller/profile-seller.component';
 
 const routes: Routes = [
   {path:'Login',title:'AMS',component:LoginComponent,children:[
@@ -37,26 +39,30 @@ const routes: Routes = [
   {path:'AMS',title:'AMS',component:AMSComponent,children:[
     {path:'Home',title:'AMS',component:HomeComponent},
 
-    {path:'FarmLands',title:'AMS',component:FarmLandsComponent},
+    {path:'FarmLands',title:'AMS',component:FarmLandsComponent,canActivate:[RoleGaurdGuard]},
 
-    {path:'FeildToTable',title:'AMS',component:FeildToTableComponent},
+    {path:'FeildToTable',title:'AMS',component:FeildToTableComponent,canActivate:[RoleGaurdGuard]},
 
-    {path:'SellMyProduct',title:'AMS',component:SellMyProductComponent},
+    {path:'SellMyProduct',title:'AMS',component:SellMyProductComponent,canActivate:[RoleGaurdGuard]},
 
-    {path:'SellMyLand',title:'AMS',component:SellMyLandComponent},
+    {path:'SellMyLand',title:'AMS',component:SellMyLandComponent,canActivate:[RoleGaurdGuard]},
+
+    {path:'LoginRequest',title:'AMS',component:HomeComponent,canActivate:[RoleGaurdGuard]},
 
     {path:'OrderTracking',title:'AMS',component:OrderTrackingComponent , children:[
       {path:'Incoming',title:'AMS',component:OrderTrackingIncomingComponent},
       {path:'Taken',title:'AMS',component:OrderTrackingTakenComponent},
       {path:'',redirectTo:'Incoming',pathMatch:'full'}
-    ]},
+    ],canActivate:[RoleGaurdGuard]},
 
     {path:'Profile',title:'AMS',component:ProfileComponent,children:[
       {path:'WishList',title:'AMS',component:ProfileWishlistComponent},
       {path:'Cart',title:'AMS',component:ProfileCartComponent},
       {path:'Orders',title:'AMS',component:ProfileOrdersComponent},
       {path:'',redirectTo:'Cart',pathMatch:'full'}
-    ]},
+    ],canActivate:[RoleGaurdGuard]},
+
+    {path:'SellerProfile',title:'AMS',component:ProfileSellerComponent},
 
     {path:'',redirectTo:'AMS/Home',pathMatch:'full'}
   ]},

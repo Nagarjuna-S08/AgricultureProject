@@ -21,7 +21,7 @@ export class FarmLandsComponent implements OnInit{
     }
     POPUPData:any=null
 
-    constructor(private tost:ToastrService,private obj:LandServiceService,private WishListObj:WishListServiceService,public PopupObj:LandMoreDetailsPopUpService,private authObj:AuthService){}
+    constructor(private tost:ToastrService,private obj:LandServiceService,private WishListObj:WishListServiceService,public PopupObj:LandMoreDetailsPopUpService,public authObj:AuthService){}
 
     ngOnInit(): void {
       this.GetApi()

@@ -21,7 +21,7 @@ export class FeildToTableComponent implements OnInit{
     totalamount:0
   }
 
-  constructor(private tost:ToastrService,private obj:ProductServiceService,private CartObj:CartServiceService,private authObj:AuthService){}
+  constructor(private tost:ToastrService,private obj:ProductServiceService,private CartObj:CartServiceService,public authObj:AuthService){}
   
   ngOnInit(): void {
     this.GetApi()

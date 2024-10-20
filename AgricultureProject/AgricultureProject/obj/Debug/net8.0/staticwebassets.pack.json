@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\LandsPhotos\\8dece1b4-bda7-45b5-b728-bd98d451ceac.png",
-      "PackagePath": "staticwebassets\\LandsPhotos\\8dece1b4-bda7-45b5-b728-bd98d451ceac.png"
-    },
-    {
       "Id": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\ProductPhotos\\3893bc8a-4f90-431c-8053-0a3c4f9dec65.jpg",
       "PackagePath": "staticwebassets\\ProductPhotos\\3893bc8a-4f90-431c-8053-0a3c4f9dec65.jpg"
     },

@@ -1,0 +1,43 @@
+<div class="user-profile">
+    <div class="user-details">
+        <h3>User Profile</h3>
+        <div class="profile-contorls">
+            <div class="profile-image-div">
+                <img src="" alt="">
+                <div class="user_info" *ngIf="authObj.GetRole(authObj.GetToken())=='Buyer'">
+                    <h4>{{UserDetail[0]?.buyername}}</h4>
+                    <address>{{UserDetail[0]?.buyeraddress}} - {{UserDetail[0]?.email}}</address>
+                </div>
+                <div class="user_info" *ngIf="authObj.GetRole(authObj.GetToken())=='Seller'">
+                    <h4>{{UserDetail[0]?.organizationname}}</h4>
+                    <address>{{UserDetail[0]?.organizationaddress}} - {{UserDetail[0]?.email}}</address>
+                </div>
+            </div>
+            <button class="eidt-but">
+                Edit Profile
+            </button>
+            <button class="update-but">
+                Update profile DP
+            </button>
+            <button class="remove-but">
+                Remove Profile DP
+            </button>
+        </div>
+        <div class="profile-inputs">
+            <form action="">
+                <div class="inputdiv width-half">
+                    <label for="">First Name</label>
+                    <input type="text">
+                </div>
+                <div class="inputdiv width-half">
+                    <label for="">Last Name</label>
+                    <input type="text">
+                </div>
+                <div class="inputdiv width-full">
+                    <label for="">UserName</label>
+                    <input type="text">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

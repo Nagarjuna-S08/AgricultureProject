@@ -62,8 +62,15 @@ namespace AgricultureProject.Controllers
             {
                 return BadRequest();
             }
+            var matches = await _masterService.GetAllAsyn(i => i.email == Buyer.email, "");
+
+            if (matches.Any())
+            {
+                return BadRequest("User already exists.");
+            }
+
             await _sellerService.ProductCreate(Buyer);
-            return Ok("Added Successfully");
+            return Ok();
         }
 
 

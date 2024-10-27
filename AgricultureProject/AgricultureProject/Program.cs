@@ -47,6 +47,7 @@ builder.Services.AddScoped<IsellerSerevice, Sellerservice>();
 builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddScoped<IWishlistService, WishlistService>();
 builder.Services.AddScoped<IOrderService, Orderservice>();
+builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped(typeof(IMasterService<>), typeof(MasterService<>));
 
 

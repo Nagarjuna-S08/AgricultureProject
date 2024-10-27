@@ -15,6 +15,9 @@ export class LoginServiceService {
   PostApiBuyer(LoginModel:LoginModel):Observable<any>{
     return this.http.post<any>(this.envi.environmentUrl+`/api/Auth/Login/Buyer`,LoginModel)
   }
+  PostApiAsdmin(LoginModel:LoginModel):Observable<any>{
+    return this.http.post<any>(this.envi.environmentUrl+`/api/Auth/Login/Admin`,LoginModel)
+  }
   PostApiSeller(LoginModel:LoginModel):Observable<any>{
     return this.http.post<any>(this.envi.environmentUrl+`/api/Auth/Login/Seller`,LoginModel)
   }

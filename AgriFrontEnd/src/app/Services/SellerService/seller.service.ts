@@ -15,6 +15,9 @@ export class SellerService {
   GetApi():Observable<any>{
     return this.http.get<any>(this.envi.environmentUrl+this.serverLink)
   }
+  GetNotApproved():Observable<any>{
+    return this.http.get<any>(this.envi.environmentUrl+this.serverLink+'/NotApproved')
+  }
   GetOneApi(SellerId:number):Observable<any>{
     return this.http.get<any>(this.envi.environmentUrl+this.serverLink+`/Onedata/${SellerId}`)
   }

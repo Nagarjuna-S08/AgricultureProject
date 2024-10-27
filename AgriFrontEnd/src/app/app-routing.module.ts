@@ -23,6 +23,8 @@ import { BuyerRegisterComponent } from './register-page/buyer-register/buyer-reg
 import { LoginActiveGuard } from './AuthService_Gaurd/GaurdFolder/login-active.guard';
 import { RoleGaurdGuard } from './AuthService_Gaurd/GaurdFolder/role-gaurd.guard';
 import { ProfileSellerComponent } from './ams/profile-seller/profile-seller.component';
+import { LoginRequestComponent } from './ams/login-request/login-request.component';
+import { ReviewComponent } from './ams/review/review.component';
 
 const routes: Routes = [
   {path:'Login',title:'AMS',component:LoginComponent,children:[
@@ -63,6 +65,10 @@ const routes: Routes = [
     ],canActivate:[RoleGaurdGuard]},
 
     {path:'SellerProfile',title:'AMS',component:ProfileSellerComponent},
+
+    {path:'LoginRequests',title:'AMS',component:LoginRequestComponent},
+
+    {path:'Reviews',title:'AMS',component:ReviewComponent},
 
     {path:'',redirectTo:'AMS/Home',pathMatch:'full'}
   ]},

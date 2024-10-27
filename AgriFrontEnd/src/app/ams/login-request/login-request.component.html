@@ -1,0 +1,59 @@
+<div class="LoginRequest">
+    <div class="heading-div">
+        <h3>Login request</h3>
+    </div>
+    <div class="Search-block">
+        <div class="searchdiv">
+            <input type="search" placeholder="Search">
+            <img src="assets/Images/searchlogo.png" alt="">
+        </div>
+        <div class="searchdiv">
+            <select id="select" name="" id="">
+                <option value="" disabled selected>Filter</option>
+                <option value="">HarvestedDate</option>
+            </select>
+            <img class="filterimg" src="assets/Images/filterimg.png" alt="">
+        </div>
+    </div>
+
+
+    <div class="CheckAllDiv">
+        <div class="checkBoxinputdiv">
+            <input id="acceptall" type="checkbox">
+            <label for="acceptall">Select All</label>
+        </div>
+        
+        <div class="buttondiv">
+            <button class="button add">Accept All</button>
+            <button class="button clear">Decline All</button>
+        </div>
+    </div>
+
+
+    <div class="request-detail-header" *ngFor="let data of SellerData">
+        <div class="request-detail">
+            <img src="assets/Images/BackgroundImage.png" alt="">
+            <div class="request-detail-part1">
+                <h4>OrhaniZation Name : {{data.organizationname}}</h4>
+                <h5>From : {{data.organizationaddress}}</h5>
+                <h5>Email: {{data.email}}</h5>
+                <h5>Phone Numbner : {{data.organizationphonenumber}}</h5>
+            </div>
+            <div class="request-detail-part2">
+                <h4>Leader Name : {{data.leadername}}</h4>
+                <h5>From : {{data.leaderaddress}}</h5>
+                <h5>Email: {{data.leaderemail}}</h5>
+                <h5>Phone Numbner : {{data.leaderphone}}</h5>
+            </div>
+            <div class="request-detail-part3">
+                <h4>Approved Status : {{data.approved}}</h4>
+                <div class="buttondiv">
+                    <button class="button add tick-button" (click)="Update(data.id,true)"><span>&#10003;</span> Accept</button>
+                    <button class="button clear cancel-button" (click)="Update(data.id,false)"><span>&#215;</span>Decline</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

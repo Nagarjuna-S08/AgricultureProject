@@ -35,6 +35,8 @@ import { SellMyProductPopUpComponent } from './ams/sell-my-product/sell-my-produ
 import { FarmLandsMoreDetailsPopUpComponent } from './ams/farm-lands/farm-lands-more-details-pop-up/farm-lands-more-details-pop-up.component';
 import { InterceptorFileInterceptor } from './AuthService_Gaurd/interceptor-file.interceptor';
 import { ProfileSellerComponent } from './ams/profile-seller/profile-seller.component';
+import { LoginRequestComponent } from './ams/login-request/login-request.component';
+import { ReviewComponent } from './ams/review/review.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +66,9 @@ import { ProfileSellerComponent } from './ams/profile-seller/profile-seller.comp
     SellMyLandPopUpComponent,
     SellMyProductPopUpComponent,
     FarmLandsMoreDetailsPopUpComponent,
-    ProfileSellerComponent
+    ProfileSellerComponent,
+    LoginRequestComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,

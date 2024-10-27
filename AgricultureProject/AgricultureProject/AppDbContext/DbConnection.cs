@@ -19,6 +19,8 @@ namespace AgricultureProject.AppDbContext
         public DbSet<OrderDetails> OrderTable { get; set; }
         public DbSet<ProductReviews> ProductReviewsTable { get; set; }
 
+        public DbSet<AdminDetails> AdminDetailsTable { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

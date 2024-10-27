@@ -2,7 +2,7 @@ export class SellerCreate{
     organizationname:string=''
     email:string=''
     organizationaddress:string=''
-    organizationphonenumbe:string=''
+    organizationphonenumber:string=''
     organizationpassword:string=''
     leadername: string = ''
     leaderaadharnumber: string = ''

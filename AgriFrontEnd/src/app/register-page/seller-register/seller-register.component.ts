@@ -17,7 +17,7 @@ export class SellerRegisterComponent {
     organizationname:'',
     email:'',
     organizationaddress:'',
-    organizationphonenumbe:'',
+    organizationphonenumber:'',
     organizationpassword:'',
     leadername: '',
     leaderaadharnumber: '',
@@ -34,7 +34,7 @@ export class SellerRegisterComponent {
     if (this.sellerForm.organizationname === '' ||
         this.sellerForm.email === '' ||
         this.sellerForm.organizationaddress === '' ||
-        this.sellerForm.organizationphonenumbe === '' ||
+        this.sellerForm.organizationphonenumber === '' ||
         this.sellerForm.organizationpassword === '' ||
         this.sellerForm.leadername === '' ||
         this.sellerForm.leaderaddress === '' ||

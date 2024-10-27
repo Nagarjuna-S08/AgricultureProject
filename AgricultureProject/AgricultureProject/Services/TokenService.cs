@@ -14,7 +14,7 @@ namespace AgricultureProject.Services
             _configuration = configuration;
         }
 
-        public string GenerateToken(int BuyerId,string username,string BuyerAddress,string BuyerPhoneNumber,string Role)
+        public string GenerateToken(int BuyerId, string username, string BuyerAddress, string BuyerPhoneNumber, string Role)
         {
             // Read JWT settings
             var jwtSettings = _configuration.GetSection("JwtSettings");
@@ -33,6 +33,39 @@ namespace AgricultureProject.Services
                 new Claim("UserAddress",BuyerAddress),
                 new Claim("UserPhoneNumber",BuyerPhoneNumber),
                 new Claim("UserId",BuyerId.ToString()),
+                new Claim("Role",Role)
+            };
+
+            // Create the token
+            var token = new JwtSecurityToken(
+                issuer: issuer,
+                audience: audience,
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(expiryInMinutes),
+                signingCredentials: credentials
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+
+        public string GenerateTokenAdmin(int AdminId, string username, string email, string Role)
+        {
+            // Read JWT settings
+            var jwtSettings = _configuration.GetSection("JwtSettings");
+            var secretKey = jwtSettings.GetValue<string>("SecretKey");
+            var issuer = jwtSettings.GetValue<string>("Issuer");
+            var audience = jwtSettings.GetValue<string>("Audience");
+            var expiryInMinutes = jwtSettings.GetValue<int>("ExpiryInMinutes");
+
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            // Create claims
+            List<Claim> claims = new List<Claim>
+            {
+                new Claim("UserName",email),
+                new Claim("UserId",AdminId.ToString()),
                 new Claim("Role",Role)
             };
 

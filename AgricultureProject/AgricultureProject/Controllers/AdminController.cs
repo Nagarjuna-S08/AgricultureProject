@@ -3,6 +3,7 @@ using AgricultureProject.Model;
 using AgricultureProject.Services.IServices;
 using AgricultureProject.Services.MasterServices;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,21 +11,22 @@ namespace AgricultureProject.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SellerController : ControllerBase
+    public class AdminController : ControllerBase
     {
-        private readonly IMasterService<SellerDetails> _masterService;
-        private readonly IsellerSerevice _sellerService;
+        private readonly IMasterService<AdminDetails> _masterService;
+        private readonly IAdminService _AdminService;
         private readonly IMapper _mapper;
 
-        public SellerController(IMasterService<SellerDetails> masterService, IsellerSerevice sellerservice, IMapper mapper)
+        public AdminController(IMasterService<AdminDetails> masterService, IAdminService adminService, IMapper mapper)
         {
             _mapper = mapper;
-            _sellerService = sellerservice;
+            _AdminService = adminService;
             _masterService = masterService;
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<SellerDetails>>> GetAll()
+        [Authorize]
+        public async Task<ActionResult<List<BuyerDetails>>> GetAll()
         {
             var result = await _masterService.GetAllAsyn();
             if (result == null)
@@ -34,20 +36,9 @@ namespace AgricultureProject.Controllers
             return Ok(result);
         }
 
-        [HttpGet("NotApproved")]
-        public async Task<ActionResult<List<SellerDetails>>> GetNotApproved()
-        {
-            var result = await _masterService.GetAllAsyn(i => i.Approved==false);
-            if (result == null)
-            {
-                return NotFound();
-            }
-            return Ok(result);
-        }
-
 
         [HttpGet("Onedata/{Id:int}")]
-        public async Task<ActionResult<List<SellerDetails>>> GetOne(int Id)
+        public async Task<ActionResult<List<BuyerDetails>>> GetOne(int Id)
         {
             if (Id == 0)
             {
@@ -67,22 +58,23 @@ namespace AgricultureProject.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> CreateProduct(SellerCreate Buyer)
+        public async Task<ActionResult> CreateProduct(AdminDetails admin)
         {
-            if (Buyer == null)
+            if (admin == null)
             {
-                return BadRequest();
+                return BadRequest("Invalid Admin data.");
             }
-            var matches = await _masterService.GetAllAsyn(i => i.email == Buyer.email, "");
+
+            var matches = await _masterService.GetAllAsyn(i => i.email == admin.email, "");
 
             if (matches.Any())
             {
                 return BadRequest("User already exists.");
             }
-
-            await _sellerService.ProductCreate(Buyer);
+            await _AdminService.ProductCreate(admin);
             return Ok();
         }
+
 
 
 
@@ -96,22 +88,21 @@ namespace AgricultureProject.Controllers
                 return BadRequest();
             }
             await _masterService.Delete(Id);
-            return Ok();
+            return Ok("Deleted Succesfully");
         }
 
 
 
 
         [HttpPut("{Id:int}")]
-        public async Task<IActionResult> ProductUpdate([FromBody]SellerUpdate dtoupdate, int Id)
-         {
+        public async Task<IActionResult> ProductUpdate([FromBody]AdminDetails dtoupdate, int Id)
+        {
             if (Id == 0 || Id != dtoupdate.Id)
             {
                 return BadRequest();
             }
-            await _sellerService.Update(dtoupdate, Id);
-            return Ok();
+            await _AdminService.Update(dtoupdate, Id);
+            return Ok(dtoupdate);
         }
-
     }
 }

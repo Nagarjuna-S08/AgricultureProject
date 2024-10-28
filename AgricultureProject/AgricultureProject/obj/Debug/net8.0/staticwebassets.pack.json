@@ -1,6 +1,18 @@
 {
   "Files": [
     {
+      "Id": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\LandsPhotos\\287b437b-61d1-4929-9aa4-1d276ae14edc.jpg",
+      "PackagePath": "staticwebassets\\LandsPhotos\\287b437b-61d1-4929-9aa4-1d276ae14edc.jpg"
+    },
+    {
+      "Id": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\LandsPhotos\\9441bf16-0d66-45ca-a0e2-4044d879f0e8.png",
+      "PackagePath": "staticwebassets\\LandsPhotos\\9441bf16-0d66-45ca-a0e2-4044d879f0e8.png"
+    },
+    {
+      "Id": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\LandsPhotos\\e5655523-fb18-44cf-93a0-4c2749829c73.jpg",
+      "PackagePath": "staticwebassets\\LandsPhotos\\e5655523-fb18-44cf-93a0-4c2749829c73.jpg"
+    },
+    {
       "Id": "C:\\AgricultureProject\\AgricultureProject\\AgricultureProject\\wwwroot\\ProductPhotos\\3893bc8a-4f90-431c-8053-0a3c4f9dec65.jpg",
       "PackagePath": "staticwebassets\\ProductPhotos\\3893bc8a-4f90-431c-8053-0a3c4f9dec65.jpg"
     },

@@ -75,7 +75,7 @@ export class SellMyLandComponent implements OnInit {
       this.LandCreateDetail.landprice=this.LandForm.get('landprice')?.value
       this.LandCreateDetail.ownername=this.LandForm.get('ownername')?.value
       this.LandCreateDetail.updateddate=new Date().toDateString()
-      this.LandCreateDetail.sellerid=1
+      this.LandCreateDetail.sellerid=this.authObj.GetUserId(this.authObj.GetToken())
       
       this.PostApi(this.LandCreateDetail)
 
@@ -103,6 +103,8 @@ export class SellMyLandComponent implements OnInit {
 
 
   GetApi(id:number){
+    console.log(id);
+    
     this.obj.GetSellerApi(id).subscribe({
       next:(data:any)=>{
         this.LandDetails=data

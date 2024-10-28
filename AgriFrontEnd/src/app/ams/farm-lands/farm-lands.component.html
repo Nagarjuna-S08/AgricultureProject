@@ -21,29 +21,29 @@
 
             <div class="filteroption">
                 <h4>Budget</h4>
-                <input type="range" min="0" max="20000000">
+                <input type="range" min="0" max="200" value="200" #budget (change)="FilterFun(budget,Area,locality)">
                 <div class="filtervalue">
-                    <h4>Min Value : 8990</h4>
-                    <h4>Max Value : 54646533</h4>
+                    <h4>Min Value : 0</h4>
+                    <h4>Max Value : {{budget.value}} Lakhs</h4>
                 </div>
             </div>
 
             <div class="filteroption">
                 <h4>Area Sq.ft</h4>
-                <input type="range" min="0" max="20000000">
+                <input type="range" min="0" max="200" value="200" #Area (change)="FilterFun(budget,Area,locality)">
                 <div class="filtervalue">
-                    <h4>Min Value : 8990</h4>
-                    <h4>Max Value : 54646533</h4>
+                    <h4>Min Value : 0</h4>
+                    <h4>Max Value : {{Area.value}} Sq.ft</h4>
                 </div>
             </div>
 
             <div class="filteroption">
                 <h4>Locality</h4>
-                <select name="" id="">
-                    <option value="">Madurai-16</option>
-                    <option value="">Madurai-16</option>
-                    <option value="">Madurai-16</option>
-                    <option value="">Madurai-16</option>
+                <select name="" id="" #locality (change)="FilterFun(budget,Area,locality)">
+                    <option value="Madurai-16">Madurai-16</option>
+                    <option value="Theni">Theni</option>
+                    <option value="Thirupur">Thirupur</option>
+                    <option value="Chennai">Chennai</option>
                 </select>
             </div>
         </div>
@@ -54,15 +54,15 @@
             <div class="landdetaileach" *ngFor="let data of LandDetails">
                 <img [src]="data.landphoto1" alt="">
                 <div class="aboudetails">
-                    <p>Address : {{data.landaddress}}</p>
+                    <p>Address : {{data?.landaddress}}</p>
                     <div class="pricearea">
-                        <h4>Area : {{data.landarea}} Sq.ft</h4>
-                        <h4>Amount : {{data.landprice}} Cr</h4>
+                        <h4>Area : {{data?.landarea}} Sq.ft</h4>
+                        <h4>Amount : {{data?.landprice}} Cr</h4>
                     </div>
                     <div class="ownerdetails">
                         <p>Owner :</p>
-                        <p>{{data.ownername}}</p>
-                        <p>Ph.No.:{{data.seller.organizationphonenumber}}</p>
+                        <p>{{data?.ownername}}</p>
+                        <p>Ph.No.:{{data?.seller?.organizationphonenumber}}</p>
                     </div>
                     <div class="buttondiv">
                         <button type="button" *ngIf="authObj.GetRole(authObj.GetToken())!='Seller'" class="button wishlist" (click)="WishListAdd(data.id,data.seller.id)">Add To Wishlist</button>

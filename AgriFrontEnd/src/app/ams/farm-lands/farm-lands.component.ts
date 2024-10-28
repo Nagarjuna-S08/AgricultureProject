@@ -27,6 +27,21 @@ export class FarmLandsComponent implements OnInit{
       this.GetApi()
     }
 
+    FilterFun(Budget:any,Area:any,locality:any){
+      // console.log(Budget.value);
+      // console.log(Area.value);
+      // console.log(locality.value);
+      this.obj.FilterGetApi(0,Budget.value,0,Area.value,locality.value).subscribe({
+        next:(data)=>{
+          console.log(data);
+          this.LandDetails=data
+        },
+        error:(err)=>{
+          console.log(err);
+        }
+      })
+    }
+
     onClick(Landid:number) {
       this.obj.GetOneApi(Landid).subscribe({
         next:(data)=>{
@@ -45,7 +60,7 @@ export class FarmLandsComponent implements OnInit{
     GetApi(){
       this.obj.GetApi().subscribe({
         next:(data:any)=>{
-          this.LandDetails=data
+          this.LandDetails=data;
         },
         error:(error)=>{
           console.log(error);

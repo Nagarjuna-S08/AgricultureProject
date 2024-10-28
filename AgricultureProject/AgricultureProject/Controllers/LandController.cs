@@ -113,9 +113,9 @@ namespace AgricultureProject.Controllers
         //Custom api for specialized page in frontend (Land Page)
 
         [HttpGet("Filter/Budget/{minBudget:int}/{maxBudget:int}/{minArea:int}/{maxArea:int}/{Locality}")]
-        public async Task<ActionResult> DataBugetFilter(int minBudget, int maxBudget,int minArea, int maxArea, string Locality)
+        public async Task<ActionResult> DataBugetFilter(int minBudget, int maxBudget, int minArea, int maxArea, string Locality)
         {
-            var result = await _masterService.GetAllAsyn(i => (i.Landprice >= minBudget && i.Landprice <= maxBudget) && (i.Landarea >= minArea && i.Landarea <= maxArea) && (i.Landaddress.Contains(Locality)) );
+            var result = await _masterService.GetAllAsyn(i => (i.Landprice >= minBudget && i.Landprice <= maxBudget) && (i.Landarea >= minArea && i.Landarea <= maxArea) || (i.Landaddress.Contains(Locality)), "Seller");
             return Ok(result);
         }
 

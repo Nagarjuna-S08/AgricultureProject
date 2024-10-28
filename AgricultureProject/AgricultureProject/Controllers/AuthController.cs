@@ -50,7 +50,7 @@ namespace AgricultureProject.Controllers
 
             if (result.Count() > 0 && result[0].Approved) // Replace with real validation
             {
-                var token = _tokenService.GenerateToken(result[0].Id ,result[0].Organizationname, result[0].Organizationaddress, result[0].Organizationphonenumber,"Seller");
+                var token = _tokenService.GenerateToken(result[0].Id,result[0].Organizationname, result[0].Organizationaddress, result[0].Organizationphonenumber,"Seller");
                 return Ok(new { Token = token });
             }
             else

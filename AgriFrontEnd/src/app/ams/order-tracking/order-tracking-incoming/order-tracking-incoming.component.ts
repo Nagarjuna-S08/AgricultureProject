@@ -22,6 +22,8 @@ export class OrderTrackingIncomingComponent implements OnInit{
     status:'',
     acceptCheck:false
   }
+  filterText: string = ''
+  filteredFeildToTableDetails: any[] = []; // Add this for optimized search
 
   onClick(event: Event,orderid:number) {
     event.preventDefault(); // This will prevent routing or navigation
@@ -74,7 +76,7 @@ export class OrderTrackingIncomingComponent implements OnInit{
       next:(data)=>{
         this.OrderSeller=data;
         console.log(this.OrderSeller);
-        
+        this.filteredFeildToTableDetails = [...data]; // Initialize filtered data
       },
       error:(err)=>{
         console.log(err);
@@ -83,6 +85,32 @@ export class OrderTrackingIncomingComponent implements OnInit{
   }
 
   OpenPopUp(){
+    
+  }
+
+  filterData(): void {
+    if (!this.filterText.trim()) {
+      this.GetApi(this.authObj.GetUserId(this.authObj.GetToken())); // Reset the list if filter text is empty
+      return;
+    }
+  
+    const filterTextLower = this.filterText.toLowerCase(); // Lowercase for case-insensitive matching
+  
+    this.filteredFeildToTableDetails = this.OrderSeller.filter((item: any) => {
+      return (
+        (item.productids?.toLowerCase() || '').includes(filterTextLower) ||
+        (item.productNames?.toLowerCase() || '').includes(filterTextLower) ||
+        // (item.quantity?.toLowerCase() || '').includes(filterTextLower) ||
+        (item.productQuantities?.toString() || '').toLowerCase().includes(filterTextLower) ||
+        (item.productAmount?.toString() || '').toLowerCase().includes(filterTextLower) ||
+        (item.totalamount?.toString() || '').toLowerCase().includes(filterTextLower) ||
+        (item.quantity?.toString() || '').toLowerCase().includes(filterTextLower) ||
+        // (item.totalquantity?.toLowerCase() || '').includes(filterTextLower) ||
+        (item.buyer?.buyername?.toLowerCase() || '').includes(filterTextLower) ||
+        (item.buyer?.buyeraddress?.toLowerCase() || '').includes(filterTextLower) 
+        // (item.amountperKG?.toLowerCase() || '').includes(filterTextLower)
+      );
+    });
     
   }
 }

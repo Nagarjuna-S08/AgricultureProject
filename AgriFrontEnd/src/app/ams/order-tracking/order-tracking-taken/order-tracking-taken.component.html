@@ -1,6 +1,6 @@
 <div class="TakenOrder">
     <div class="searchdiv order-search">
-        <input type="search" placeholder="Search">
+        <input type="text" placeholder="Search"  [(ngModel)]="filterText" (input)="filterData()">
         <img src="assets/Images/searchlogo.png" alt="">
     </div>
 
@@ -19,7 +19,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let data of OrderDetails">
+                <tr *ngFor="let data of filteredFeildToTableDetails">
                     <td>{{data.id}}</td>
                     <td>{{data.buyer.buyername}}</td>
                     <td>{{data.id}}</td>

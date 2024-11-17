@@ -3,7 +3,7 @@
     <div class="frambackground">
         
         <div class="searchdiv">
-            <input type="text" placeholder="Search">
+            <input type="text" placeholder="Search" [(ngModel)]="filterText" (input)="filterData()">
             <img src="assets/Images/searchlogo.png" alt="">
         </div>
         
@@ -51,7 +51,7 @@
 
         <div class="displaysection">
 
-            <div class="landdetaileach" *ngFor="let data of LandDetails">
+            <div class="landdetaileach" *ngFor="let data of filteredLandDetails">
                 <img [src]="data.landphoto1" alt="">
                 <div class="aboudetails">
                     <p>Address : {{data?.landaddress}}</p>

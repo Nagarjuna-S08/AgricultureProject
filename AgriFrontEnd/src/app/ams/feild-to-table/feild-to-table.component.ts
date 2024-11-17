@@ -20,6 +20,8 @@ export class FeildToTableComponent implements OnInit{
     quantity:0,
     totalamount:0
   }
+  filterText: string = ''
+  filteredFeildToTableDetails: any[] = []; // Add this for optimized search
 
   constructor(private tost:ToastrService,private obj:ProductServiceService,private CartObj:CartServiceService,public authObj:AuthService){}
   
@@ -32,6 +34,7 @@ export class FeildToTableComponent implements OnInit{
     this.obj.GetApi().subscribe({
       next:(data:any)=>{
         this.FeildToTable=data
+        this.filteredFeildToTableDetails = [...data]; // Initialize filtered data
       },
       error:(error)=>{
         console.log(error);
@@ -57,4 +60,26 @@ export class FeildToTableComponent implements OnInit{
     })
   }
 
+  filterData(): void {
+    if (!this.filterText.trim()) {
+      this.GetApi(); // Reset the list if filter text is empty
+      return;
+    }
+  
+    const filterTextLower = this.filterText.toLowerCase(); // Lowercase for case-insensitive matching
+  
+    this.filteredFeildToTableDetails = this.FeildToTable.filter((item: any) => {
+      return (
+        (item.productname?.toLowerCase() || '').includes(filterTextLower) ||
+        (item.amountperKG?.toString() || '').toLowerCase().includes(filterTextLower) ||
+        (item.totalquantity?.toString() || '').toLowerCase().includes(filterTextLower) ||
+        // (item.totalquantity?.toLowerCase() || '').includes(filterTextLower) ||
+        (item.harvesteddate?.toLowerCase() || '').includes(filterTextLower) ||
+        (item.updateddate?.toLowerCase() || '').includes(filterTextLower) 
+        // (item.amountperKG?.toLowerCase() || '').includes(filterTextLower)
+      );
+    });
+    
+  }
+  
 }

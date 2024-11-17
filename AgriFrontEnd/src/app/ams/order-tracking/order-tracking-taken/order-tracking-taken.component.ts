@@ -13,6 +13,8 @@ export class OrderTrackingTakenComponent implements OnInit{
   constructor(private OrderObj:OrderServiceService,private Toast:ToastrService,private authObj:AuthService){}
 
   OrderDetails:any=[]
+  filterText: string = ''
+  filteredFeildToTableDetails: any[] = []; // Add this for optimized search
 
   ngOnInit(): void {
     this.GetApi(this.authObj.GetUserId(this.authObj.GetToken()));
@@ -24,7 +26,7 @@ export class OrderTrackingTakenComponent implements OnInit{
       next:(data)=>{
         this.OrderDetails = data
         console.log(this.OrderDetails);
-        
+        this.filteredFeildToTableDetails = [...data]; // Initialize filtered data
       },
       error:(err)=>{
         console.log(err);
@@ -43,5 +45,25 @@ export class OrderTrackingTakenComponent implements OnInit{
     })
   }
 
+  filterData(): void {
+    if (!this.filterText.trim()) {
+      this.GetApi(this.authObj.GetUserId(this.authObj.GetToken())); // Reset the list if filter text is empty
+      return;
+    }
+  
+    const filterTextLower = this.filterText.toLowerCase(); // Lowercase for case-insensitive matching
+  
+    this.filteredFeildToTableDetails = this.OrderDetails.filter((item: any) => {
+      return (
+        (item.paymentmethod?.toLowerCase() || '').includes(filterTextLower) ||
+        (item.paymentdate?.toLowerCase() || '').includes(filterTextLower) ||
+        (item.status?.toLowerCase() || '').includes(filterTextLower) ||
+        (item.quantity?.toString() || '').toLowerCase().includes(filterTextLower) ||
+        (item.id?.toString() || '').toLowerCase().includes(filterTextLower) ||
+        (item.buyer?.buyername?.toLowerCase() || '').includes(filterTextLower) 
+      );
+    });
+    
+  }
 
 }

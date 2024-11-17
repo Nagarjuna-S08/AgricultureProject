@@ -8,7 +8,7 @@
             <img class="filterimg" src="assets/Images/filterimg.png" alt="">
         </div>
         <div class="searchdiv">
-            <input type="search" placeholder="Search">
+            <input type="text" placeholder="Search" [(ngModel)]="filterText" (input)="filterData()">
             <img src="assets/Images/searchlogo.png" alt="">
         </div>
     </div>
@@ -16,7 +16,7 @@
     <div class="feildtotablesection2">
 
 
-        <div class="eachProduct" *ngFor="let data of FeildToTable">
+        <div class="eachProduct" *ngFor="let data of filteredFeildToTableDetails">
             <img class="productimg" [src]="data.productimage" alt="">
             <div class="productTitle">
                 <h4>{{data.productname}}</h4>

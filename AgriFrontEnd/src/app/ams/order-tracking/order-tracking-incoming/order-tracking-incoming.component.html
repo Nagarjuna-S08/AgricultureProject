@@ -1,12 +1,12 @@
 <app-order-pop-up *ngIf="PopupObj.PopUpShown" [PopUpData]="POPUPData"></app-order-pop-up>
 <div class="incomingOrder">
     <div class="searchdiv order-search">
-        <input type="search" placeholder="Search">
+        <input type="text" placeholder="Search"  [(ngModel)]="filterText" (input)="filterData()">
         <img src="assets/Images/searchlogo.png" alt="" >
     </div>
 
     <div class="orders" style="display: flex;justify-content: flex-start;">
-        <div class="order-details" *ngFor="let data of OrderSeller">
+        <div class="order-details" *ngFor="let data of filteredFeildToTableDetails">
             <div class="items">
                 <h2>Number of Items : {{data.quantity}}</h2>
                 <a href="#" class="more-details" (click)="onClick($event,data.id)">More Details</a>

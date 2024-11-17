@@ -20,6 +20,8 @@ export class FarmLandsComponent implements OnInit{
       sellerid:0
     }
     POPUPData:any=null
+    filterText: string = ''
+    filteredLandDetails: any[] = []; // Add this for optimized search
 
     constructor(private tost:ToastrService,private obj:LandServiceService,private WishListObj:WishListServiceService,public PopupObj:LandMoreDetailsPopUpService,public authObj:AuthService){}
 
@@ -31,10 +33,11 @@ export class FarmLandsComponent implements OnInit{
       // console.log(Budget.value);
       // console.log(Area.value);
       // console.log(locality.value);
+      this.filterText=''
       this.obj.FilterGetApi(0,Budget.value,0,Area.value,locality.value).subscribe({
         next:(data)=>{
           console.log(data);
-          this.LandDetails=data
+          this.filteredLandDetails=data
         },
         error:(err)=>{
           console.log(err);
@@ -61,6 +64,7 @@ export class FarmLandsComponent implements OnInit{
       this.obj.GetApi().subscribe({
         next:(data:any)=>{
           this.LandDetails=data;
+          this.filteredLandDetails = [...data]; // Initialize filtered data
         },
         error:(error)=>{
           console.log(error);
@@ -82,5 +86,27 @@ export class FarmLandsComponent implements OnInit{
         }
       })
     }
+
+
+    filterData(): void {
+      if (!this.filterText.trim()) {
+        this.GetApi(); // Reset the list if filter text is empty
+        return;
+      }
+    
+      const filterTextLower = this.filterText.toLowerCase(); // Lowercase for case-insensitive matching
+    
+      this.filteredLandDetails = this.LandDetails.filter((item: any) => {
+        return (
+          (item.landaddress?.toLowerCase() || '').includes(filterTextLower) ||
+          (item.landarea?.toString() || '').toLowerCase().includes(filterTextLower) ||
+          (item.landprice?.toString() || '').toLowerCase().includes(filterTextLower) ||
+          (item.seller?.organizationphonenumber?.toLowerCase() || '').includes(filterTextLower) ||
+          (item.ownername?.toLowerCase() || '').includes(filterTextLower)
+        );
+      });
+      
+    }
+    
   
 }
